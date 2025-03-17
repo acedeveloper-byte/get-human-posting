@@ -7,6 +7,7 @@ import LatestStyle from "@/components/HomeSection/LatestStyle";
 import FeaturedSection from "@/components/HomeSection/FeaturedSection";
 import TechSection from "@/components/HomeSection/TechSection";
 import Footer from "@/components/Footer";
+import CategorySection from "@/components/HomeSection/CategorySection";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Header />
         <FeaturedSection />
         <StylingSection />
+        <CategorySection />
         <LatestStyle />
         <TechSection />
         <Footer />

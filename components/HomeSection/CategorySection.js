@@ -28,7 +28,7 @@ const CategorySection = () => {
                                                                         href="category/fashion/index.html" title="Fashion"></a>
                                                                         <img
                                                                             src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/08/fashion-300x300.jpg"
-                                                                            class="penci-lazy penci-image-holder"> </img>
+                                                                            class="penci-lazy penci-image-holder" />
                                                                     </div>
                                                                 </div>
                                                                 <div class="pcbg-content">
@@ -55,9 +55,9 @@ const CategorySection = () => {
                                                                 <div class="pcbg-thumb">
                                                                     <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
                                                                         href="category/food/index.html" title="Food"></a>
-                                                                        <div
+                                                                        <img
                                                                             src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/08/food-300x300.jpg"
-                                                                            class="penci-lazy penci-image-holder"> </div>
+                                                                            class="penci-lazy penci-image-holder" />
                                                                     </div>
                                                                 </div>
                                                                 <div class="pcbg-content">
@@ -83,9 +83,9 @@ const CategorySection = () => {
                                                                 <div class="pcbg-thumb">
                                                                     <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
                                                                         href="category/technology/index.html" title="Technology"></a>
-                                                                        <div
+                                                                        <img
                                                                             src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/08/tech-300x300.jpg"
-                                                                            class="penci-lazy penci-image-holder"> </div>
+                                                                            class="penci-lazy penci-image-holder" />
                                                                     </div>
                                                                 </div>
                                                                 <div class="pcbg-content">
@@ -112,9 +112,9 @@ const CategorySection = () => {
                                                                 <div class="pcbg-thumb">
                                                                     <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
                                                                         href="category/life-style/style/index.html" title="Style"></a>
-                                                                        <div
+                                                                        <img
                                                                             src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/08/style-300x300.jpg"
-                                                                            class="penci-lazy penci-image-holder"> </div>
+                                                                            class="penci-lazy penci-image-holder" />
                                                                     </div>
                                                                 </div>
                                                                 <div class="pcbg-content">
@@ -141,9 +141,9 @@ const CategorySection = () => {
                                                                 <div class="pcbg-thumb">
                                                                     <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
                                                                         href="category/life-style/healthy-living/index.html" title="Living"></a>
-                                                                        <div
+                                                                        <img
                                                                             src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/08/living-300x300.jpg"
-                                                                            class="penci-lazy penci-image-holder"> </div>
+                                                                            class="penci-lazy penci-image-holder" />
                                                                     </div>
                                                                 </div>
                                                                 <div class="pcbg-content">
@@ -170,9 +170,9 @@ const CategorySection = () => {
                                                                 <div class="pcbg-thumb">
                                                                     <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
                                                                         href="category/life-style/healthy-living/index.html" title="Culture"></a>
-                                                                        <div
+                                                                        <img
                                                                             src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/08/culture-300x300.jpg"
-                                                                            class="penci-lazy penci-image-holder"> </div>
+                                                                            class="penci-lazy penci-image-holder" />
                                                                     </div>
                                                                 </div>
                                                                 <div class="pcbg-content">
