@@ -1,5 +1,4 @@
 import React from 'react'
-import "../../assets/wp-content/uploads/2021/08/banner-home.jpg"
 const TopSection = () => {
     return (
         <>
