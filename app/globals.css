@@ -15518,3 +15518,217 @@ body:not(.pcdm-enable)
 .widget ul#penci-latestwg-4213 li .penci-image-holder.small-fix-size {
   width: 118px;
 }
+
+
+
+
+
+/* Global Styles */
+
+/* 
+/* Card Style */
+.card {
+  max-width: 400px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Input Fields */
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Label Styles */
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Error Message */
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+/* Button Style */
+button {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+  }
+}
+
+.card {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 24px;
+  max-width: 400px;
+}
+
+.card h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card p {
+  color: #6b7280;
+  text-align: center;
+}
+
+.card form input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.input-fleilds-border form input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.card form label {
+  display: flex;
+  align-items: center;
+  padding: 1px 13px !important;
+  border-radius: 6px;
+  /* background: #f3f4f6; */
+}
+
+.card button {
+  width: 100%;
+  padding: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #1d4ed8;
+}
+
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-login button {
+  border: 1px solid #d1d5db;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.social-login button:hover {
+  background: #f3f4f6;
+}
+
+
+
+/* Centering the card */
+.form-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.split-form {
+  display: flex;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px
+}
+
+.split-form .image-side {
+  flex: 1;
+  background: linear-gradient(45deg, black, #002de7);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.split-form .form-side {
+  flex: 1;
+  padding: 3rem;
+}
+
+.split-form input {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-bottom: 2px solid #eee;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.split-form input:focus {
+  border-bottom-color: #002de7;
+}
+
+.split-form button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  background: #002de7;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.split-form button:hover {
+  transform: translateY(-2px);
+}
+@media only screen and (max-width: 768px) {
+  .split-form .image-side {
+    display: none !important;
+  }
+}

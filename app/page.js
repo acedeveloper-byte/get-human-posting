@@ -1,7 +1,5 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+
 import Header from "@/components/Header";
-import TopSection from "@/components/BannerSection.js/TopSection";
 import StylingSection from "@/components/HomeSection/LifeStyleSection";
 import LatestStyle from "@/components/HomeSection/LatestStyle";
 import FeaturedSection from "@/components/HomeSection/FeaturedSection";
