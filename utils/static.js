@@ -1,1 +1,1 @@
-export const HOST =  "http://192.168.1.8:7400/"
+export const HOST = "http://localhost:7400/"

@@ -145,13 +145,13 @@
 
 // export default Page;
 
-
+'use client'
 import React from "react"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import Login from "@/components/Authentication/login.js"
 
-const page  = () =>{
+const page = () => {
   return (
     <>
       <Header />
