@@ -2,7 +2,6 @@ import React from 'react'
 const BottomSection = () => {
     return (
         <>
-
             <section
                 class="penci-section penci-dmcheck penci-elbg-activate penci-disSticky penci-structure-10 elementor-section elementor-top-section elementor-element elementor-element-c9d6306 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
                 data-id="c9d6306" data-element_type="section"

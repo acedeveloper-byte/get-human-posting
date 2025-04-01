@@ -3,6 +3,8 @@ import React from 'react'
 const TechSection = () => {
     return (
         <>
+
+    
             <section
                 class="penci-section penci-dmcheck penci-elbg-activate penci-disSticky penci-structure-10 elementor-section elementor-top-section elementor-element elementor-element-032edc7 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                 data-id="032edc7" data-element_type="section"
