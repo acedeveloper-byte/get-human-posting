@@ -1,35 +1,12 @@
 'use client';
 import React from 'react';
 import { useFormik } from 'formik';
-// import { useNavigate } from 'react-router-dom';  // Import useNavigate hook
+import { useRouter } from 'next/navigation';
+import { handleRegisterApiCall } from '@/utils/apicall/register_api';
 
 const Register = () => {
-//   const navigate = useNavigate();  // Initialize useNavigate
+  const router = useRouter()
 
-  // Function to handle API call
-  const handleApiCall = async (values) => {
-    try {
-      const response = await fetch('https://api.acedigitalsolution.com/auth/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(values),
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error('Error during API call:', error);
-      return { error: error.message };  // Ensure error structure matches API expectations
-    }
-  };
-
-  // Formik form handling
   const formik = useFormik({
     initialValues: {
       user_name: '',
@@ -39,16 +16,9 @@ const Register = () => {
       website: '',
     },
     onSubmit: async (values) => {
-      const response = await handleApiCall(values);
+      await handleRegisterApiCall(values, router);
 
-      // Adjust this according to the API response format
-      if (response && response.success) {
-        console.log('Registration successful:', response);
-        alert('Registration successful! Please login.');
-        navigate('/login'); // Redirect to login page after successful registration
-      } else {
-        alert(`Registration failed! Error: ${response.error || 'Unknown error'}`);
-      }
+
     },
   });
 

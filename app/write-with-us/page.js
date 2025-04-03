@@ -1,119 +1,53 @@
 "use client";
-import React from "react";
-import { Card, Form, Col, Container, Row } from 'react-bootstrap';
-import { Formik, useFormik } from "formik";
+import React, { useState, useEffect } from "react";
+import { Card, Form, Col, Container, Row, Button } from "react-bootstrap";
+import { useFormik } from "formik";
 import * as Yup from "yup";
-import axios from "axios";
+import dynamic from "next/dynamic";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+// Dynamically import CKEditor (Disabling SSR)
+const CKEditor = dynamic(() => import("@ckeditor/ckeditor5-react").then((mod) => mod.CKEditor), {
+  ssr: false,
+});
+
+let ClassicEditor; // Declare ClassicEditor globally
+
 const Page = () => {
-  // Validation Schema using Yup
+  const [editorLoaded, setEditorLoaded] = useState(false);
+  const [editorValue, setEditorValue] = useState("");
+  const [user_data, setUser_data] = useState(false)
+  // Load ClassicEditor only on the client side
+  useEffect(() => {
+    import("@ckeditor/ckeditor5-build-classic").then((mod) => {
+      ClassicEditor = mod.default;
+      setEditorLoaded(true);
+    });
+
+    if (localStorage.getItem("auth_user") === null) {
+      setUser_data(true)
+    } else {
+      setUser_data(false)
+
+    }
+  }, []);
+
   const validationSchema = Yup.object({
-    file: Yup.mixed().required("File is required"),
-    categoryName: Yup.string().required("Category name is required"),
-    categoryStatus: Yup.boolean().required("Category status is required"),
+    title: Yup.string().required("Title is required"),
+    content: Yup.string().required("Content is required"),
   });
 
   const formik = useFormik({
-
     initialValues: {
       title: "",
-    }
-  })
-
-  // return (
-  //   <div className="form-login-container my-5 py-5">
-  //     <div className="card">
-  //       <h2 className="text-center">Create Category</h2>
-  //       <Formik
-  //         initialValues={{
-  //           file: null,
-  //           categoryName: "",
-  //           categoryStatus: true,
-  //         }}
-  //         validationSchema={validationSchema}
-  //         onSubmit={async (values, { setSubmitting, resetForm }) => {
-  //           const formData = new FormData();
-  //           formData.append("file", values.file);
-  //           formData.append("categoryName", values.categoryName);
-  //           formData.append("categoryStatus", values.categoryStatus);
-
-  //           try {
-  //             const response = await axios.post(
-  //               "http://192.168.1.8:7400/category/create-new-category",
-  //               formData,
-  //               {
-  //                 headers: {
-  //                   "Content-Type": "multipart/form-data",
-  //                 },
-  //               }
-  //             );
-
-  //             console.log("API Response:", response.data);
-  //             alert("Category created successfully!");
-  //             resetForm(); // Reset form after successful submission
-  //           } catch (error) {
-  //             console.error("API Error:", error);
-  //             alert("Error creating category!");
-  //           }
-
-  //           setSubmitting(false);
-  //         }}
-  //       >
-  //         {({ isSubmitting, setFieldValue }) => (
-  //           <Form className="space-y-4">
-  //             {/* File Upload Field */}
-  //             <div>
-  //               <label>File</label>
-  //               <input
-  //                 type="file"
-  //                 name="file"
-  //                 onChange={(event) => {
-  //                   setFieldValue("file", event.currentTarget.files[0]);
-  //                 }}
-  //               />
-  //               <ErrorMessage name="file" component="div" className="error" />
-  //             </div>
-
-  //             {/* Category Name Field */}
-  //             <div>
-  //               <label>Category Name</label>
-  //               <Field type="text" name="categoryName" />
-  //               <ErrorMessage
-  //                 name="categoryName"
-  //                 component="div"
-  //                 className="error"
-  //               />
-  //             </div>
-
-  //             {/* Category Status Field */}
-  //             <div>
-  //               <label>Category Status</label>
-  //               <Field as="select" name="categoryStatus">
-  //                 <option value={true}>True</option>
-  //                 <option value={false}>False</option>
-  //               </Field>
-  //               <ErrorMessage
-  //                 name="categoryStatus"
-  //                 component="div"
-  //                 className="error"
-  //               />
-  //             </div>
-
-  //             {/* Submit Button */}
-  //             <button className="my-4" type="submit" disabled={isSubmitting}>
-  //               {isSubmitting ? "Submitting..." : "Submit"}
-  //             </button>
-  //           </Form>
-  //         )}
-  //       </Formik>
-  //     </div>
-  //   </div>
-  // );
-
-  const { values, handleChange, handleSubmit, onFocus, onBlur } = formik;
-
+      content: "",
+    },
+    validationSchema,
+    onSubmit: async (values) => {
+      // Call your API function here
+    },
+  });
 
   return (
     <>
@@ -122,27 +56,63 @@ const Page = () => {
         <Card.Header>Write With Us</Card.Header>
         <Card.Body>
           <Container fluid>
-            <Form>
-              <Row>
-                <Col md={3}>
-                  <Form.Control name="title" value={values.title} placeholder="Enter title" />
-                </Col>
-                <Col md={3}>
-                  <Form.Control name="category" value={values.title} placeholder="Enter title" />
-                </Col>
-                <Col md={6}>
-                  <Form.Control name="content"
-                    as="textarea" rows={3} />
-                </Col>
+            <Form noValidate onSubmit={formik.handleSubmit}>
+              <Row className="mb-3">
+                <Form.Group as={Col} md="4" controlId="title">
+                  <Form.Label>Title</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter Title"
+                    {...formik.getFieldProps("title")}
+                    isInvalid={formik.touched.title && formik.errors.title}
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    {formik.errors.title}
+                  </Form.Control.Feedback>
+                </Form.Group>
+
+                <Form.Group as={Col} md="4" controlId="category">
+                  <Form.Label>Category</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter Category"
+                    {...formik.getFieldProps("category")}
+                  />
+                </Form.Group>
               </Row>
+
+              <Form.Group className="mb-3">
+                <Form.Label>Content</Form.Label>
+                {editorLoaded ? (
+                  <CKEditor
+                    editor={ClassicEditor}
+                    data={editorValue}
+                    onChange={(event, editor) => {
+                      const content = editor.getData();
+                      setEditorValue(content);
+                      formik.setFieldValue("content", content);
+                    }}
+                  />
+                ) : (
+                  <p>Loading editor...</p>
+                )}
+                {formik.touched.content && formik.errors.content && (
+                  <div className="text-danger">{formik.errors.content}</div>
+                )}
+              </Form.Group>
+
+              {user_data === true ?
+                <Button type="submit">Submit Form</Button>
+                :
+                <Button type="">Please login to create a post</Button>
+              }
             </Form>
           </Container>
         </Card.Body>
       </Card>
       <Footer />
     </>
-
-  )
+  );
 };
 
 export default Page;

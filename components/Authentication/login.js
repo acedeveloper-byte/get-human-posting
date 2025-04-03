@@ -1,34 +1,18 @@
 'use client'
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useFormik } from 'formik';
-import { useNavigate } from 'react-router-dom';
+import { handleApiCall } from '@/utils/apicall/login';
+import { useRouter } from 'next/navigation';
 
 
 const Login = () => {
+
+
+  const router = useRouter()
   // const navigate = useNavigate(); // Initialize useNavigate for redirection
 
   // Function to handle API call
-  const handleApiCall = async (values) => {
-    try {
-      const response = await fetch('https://api.acedigitalsolution.com/auth/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(values),
-      });
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error('Error during API call:', error);
-      return { error: error.message };
-    }
-  };
 
   // Formik form handling
   const formik = useFormik({
@@ -37,17 +21,33 @@ const Login = () => {
       password: '',
     },
     onSubmit: async (values) => {
-      const response = await handleApiCall(values);
+      await handleApiCall(values, router);
 
-      if (response.token) {
-        console.log('Login successful:', response);
-        localStorage.setItem('token', response.token); // Store token if needed
-        navigate('/'); // Redirect to home page after login
-      } else {
-        alert('Login failed! Please check your credentials.');
-      }
+      // if (response.token) {
+      //   console.log('Login successful:', response);
+      //   localStorage.setItem('token', response.token); // Store token if needed
+      //   navigate('/'); // Redirect to home page after login
+      // } else {
+      //   alert('Login failed! Please check your credentials.');
+      // }
     },
   });
+
+  useEffect(() => {
+    if (
+      localStorage.getItem("auth_data")
+
+    ) {
+      const auth_data = localStorage.getItem("auth_data")
+
+      if (auth_data === null) {
+        return;
+      } else {
+        router.push("/")
+      }
+
+    }
+  }, [])
 
   const { values, handleChange, handleSubmit } = formik;
 
@@ -79,6 +79,7 @@ const Login = () => {
             />
             <button type="submit">Login</button>
           </form>
+          <span><strong>Don't have an account ?</strong> <a href="/register" className="text-decoration-none text-blue">Click here</a></span>
         </div>
       </div>
     </>

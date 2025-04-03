@@ -3544,8 +3544,6 @@ h4,
 h5,
 h6,
 html,
-input,
-label,
 li,
 ol,
 p,
@@ -3557,9 +3555,6 @@ ul {
   padding: 0;
 }
 
-input {
-  background-color: transparent;
-}
 
 fieldset,
 img {
@@ -3595,22 +3590,6 @@ a img {
 body:not(.penci-fawesome-ver5) .penci-faicon {
   font-family: FontAwesome;
   font-weight: 400;
-}
-
-button,
-input[type="button"],
-input[type="email"],
-input[type="search"],
-input[type="submit"],
-input[type="text"],
-textarea {
-  -webkit-appearance: none;
-  border-radius: 0;
-  -webkit-border-radius: 0;
-}
-
-p:empty:before {
-  content: none;
 }
 
 body,
@@ -3653,41 +3632,8 @@ body {
   --pcsnav-w: 270px;
 }
 
-input[type="date"],
-input[type="email"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="url"],
-select,
-textarea {
-  font-family: var(--pcbody-font);
-  padding: 11px 20px;
-  max-width: 100%;
-  width: 100%;
-  border: 1px solid var(--pcborder-cl);
-  border-radius: 0;
-  background-color: transparent;
-  box-shadow: none;
-  color: var(--pctext-cl);
-  vertical-align: middle;
-  font-size: inherit;
-}
 
-input[type="date"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="text"]:focus,
-input[type="url"]:focus,
-select:focus,
-textarea:focus {
-  outline: 0;
-}
+
 
 [type="button"],
 [type="submit"],
@@ -3711,11 +3657,6 @@ button {
   text-transform: uppercase;
 }
 
-button[disabled],
-input[disabled] {
-  opacity: 0.6 !important;
-  cursor: default;
-}
 
 p {
   font-size: 14px;
@@ -15603,26 +15544,14 @@ button:hover {
   text-align: center;
 }
 
-.card form input {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  outline: none;
-}
 
-.input-fleilds-border form input {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  outline: none;
-}
 
 .card form label {
   display: flex;
   align-items: center;
   padding: 1px 13px !important;
   border-radius: 6px;
-  /* background: #f3f4f6; */
+/* background: #f3f4f6; */
 }
 
 .card button {
@@ -15701,7 +15630,7 @@ button:hover {
   width: 100%;
   padding: 1rem;
   margin: 0.5rem 0;
-  border: none;
+  /* border: none; */
   border-bottom: 2px solid #eee;
   outline: none;
   transition: border-color 0.3s;

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { HOST } from "../static";
 
-export const handleApiCall = async (values, router) => {
+export const handleOtpCall = async (values, router) => {
 
     const myHeaders = new Headers();
     myHeaders.append("accept", "*/*");
@@ -9,21 +9,16 @@ export const handleApiCall = async (values, router) => {
 
     const options = {
         method: "POST",
-        url: `${HOST}auth/login`,
-        data: {
-            email: values.email,
-            password: values.password
-        },
+        url: `${HOST}auth/verify-otp/${values.otp}`,
+        data: {},
         redirect: "follow",
     }
     const fetchapi = await axios.request(options)
     const resp = await fetchapi
-    console.log(options)
     if (resp.data.baseResponse.message === "REQUEST_FULLFILLED") {
-        localStorage.setItem("auth_data", JSON.stringify(resp.data.response))
-        router.push("/")
+        router.push("/login")
     } else {
-        alert(resp.data.baseResponse.message)
+        alert("Error While Logging In")
     }
 
 }
