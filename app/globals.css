@@ -15732,3 +15732,13 @@ button:hover {
     display: none !important;
   }
 }
+
+
+.write-with-us  {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background: #ffffff;
+    padding: 24px;
+    max-width: 95%;
+    margin: 40px;
+}
