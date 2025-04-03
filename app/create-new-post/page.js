@@ -5,6 +5,9 @@ import * as Yup from "yup";
 import axios from "axios";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ReactQuill from "react-quill";
+
+
 const Page = () => {
   // Validation Schema using Yup
   const validationSchema = Yup.object({
@@ -12,6 +15,15 @@ const Page = () => {
     categoryName: Yup.string().required("Category name is required"),
     status: Yup.boolean().required("Category status is required"),
   });
+
+const toolbar  = [
+  [{ header: "1" }, { header: "2" }, { font: [] }],
+  [{ list: "ordered" }, { list: "bullet" }],
+  ["bold", "italic", "underline"],
+  [{ align: [] }],
+  ["link", "image"],
+  ["clean"], // Clear formatting option
+]
 
   const handleSubmit = (values) => {
     const myHeaders = new Headers();
@@ -142,6 +154,13 @@ const Page = () => {
                         className="error"
                       />
                     </div>
+
+                    <ReactQuill
+    theme="snow"
+    value={values.content}
+    onChange={(value) => setFieldValue("content", value)}
+    modules={toolbar}
+  />
 
                     {/* Submit Button */}
                     <button
