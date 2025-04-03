@@ -13,11 +13,8 @@ const Header = () => {
 
     }, [user])
 
-
-
     const parsedata = user
 
-    console.log("parsedata.user_name:", parsedata)
     return (
         <>
             <header id="header" className="header-header-10 has-bottom-line" itemScope="itemscope"
