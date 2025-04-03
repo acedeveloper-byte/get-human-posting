@@ -38,9 +38,11 @@ const Login = () => {
       localStorage.getItem("auth_data")
 
     ) {
-      const auth_data = localStorage.getItem("auth_data")
 
-      if (auth_data === null) {
+
+      const auth_data = JSON.parse(localStorage.getItem("auth_data"))
+
+      if (auth_data?.user_name) {
         return;
       } else {
         router.push("/")
