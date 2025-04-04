@@ -69,7 +69,7 @@ const Header = () => {
                                 <li id="menu-item-1567"
                                     className="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567"><a
                                         href="#">Tech</a></li>
-                                {parsedata.user_name ?
+                                {parsedata?.user_name ?
                                     <>
                                         <li id="menu-item-167"
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567"><a
