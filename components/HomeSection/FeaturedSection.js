@@ -6,7 +6,7 @@ const FeaturedSection = () => {
 
     const [data, setData] = useState([])
     useEffect(async () => {
-        await AllPost(setData, "Featured")
+        AllPost(setData, "Featured")
     }, [])
 
     return (

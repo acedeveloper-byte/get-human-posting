@@ -19,7 +19,7 @@ export const Guest_Posting_APi = async (values, router) => {
 
         if (response.data.baseResponse?.message === "REQUEST_FULLFILLED") {
             // localStorage.setItem("auth_data", JSON.stringify(response.data.response));
-            router.push("/title");
+            router.push("/your-posts");
         } else {
             alert("Error While Posting Blog");
         }
