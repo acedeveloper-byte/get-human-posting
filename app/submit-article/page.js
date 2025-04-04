@@ -37,8 +37,10 @@ const page = () => {
     validationSchema,
     onSubmit: async (values) => {
       // { title, status, content, category, user_id }
-      const valuess = { title: values.title, status: true, content: values.content, category: values.category, user_id: user_data._id }
+      const valuess = { title: values.title, file: values.file, status: true, content: values.content, category: values.category, user_id: user_data._id }
+
       await Guest_Posting_APi(valuess, router)
+
     },
   });
 

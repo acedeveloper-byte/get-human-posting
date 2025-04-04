@@ -7,30 +7,28 @@ const Header = () => {
     const router = useRouter()
     const pathname = usePathname()
     const [user, setUser] = useState({})
+
     useEffect(() => {
         if (localStorage.getItem("auth_data")) {
             setUser(JSON.parse(localStorage.getItem("auth_data")))
         }
-
     }, [])
 
-    const parsedata = user
 
     const handleLogout = () => {
         localStorage.clear()
         router.push('/login')
     }
 
-    console.log("pathname::", pathname)
+
+
     return (
         <>
-            <header id="header" className="header-header-10 has-bottom-line" itemScope="itemscope"
-                itemType="https://schema.org/WPHeader">
-                <nav id="navigation" className="header-layout-bottom header-10 menu-style-1" role="navigation" itemScope
-                    itemType="https://schema.org/SiteNavigationElement">
+            <header id="header" className="header-header-10 has-bottom-line" >
+                <nav id="navigation" className="header-layout-bottom header-10 menu-style-1" role="navigation" >
                     <div className="container">
                         <div className="button-menu-mobile header-10"></div>
-                        <div className="penci-mobile-hlogo"> <a href=""><img fetchPriority="high"
+                        <div className="penci-mobile-hlogo"> <a href="/"><img fetchPriority="high"
                             className="penci-mainlogo penci-mainlogo-mb penci-limg"
                             src="/assets/images/logo/logo.png"
                             alt="Guest Posting" width="600" height="151" /></a>
@@ -69,7 +67,7 @@ const Header = () => {
                                 <li id="menu-item-1567"
                                     className="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567"><a
                                         href="#">Tech</a></li>
-                                {parsedata?.user_name ?
+                                {user?.user_name ?
                                     <>
                                         <li id="menu-item-167"
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567"><a

@@ -2,35 +2,29 @@ import axios from "axios";
 import { HOST } from "../static";
 
 export const Guest_Posting_APi = async (values, router) => {
+    try {
+        const form = new FormData();
+        form.append("title", values.title);
+        form.append("status", values.status.toString()); // Convert boolean to string
+        form.append("content", values.content);
+        form.append("category", values.category);
+        form.append("user_id", values.user_id); // Ensure this is correctly passed
+        form.append("file", values.file);
 
+        const response = await axios.post(`${HOST}post/create-new-post`, form, {
+            headers: {
+                "accept": "*/*", // Accept all responses
+            },
+        });
 
-    const myHeaders = new Headers();
-    myHeaders.append("accept", "*/*");
-    myHeaders.append("Content-Type", "application/json");
-
-    /* user_id: { type: String, required: true },
-        title: { type: String, required: true },
-        category: { type: String },
-        status: { type: Boolean, required: true },
-        content: { type: String, required: true } */
-
-    const options = {
-        method: "POST",
-        url: `${HOST}post/create-new-post`,
-        data: values,
-        redirect: "follow",
+        if (response.data.baseResponse?.message === "REQUEST_FULLFILLED") {
+            // localStorage.setItem("auth_data", JSON.stringify(response.data.response));
+            router.push("/title");
+        } else {
+            alert("Error While Posting Blog");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Failed to submit form. Check console for details.");
     }
-    console.log("options:", options)
-    const fetchapi = await axios.request(options)
-    const resp = await fetchapi
-    console.log(resp.data)
-    if (resp.data.baseResponse.message === "REQUEST_FULLFILLED") {
-        localStorage.setItem("auth_data", JSON.stringify(resp.data.response))
-        router.push("/")
-    } else {
-        alert("Error While Posting blog")
-    }
-
-}
-
-
+};
