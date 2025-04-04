@@ -57,7 +57,7 @@ const Login = () => {
           <h2>Sign In</h2>
           <form onSubmit={handleSubmit}>
             <input
-              type="email"
+              type="text"
               name="email"
               placeholder="Email"
               required

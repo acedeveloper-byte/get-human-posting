@@ -21,26 +21,31 @@ const OTP = () => {
     const { values, handleChange, handleSubmit } = formik;
 
     return (
-        <div className="split-form">
-            <div className="image-side">
-                <h2>Last Step!</h2>
-                <p>Please verify otp and get access to your account</p>
+        <>
+            {loading && <div className='loading-overlay' />}
+            <div className="split-form">
+                <div className="image-side">
+                    <h2>Last Step!</h2>
+                    <p>Please verify otp and get access to your account</p>
+                </div>
+                <div className="form-side">
+                    <h2>Verify OTP</h2>
+                    <form onSubmit={handleSubmit}>
+                        <input
+                            type="text"
+                            name="otp"
+                            placeholder="Otp"
+                            required
+                            onChange={handleChange}
+                            value={values.otp}
+                        />
+
+                        <button type="submit">                    {loading ? <Spinner animation="border" /> : "Submit"}
+                        </button>
+                    </form>
+                </div>
             </div>
-            <div className="form-side">
-                <h2>Verify OTP</h2>
-                <form onSubmit={handleSubmit}>
-                    <input
-                        type="text"
-                        name="otp"
-                        placeholder="Otp"
-                        required
-                        onChange={handleChange}
-                        value={values.otp}
-                    />
-                    {loading ? <Spinner animation="border" /> : "Submit"}
-                </form>
-            </div>
-        </div>
+        </>
     );
 };
 

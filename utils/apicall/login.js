@@ -19,6 +19,7 @@ export const handleApiCall = async (values, router, setloading) => {
     }
     const fetchapi = await axios.request(options)
     const resp = await fetchapi
+
     setloading(true)
 
     if (resp.data.baseResponse.message === "REQUEST_FULLFILLED") {
