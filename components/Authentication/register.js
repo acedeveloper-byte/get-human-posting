@@ -1,24 +1,22 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import { useRouter } from 'next/navigation';
 import { handleRegisterApiCall } from '@/utils/apicall/register_api';
+import { Spinner } from 'react-bootstrap';
 
 const Register = () => {
+  const [loading, setloading] = useState(false)
   const router = useRouter()
 
   const formik = useFormik({
     initialValues: {
       user_name: '',
       email: '',
-      phone: '',
       password: '',
-      website: '',
     },
     onSubmit: async (values) => {
-      await handleRegisterApiCall(values, router);
-
-
+      await handleRegisterApiCall(values, router, setloading);
     },
   });
 
@@ -49,14 +47,7 @@ const Register = () => {
             onChange={handleChange}
             value={values.email}
           />
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Phone Number"
-            required
-            onChange={handleChange}
-            value={values.phone}
-          />
+
           <input
             type="password"
             name="password"
@@ -65,15 +56,8 @@ const Register = () => {
             onChange={handleChange}
             value={values.password}
           />
-          <input
-            type="text"
-            name="website"
-            placeholder="Website"
-            required
-            onChange={handleChange}
-            value={values.website}
-          />
-          <button type="submit">Register</button>
+
+          <button type="submit">{loading ? <Spinner animation="border" /> : "Register"}</button>
         </form>
       </div>
     </div>

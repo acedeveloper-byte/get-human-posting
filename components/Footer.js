@@ -27,7 +27,7 @@ const Footer = () => {
                     <div className="footer-logo-copyright footer-not-logo footer-not-gotop">
                         <div id="footer-copyright">
                             <p>@2025 - All Right Reserved. Designed and Developed by <a rel="nofollow"
-                                href="https://soledad.pencidesign.net/go-soledad/" target="_blank">PenciDesign</a></p>
+                                href="https://soledad.Author.net/go-soledad/" target="_blank">Author</a></p>
                         </div>
                     </div>
                 </div>

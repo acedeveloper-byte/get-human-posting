@@ -1,8 +1,10 @@
 import axios from "axios";
 import { HOST } from "../static";
 
-export const handleRegisterApiCall = async (values, router) => {
+export const handleRegisterApiCall = async (values, router, setloading) => {
   try {
+
+    setloading(true)
     const response = await fetch(`${HOST}auth/register`, {
       method: 'POST',
       headers: {
@@ -10,6 +12,7 @@ export const handleRegisterApiCall = async (values, router) => {
       },
       body: JSON.stringify(values),
     });
+    setloading(true)
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -17,8 +20,10 @@ export const handleRegisterApiCall = async (values, router) => {
 
     const data = await response.json();
     if (data.baseResponse.message === "REQUEST_FULLFILLED") {
+      setloading(false)
       router.push("/verify-otp")
     } else {
+      setloading(false)
       alert("Error While Logging In")
     }
     return data;

@@ -1,10 +1,12 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import { useRouter } from 'next/navigation';
 import { handleOtpCall } from '@/utils/apicall/verify_otp';
+import { Spinner } from 'react-bootstrap';
 
 const OTP = () => {
+    const [loading, setloading] = useState(false)
     const router = useRouter()
 
     const formik = useFormik({
@@ -12,7 +14,7 @@ const OTP = () => {
             otp: '',
         },
         onSubmit: async (values) => {
-            await handleOtpCall(values, router);
+            await handleOtpCall(values, router, setloading);
         },
     });
 
@@ -35,8 +37,7 @@ const OTP = () => {
                         onChange={handleChange}
                         value={values.otp}
                     />
-
-                    <button type="submit">OTP</button>
+                    {loading ? <Spinner animation="border" /> : "Submit"}
                 </form>
             </div>
         </div>

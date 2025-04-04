@@ -16,7 +16,7 @@ const TopSection = () => {
                                 <div class="elementor-widget-container">
                                     <div style={{ textAlign: "center" }}> <a style={{ display: "inline-block", maxWidth: "728px" }}
                                         href="https://1.envato.market/YYJ4P" target="_blank"><img loading="lazy" decoding="async"
-                                            src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/08/banner-home.jpg" width="728" height="90" alt="banner" /></a>
+                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/08/banner-home.jpg" width="728" height="90" alt="banner" /></a>
                                     </div>
                                 </div>
                             </div>

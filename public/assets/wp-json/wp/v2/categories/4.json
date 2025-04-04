@@ -1,1 +1,32 @@
-{"id":4,"count":9,"description":"","link":"https:\/\/soledaddemo.pencidesign.net\/category\/featured\/","name":"Featured","slug":"featured","taxonomy":"category","parent":0,"meta":[],"_links":{"self":[{"href":"https:\/\/soledaddemo.pencidesign.net\/wp-json\/wp\/v2\/categories\/4"}],"collection":[{"href":"https:\/\/soledaddemo.pencidesign.net\/wp-json\/wp\/v2\/categories"}],"about":[{"href":"https:\/\/soledaddemo.pencidesign.net\/wp-json\/wp\/v2\/taxonomies\/category"}],"wp:post_type":[{"href":"https:\/\/soledaddemo.pencidesign.net\/wp-json\/wp\/v2\/posts?categories=4"}],"curies":[{"name":"wp","href":"https:\/\/api.w.org\/{rel}","templated":true}]}}
+{
+  "id": 4,
+  "count": 9,
+  "description": "",
+  "link": "https://soledaddemo.Author.net/category/featured/",
+  "name": "Featured",
+  "slug": "featured",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+    "self": [
+      { "href": "https://soledaddemo.Author.net/wp-json/wp/v2/categories/4" }
+    ],
+    "collection": [
+      { "href": "https://soledaddemo.Author.net/wp-json/wp/v2/categories" }
+    ],
+    "about": [
+      {
+        "href": "https://soledaddemo.Author.net/wp-json/wp/v2/taxonomies/category"
+      }
+    ],
+    "wp:post_type": [
+      {
+        "href": "https://soledaddemo.Author.net/wp-json/wp/v2/posts?categories=4"
+      }
+    ],
+    "curies": [
+      { "name": "wp", "href": "https://api.w.org/{rel}", "templated": true }
+    ]
+  }
+}

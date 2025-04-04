@@ -51,7 +51,7 @@ const LatestStyle = () => {
                                                 <div class="home-featured-cat-content pwf-id-default style-10">
                                                     <div class="mag-post-box hentry first-post">
                                                         <div class="magcat-thumb"> <img class="penci-image-holder penci-lazy"
-                                                            src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/8-1-585x390.jpeg"
+                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/8-1-585x390.jpeg"
                                                             href="the-ultimate-napa-valley-tour-eat-and-drink-with-tls-editor/index.html"
                                                             title="The Ultimate Napa Valley Tour: Eat and Drink With T+L&#8217;s Editor" />
                                                         </div>
@@ -78,7 +78,7 @@ const LatestStyle = () => {
                                                     </div>
                                                     <div class="mag-post-box hentry first-post">
                                                         <div class="magcat-thumb"> <img class="penci-image-holder penci-lazy"
-                                                            src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/15-585x390.jpeg"
+                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/15-585x390.jpeg"
                                                             href="how-biometrics-may-be-key-in-reducing-the-hassles-of-travel/index.html"
                                                             title="How Biometrics May Be Key In Reducing The Hassles Of Travel" /> </div>
                                                         <div class="magcat-detail">
@@ -104,7 +104,7 @@ const LatestStyle = () => {
                                                     </div>
                                                     <div class="mag-post-box hentry">
                                                         <div class="magcat-thumb"> <img class="penci-image-holder penci-lazy small-fix-size"
-                                                            src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/22-585x390.jpeg"
+                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/22-585x390.jpeg"
                                                             href="how-you-can-take-part-in-national-travel-and-tourism-week/index.html"
                                                             title="How You Can Take Part in National Travel and Tourism Week" /> </div>
                                                         <div class="magcat-detail">
@@ -121,7 +121,7 @@ const LatestStyle = () => {
                                                     </div>
                                                     <div class="mag-post-box hentry">
                                                         <div class="magcat-thumb"> <img class="penci-image-holder penci-lazy small-fix-size"
-                                                            src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/29-585x390.jpeg"
+                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/29-585x390.jpeg"
                                                             href="this-travel-website-offers-a-suite-alternative-to-airbnb-around/index.html"
                                                             title="This Travel Website Offers a &#8216;Suite&#8217; Alternative to Airbnb Around">
                                                         </img> </div>
@@ -139,7 +139,7 @@ const LatestStyle = () => {
                                                     </div>
                                                     <div class="mag-post-box hentry">
                                                         <div class="magcat-thumb"> <img class="penci-image-holder penci-lazy small-fix-size"
-                                                            src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/36-585x390.jpeg"
+                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/36-585x390.jpeg"
                                                             href="the-reason-why-solo-travel-can-be-good-for-your-soul-and-pocket/index.html"
                                                             title="The Reason Why Solo Travel Can Be Good for Your Soul and Pocket" /> </div>
                                                         <div class="magcat-detail">
@@ -156,7 +156,7 @@ const LatestStyle = () => {
                                                     </div>
                                                     <div class="mag-post-box hentry">
                                                         <div class="magcat-thumb"> <img class="penci-image-holder penci-lazy small-fix-size"
-                                                            src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/43-585x390.jpeg"
+                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/43-585x390.jpeg"
                                                             href="black-travel-vibes-brazil-is-the-bucket-list-trip-you-need-to-take/index.html"
                                                             title="Black Travel Vibes: Brazil is the Bucket List Trip You Need to Take" />
                                                         </div>
@@ -244,7 +244,7 @@ const LatestStyle = () => {
                                                         <li class="grid-style">
                                                             <article id="post-434" class="item hentry">
                                                                 <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                    src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/2-1-585x390.jpeg"
+                                                                    src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/2-1-585x390.jpeg"
                                                                     href="gemma-ward-used-to-wish-fast-fashion-was-less-prevalent-by-now/index.html"
                                                                     title="Gemma Ward Used To Wish Fast Fashion Was Less Prevalent By Now" />
                                                                 </div>
@@ -266,7 +266,7 @@ const LatestStyle = () => {
                                                         <li class="grid-style">
                                                             <article id="post-406" class="item hentry">
                                                                 <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                    src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/9-585x390.jpeg"
+                                                                    src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/9-585x390.jpeg"
                                                                     href="slow-fashion-tell-us-about-the-oldest-item-of-clothing-you-own/index.html"
                                                                     title="Slow Fashion: Tell Us About The Oldest Item of Clothing You Own" />
                                                                 </div>
@@ -288,7 +288,7 @@ const LatestStyle = () => {
                                                         <li class="grid-style">
                                                             <article id="post-378" class="item hentry">
                                                                 <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                    src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/16-585x390.jpeg"
+                                                                    src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/16-585x390.jpeg"
                                                                     href="23-best-womens-watches-2019-top-fashion-watches-for-women/index.html"
                                                                     title="23 Best Women&#8217;s Watches 2019 &#8211; Top Fashion Watches For Women">
                                                                 </img> </div>
@@ -311,7 +311,7 @@ const LatestStyle = () => {
                                                         <li class="grid-style">
                                                             <article id="post-350" class="item hentry">
                                                                 <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                    src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/23-585x390.jpeg"
+                                                                    src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/23-585x390.jpeg"
                                                                     href="met-gala-2019-lady-gaga-makes-her-way-to-fashion-event/index.html"
                                                                     title="Met Gala 2019: Lady Gaga Makes Her Way To Fashion Event" /> </div>
                                                                 <div class="grid-header-box">
@@ -332,7 +332,7 @@ const LatestStyle = () => {
                                                         <li class="grid-style">
                                                             <article id="post-322" class="item hentry">
                                                                 <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                    src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/30-585x390.jpeg"
+                                                                    src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/30-585x390.jpeg"
                                                                     href="gender-fluid-clothing-is-finally-having-its-fashion-moment/index.html"
                                                                     title="Gender-fluid Clothing Is Finally Having Its Fashion Moment" /> </div>
                                                                 <div class="grid-header-box">
@@ -353,7 +353,7 @@ const LatestStyle = () => {
                                                         <li class="grid-style">
                                                             <article id="post-290" class="item hentry">
                                                                 <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                    src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/38-585x390.jpeg"
+                                                                    src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/38-585x390.jpeg"
                                                                     href="inclusive-fashion-a-plus-size-opportunity-in-china-fashion-market/index.html"
                                                                     title="Inclusive Fashion: A Plus-Size Opportunity in China Fashion Market" />
                                                                 </div>
@@ -412,7 +412,7 @@ const LatestStyle = () => {
                                                     <li class="list-post penci-item-listp">
                                                         <article id="post-422" class="item hentry">
                                                             <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/5-1-585x390.jpeg"
+                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/5-1-585x390.jpeg"
                                                                 href="how-to-get-your-partner-on-board-with-a-healthy-lifestyle-change-with-you/index.html"
                                                                 title="How To Get Your Partner On Board With A Healthy Lifestyle Change With You">
                                                             </img> </div>
@@ -442,7 +442,7 @@ const LatestStyle = () => {
                                                     <li class="list-post penci-item-listp">
                                                         <article id="post-391" class="item hentry">
                                                             <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/12-585x390.jpeg"
+                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/12-585x390.jpeg"
                                                                 href="here-are-10-easy-ways-to-live-a-longer-and-healthier-life-right-now/index.html"
                                                                 title="Here Are 10 Easy Ways To Live A Longer and Healthier Life Right Now" />
                                                             </div>
@@ -471,7 +471,7 @@ const LatestStyle = () => {
                                                     <li class="list-post penci-item-listp">
                                                         <article id="post-366" class="item hentry">
                                                             <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/19-585x390.jpeg"
+                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/19-585x390.jpeg"
                                                                 href="this-calculator-will-guess-how-many-healthy-years-of-life-you-have/index.html"
                                                                 title="This Calculator Will Guess How Many Healthy Years of Life You Have" />
                                                             </div>
@@ -500,7 +500,7 @@ const LatestStyle = () => {
                                                     <li class="list-post penci-item-listp">
                                                         <article id="post-338" class="item hentry">
                                                             <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/26-585x390.jpeg"
+                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/26-585x390.jpeg"
                                                                 href="is-noise-pollution-the-next-big-public-health-crisis/index.html"
                                                                 title="Is Noise Pollution the Next Big Public-Health Crisis In Next Decade?" />
                                                             </div>
@@ -529,7 +529,7 @@ const LatestStyle = () => {
                                                     <li class="list-post penci-item-listp">
                                                         <article id="post-310" class="item hentry">
                                                             <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/33-585x390.jpeg"
+                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/33-585x390.jpeg"
                                                                 href="health-matters-lifting-your-mood-improving-your-health/index.html"
                                                                 title="Health Matters: Lifting your Mood and Improving your Health Today" />
                                                             </div>
@@ -558,7 +558,7 @@ const LatestStyle = () => {
                                                     <li class="list-post penci-item-listp">
                                                         <article id="post-278" class="item hentry">
                                                             <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/41-585x390.jpeg"
+                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/41-585x390.jpeg"
                                                                 href="doctors-reveal-15-things-you-should-do-to-avoid-having-a-stroke/index.html"
                                                                 title="Doctors Reveal 15 Things You Should Do to Avoid Having a Stroke" />
                                                             </div>
@@ -646,7 +646,7 @@ const LatestStyle = () => {
                                                         class="number-post">1</span> </span>
                                                         <div class="side-item">
                                                             <div class="side-image"> <a
-                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/4-1-263x175.jpeg"
+                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/4-1-263x175.jpeg"
                                                                 class="penci-lazy penci-image-holder small-fix-size" rel="bookmark"
                                                                 href="killing-comments-wont-cure-our-toxic-internet-culture/index.html"
                                                                 title="Killing Comments Won&#8217;t Cure Our Toxic Internet Culture"> </a> </div>
@@ -667,7 +667,7 @@ const LatestStyle = () => {
                                                         class="number-post">2</span> </span>
                                                         <div class="side-item">
                                                             <div class="side-image"> <a
-                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/5-1-263x175.jpeg"
+                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/5-1-263x175.jpeg"
                                                                 class="penci-lazy penci-image-holder small-fix-size" rel="bookmark"
                                                                 href="how-to-get-your-partner-on-board-with-a-healthy-lifestyle-change-with-you/index.html"
                                                                 title="How To Get Your Partner On Board With A Healthy Lifestyle Change With You">
@@ -689,7 +689,7 @@ const LatestStyle = () => {
                                                         class="number-post">3</span> </span>
                                                         <div class="side-item">
                                                             <div class="side-image"> <a
-                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/6-1-263x175.jpeg"
+                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/6-1-263x175.jpeg"
                                                                 class="penci-lazy penci-image-holder small-fix-size" rel="bookmark"
                                                                 href="a-fairytale-brand-pretty-little-thing-joins-fashion-top-brands-worldwide/index.html"
                                                                 title="&#8216;A Fairytale Brand&#8217;: Pretty Little Thing Joins Fashion Top Brands Worldwide">
@@ -711,7 +711,7 @@ const LatestStyle = () => {
                                                         class="number-post">4</span> </span>
                                                         <div class="side-item">
                                                             <div class="side-image"> <a
-                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/2-1-263x175.jpeg"
+                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/2-1-263x175.jpeg"
                                                                 class="penci-lazy penci-image-holder small-fix-size" rel="bookmark"
                                                                 href="gemma-ward-used-to-wish-fast-fashion-was-less-prevalent-by-now/index.html"
                                                                 title="Gemma Ward Used To Wish Fast Fashion Was Less Prevalent By Now"> </a>
@@ -733,7 +733,7 @@ const LatestStyle = () => {
                                                         class="number-post">5</span> </span>
                                                         <div class="side-item">
                                                             <div class="side-image"> <a
-                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/11-263x175.jpeg"
+                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/11-263x175.jpeg"
                                                                 class="penci-lazy penci-image-holder small-fix-size" rel="bookmark"
                                                                 href="countryside-versus-town-please-dont-turn-this-into-a-culture-war/index.html"
                                                                 title="Countryside Versus Town? Don&#8217;t Turn This Into A War"> </a> </div>

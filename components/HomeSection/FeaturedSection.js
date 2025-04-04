@@ -25,12 +25,13 @@ const FeaturedSection = () => {
                                                             <div class="penci-bgitin">
                                                                 <div class="penci-bgmain">
                                                                     <div class="pcbg-thumb">
-                                                                        <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
-                                                                            href="how-to-spend-the-perfect-day-on-croatias-most-magical-island/index.html"
-                                                                            title="How to Spend the Perfect Day on Croatia’s Most Magical Island"></a>
+                                                                        <div class="pcbg-thumbin">
+                                                                            <a class="pcbg-bgoverlay"
+                                                                                href="how-to-spend-the-perfect-day-on-croatias-most-magical-island/index.html"
+                                                                                title="How to Spend the Perfect Day on Croatia’s Most Magical Island"></a>
                                                                             <img
-                                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/80-1170x780.jpg"
-                                                                                data_bg_hidpi="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/80-585x390.jpg"
+                                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/80-1170x780.jpg"
+                                                                                data_bg_hidpi="https://soledaddemo.Author.net/wp-content/uploads/2021/07/80-585x390.jpg"
                                                                                 class="penci-lazy penci-image-holder" />
                                                                         </div>
                                                                     </div>
@@ -76,8 +77,8 @@ const FeaturedSection = () => {
                                                                             href="10-best-workspace-gadgets-to-totally-upgrade-your-desk-right-now/index.html"
                                                                             title="10 Best Workspace Gadgets To Totally Upgrade Your Desk Right Now"></a>
                                                                             <img
-                                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/82-585x390.jpeg"
-                                                                                data_bg_hidpi="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/82-585x390.jpeg"
+                                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/82-585x390.jpeg"
+                                                                                data_bg_hidpi="https://soledaddemo.Author.net/wp-content/uploads/2021/07/82-585x390.jpeg"
                                                                                 class="penci-lazy penci-image-holder" />
                                                                         </div>
                                                                     </div>
@@ -109,8 +110,8 @@ const FeaturedSection = () => {
                                                                             href="5-ways-to-visit-antarctica-from-photography-journeys-to-luxury-ships/index.html"
                                                                             title="5 Ways to Visit Antarctica, From Photography Journeys to Luxury Ships"></a>
                                                                             <img
-                                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/83-585x390.jpeg"
-                                                                                data_bg_hidpi="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/83-585x390.jpeg"
+                                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/83-585x390.jpeg"
+                                                                                data_bg_hidpi="https://soledaddemo.Author.net/wp-content/uploads/2021/07/83-585x390.jpeg"
                                                                                 class="penci-lazy penci-image-holder" />
                                                                         </div>
                                                                     </div>
@@ -142,8 +143,8 @@ const FeaturedSection = () => {
                                                                             href="as-office-tenants-expect-more-tech-even-the-windows-get-smart/index.html"
                                                                             title="As Office Tenants Expect More Tech, Even the Windows Get Smart Today"></a>
                                                                             <img
-                                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/77-2-585x390.jpeg"
-                                                                                data_bg_hidpi="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/77-2-585x390.jpeg"
+                                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/77-2-585x390.jpeg"
+                                                                                data_bg_hidpi="https://soledaddemo.Author.net/wp-content/uploads/2021/07/77-2-585x390.jpeg"
                                                                                 class="penci-lazy penci-image-holder" />
                                                                         </div>
                                                                     </div>
@@ -175,8 +176,8 @@ const FeaturedSection = () => {
                                                                             href="a-guide-for-you-to-understand-the-principles-of-minimal-living-style/index.html"
                                                                             title="A Guide For You To Understand The Principles Of Minimal Living Style"></a>
                                                                             <img
-                                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/76-585x390.jpeg"
-                                                                                data_bg_hidpi="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/76-585x390.jpeg"
+                                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/76-585x390.jpeg"
+                                                                                data_bg_hidpi="https://soledaddemo.Author.net/wp-content/uploads/2021/07/76-585x390.jpeg"
                                                                                 class="penci-lazy penci-image-holder" />
                                                                         </div>
                                                                     </div>

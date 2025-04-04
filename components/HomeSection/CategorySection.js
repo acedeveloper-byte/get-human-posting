@@ -27,7 +27,7 @@ const CategorySection = () => {
                                                                     <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
                                                                         href="category/fashion/index.html" title="Fashion"></a>
                                                                         <img
-                                                                            src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/08/fashion-300x300.jpg"
+                                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/08/fashion-300x300.jpg"
                                                                             class="penci-lazy penci-image-holder" />
                                                                     </div>
                                                                 </div>
@@ -56,7 +56,7 @@ const CategorySection = () => {
                                                                     <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
                                                                         href="category/food/index.html" title="Food"></a>
                                                                         <img
-                                                                            src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/08/food-300x300.jpg"
+                                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/08/food-300x300.jpg"
                                                                             class="penci-lazy penci-image-holder" />
                                                                     </div>
                                                                 </div>
@@ -84,7 +84,7 @@ const CategorySection = () => {
                                                                     <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
                                                                         href="category/technology/index.html" title="Technology"></a>
                                                                         <img
-                                                                            src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/08/tech-300x300.jpg"
+                                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/08/tech-300x300.jpg"
                                                                             class="penci-lazy penci-image-holder" />
                                                                     </div>
                                                                 </div>
@@ -113,7 +113,7 @@ const CategorySection = () => {
                                                                     <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
                                                                         href="category/life-style/style/index.html" title="Style"></a>
                                                                         <img
-                                                                            src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/08/style-300x300.jpg"
+                                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/08/style-300x300.jpg"
                                                                             class="penci-lazy penci-image-holder" />
                                                                     </div>
                                                                 </div>
@@ -142,7 +142,7 @@ const CategorySection = () => {
                                                                     <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
                                                                         href="category/life-style/healthy-living/index.html" title="Living"></a>
                                                                         <img
-                                                                            src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/08/living-300x300.jpg"
+                                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/08/living-300x300.jpg"
                                                                             class="penci-lazy penci-image-holder" />
                                                                     </div>
                                                                 </div>
@@ -171,7 +171,7 @@ const CategorySection = () => {
                                                                     <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
                                                                         href="category/life-style/healthy-living/index.html" title="Culture"></a>
                                                                         <img
-                                                                            src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/08/culture-300x300.jpg"
+                                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/08/culture-300x300.jpg"
                                                                             class="penci-lazy penci-image-holder" />
                                                                     </div>
                                                                 </div>

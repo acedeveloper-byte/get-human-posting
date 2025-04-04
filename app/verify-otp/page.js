@@ -5,11 +5,16 @@ import React from 'react'
 
 const page = () => {
     return (
-        <>
+        <div className="">
             <Header />
-            <OTP />
-            <Footer />
-        </>
+            <section className="mt-5">
+                <OTP />
+            </section>
+            <section className='mt-5'>
+
+                <Footer />
+            </section>
+        </div>
     )
 }
 

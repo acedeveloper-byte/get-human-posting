@@ -1,20 +1,27 @@
 'use client'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 
 
 const Header = () => {
     const router = useRouter()
+    const pathname = usePathname()
     const [user, setUser] = useState({})
     useEffect(() => {
         if (localStorage.getItem("auth_data")) {
             setUser(JSON.parse(localStorage.getItem("auth_data")))
         }
 
-    }, [user])
+    }, [])
 
     const parsedata = user
 
+    const handleLogout = () => {
+        localStorage.clear()
+        router.push('/login')
+    }
+
+    console.log("pathname::", pathname)
     return (
         <>
             <header id="header" className="header-header-10 has-bottom-line" itemScope="itemscope"
@@ -32,7 +39,7 @@ const Header = () => {
                             <ul id="menu-menu" className="menu">
                                 <li id="menu-item-50"
                                     class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-has-children menu-item-has-label ajax-mega-menu menu-item-50">
-                                    <a href="">Home</a>
+                                    <a href="">{pathname === "/login" ? "" : "HOME"}</a>
                                 </li>
                                 <li id="menu-item-52"
                                     className="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu penci-megapos-flexible penci-mega-menu pcmn-ajxd menu-item-has-children menu-item-52">
@@ -63,15 +70,15 @@ const Header = () => {
                                     className="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567"><a
                                         href="#">Tech</a></li>
                                 {parsedata.user_name ?
-
                                     <>
                                         <li id="menu-item-167"
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567"><a
-                                                href="#">Write With Us</a></li>                                 <li id="menu-item-167"
+                                                href="/submit-article">SUBMIT ARTICLE</a></li>                                 <li id="menu-item-167"
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567"><a
-                                                        href="#" onClick={() => { localStorage.clear(), router.push('/login') }}>Logout</a></li> </> : <li id="menu-item-167"
+                                                        href="#" onClick={() => handleLogout()}>Logout</a></li> </> : <li id="menu-item-167"
                                                             class="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567"><a
-                                                                href="/login">LOGIN</a></li>}
+                                                                href="/login">{pathname === "/login" ? "" : "LOGIN"}</a></li>
+                                }
 
                             </ul>
                         </div>
@@ -80,7 +87,7 @@ const Header = () => {
                             <div id="top-search" className="penci-top-search pcheader-icon top-search-classNamees"> <a href="#"
                                 className="search-click" aria-label="Search"> <i className="penciicon-magnifiying-glass"></i> </a>
                                 <div className="show-search pcbds-default">
-                                    <form role="search" method="get" className="pc-searchform" action="https://soledaddemo.pencidesign.net/">
+                                    <form role="search" method="get" className="pc-searchform" action="https://soledaddemo.Author.net/">
                                         <div className="pc-searchform-inner"> <input type="text" className="search-input"
                                             placeholder="Type and hit enter..." name="s" /> <i className="penciicon-magnifiying-glass"></i>
                                             <button type="submit" className="searchsubmit">Search</button> </div>

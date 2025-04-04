@@ -28,7 +28,7 @@ const StylingSection = () => {
                                                     <div class="cat-left">
                                                         <div class="mag-post-box hentry first-post">
                                                             <div class="magcat-thumb"> <img class="penci-image-holder penci-lazyimg"
-                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/6-1-585x390.jpeg"
+                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/6-1-585x390.jpeg"
                                                                 href="a-fairytale-brand-pretty-little-thing-joins-fashion-top-brands-worldwide/index.html"
                                                                 title="&#8216;A Fairytale Brand&#8217;: Pretty Little Thing Joins Fashion Top Brands Worldwide" /> </div>
                                                             <div class="magcat-detail">
@@ -57,7 +57,7 @@ const StylingSection = () => {
                                                     <div class="cat-right">
                                                         <div class="mag-post-box hentry">
                                                             <div class="magcat-thumb"> <img class="penci-image-holder penci-lazy small-fix-sizeimg"
-                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/13-585x390.jpeg"
+                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/13-585x390.jpeg"
                                                                 href="the-best-street-style-from-tbilisi-fashion-week-fall-2019-high-end/index.html"
                                                                 title="The Best Street Style From Tbilisi Fashion Week Fall 2019 High End" />
                                                             </div>
@@ -75,7 +75,7 @@ const StylingSection = () => {
                                                         </div>
                                                         <div class="mag-post-box hentry">
                                                             <div class="magcat-thumb"> <img class="penci-image-holder penci-lazy small-fix-sizeimg"
-                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/20-585x390.jpeg"
+                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/20-585x390.jpeg"
                                                                 href="meghan-markles-royal-style-a-detailed-guide-to-the-duchess/index.html"
                                                                 title="Meghan Markle&#8217;s Royal Style: A Detailed Guide to the Duchess" />
                                                             </div>
@@ -93,7 +93,7 @@ const StylingSection = () => {
                                                         </div>
                                                         <div class="mag-post-box hentry">
                                                             <div class="magcat-thumb"> <img class="penci-image-holder penci-lazy small-fix-sizeimg"
-                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/27-585x390.jpeg"
+                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/27-585x390.jpeg"
                                                                 href="looking-for-fresh-style-inspiration-go-to-seoul-this-summer/index.html"
                                                                 title="Looking For Fresh Style Inspiration? Go to Seoul This Summer" /> </div>
                                                             <div class="magcat-detail">
@@ -112,7 +112,7 @@ const StylingSection = () => {
                                                             <div className="magcat-thumb">
                                                                 <Link href="/how-to-have-clean-home-without-disturb-your-lovely-dogs">
                                                                     <img
-                                                                        src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/34-585x390.jpeg"
+                                                                        src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/34-585x390.jpeg"
                                                                         alt="How To Have Clean Home Without Disturb Your Lovely Dogs"
                                                                         className="small-fix-size"
                                                                     />
@@ -167,7 +167,7 @@ const StylingSection = () => {
                                                 <li class="penci-feed featured-news featured-news2 all-featured-news">
                                                     <div class="side-item">
                                                         <div class="side-image"> <img
-                                                            src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/11-585x390.jpeg"
+                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/11-585x390.jpeg"
                                                             class="penci-lazy penci-image-holder" rel="bookmark"
                                                             href="countryside-versus-town-please-dont-turn-this-into-a-culture-war/index.html"
                                                             title="Countryside Versus Town? Don&#8217;t Turn This Into A War" /> </div>
@@ -188,7 +188,7 @@ const StylingSection = () => {
                                                 <li class="penci-feed featured-news featured-news2 all-featured-news">
                                                     <div class="side-item">
                                                         <div class="side-image"> <img
-                                                            src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/4-1-585x390.jpeg"
+                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/4-1-585x390.jpeg"
                                                             class="penci-lazy penci-image-holder" rel="bookmark"
                                                             href="killing-comments-wont-cure-our-toxic-internet-culture/index.html"
                                                             title="Killing Comments Won&#8217;t Cure Our Toxic Internet Culture" /> </div>

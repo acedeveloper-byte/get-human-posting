@@ -4,7 +4,7 @@ const TechSection = () => {
     return (
         <>
 
-    
+
             <section
                 class="penci-section penci-dmcheck penci-elbg-activate penci-disSticky penci-structure-10 elementor-section elementor-top-section elementor-element elementor-element-032edc7 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                 data-id="032edc7" data-element_type="section"
@@ -36,8 +36,8 @@ const TechSection = () => {
                                                                             href="could-high-flying-drones-power-your-home-one-day/index.html"
                                                                             title="Could High-flying Drones Power Your Home One Day In Future?"></a>
                                                                             <img
-                                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/7-1-1170x780.jpeg"
-                                                                                data_bg_hidpi="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/7-1-585x390.jpeg"
+                                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/7-1-1170x780.jpeg"
+                                                                                data_bg_hidpi="https://soledaddemo.Author.net/wp-content/uploads/2021/07/7-1-585x390.jpeg"
                                                                                 class="penci-lazy penci-image-holder" />
                                                                         </div>
                                                                     </div>
@@ -77,8 +77,8 @@ const TechSection = () => {
                                                                             href="why-canon-and-nikon-need-to-make-a-full-frame-camera/index.html"
                                                                             title="Why Canon and Nikon Need to Make a Full Frame Camera"></a>
                                                                             <img
-                                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/14-585x390.jpeg"
-                                                                                data_bg_hidpi="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/14-585x390.jpeg"
+                                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/14-585x390.jpeg"
+                                                                                data_bg_hidpi="https://soledaddemo.Author.net/wp-content/uploads/2021/07/14-585x390.jpeg"
                                                                                 class="penci-lazy penci-image-holder" />
                                                                         </div>
                                                                     </div>
@@ -118,8 +118,8 @@ const TechSection = () => {
                                                                             href="sony-playstation-5-wont-launch-in-the-next-12-months/index.html"
                                                                             title="Sony: PlayStation 5 Won&#8217;t Launch In The Next 12 Months"></a>
                                                                             <img
-                                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/21-585x390.jpeg"
-                                                                                data_bg_hidpi="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/21-585x390.jpeg"
+                                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/21-585x390.jpeg"
+                                                                                data_bg_hidpi="https://soledaddemo.Author.net/wp-content/uploads/2021/07/21-585x390.jpeg"
                                                                                 class="penci-lazy penci-image-holder" />
                                                                         </div>
                                                                     </div>
@@ -160,8 +160,8 @@ const TechSection = () => {
                                                                             href="discover-global-camera-lens-market-upcoming-trends-growth/index.html"
                                                                             title="Discover Global Camera Lens Market Upcoming Trends & Growth"></a>
                                                                             <img
-                                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/28-585x390.jpeg"
-                                                                                data_bg_hidpi="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/28-585x390.jpeg"
+                                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/28-585x390.jpeg"
+                                                                                data_bg_hidpi="https://soledaddemo.Author.net/wp-content/uploads/2021/07/28-585x390.jpeg"
                                                                                 class="penci-lazy penci-image-holder" />
                                                                         </div>
                                                                     </div>
@@ -201,8 +201,8 @@ const TechSection = () => {
                                                                             href="deal-woot-offers-two-google-home-minis-for-48-51-percent-off/index.html"
                                                                             title="Deal: Woot Offers Two Google Home Minis For $48 (51 Percent Off)"></a>
                                                                             <img
-                                                                                src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/35-585x731.jpeg"
-                                                                                data_bg_hidpi="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/35-585x731.jpeg"
+                                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/35-585x731.jpeg"
+                                                                                data_bg_hidpi="https://soledaddemo.Author.net/wp-content/uploads/2021/07/35-585x731.jpeg"
                                                                                 class="penci-lazy penci-image-holder" />
                                                                         </div>
                                                                     </div>
