@@ -7,6 +7,7 @@ import { Editor } from '@tinymce/tinymce-react';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useRouter } from "next/navigation";
+import { Guest_Posting_APi } from "@/utils/apicall/create_post";
 
 const page = () => {
   const [user_data, setUser] = useState(false);
@@ -35,7 +36,9 @@ const page = () => {
     },
     validationSchema,
     onSubmit: async (values) => {
-      console.log("Form submitted", values);
+      // { title, status, content, category, user_id }
+      const valuess = { title: values.title, status: true, content: values.content, category: values.category, user_id: user_data._id }
+      await Guest_Posting_APi(valuess, router)
     },
   });
 
@@ -137,11 +140,14 @@ const page = () => {
                 )}
               </Form.Group>
 
-              {user_data === true ?
+              <Button type="submit">Submit Form</Button>
+
+              {/* 
+              {user_data?.user_name ?
                 <Button type="submit">Submit Form</Button>
                 :
                 <Button type="button" onClick={() => router.push("/login")}>Please login to create a post</Button>
-              }
+              } */}
             </Form>
           </Container>
         </Card.Body>
