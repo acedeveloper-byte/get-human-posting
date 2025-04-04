@@ -9,7 +9,6 @@ const FeaturedSection = () => {
         await AllPost(setData, "Featured")
     }, [])
 
-    console.log(data)
     return (
         <>
             <section
