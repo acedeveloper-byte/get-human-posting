@@ -51,7 +51,7 @@ const Header = () => {
                                 </li>
                             </ul>
                             <div id="logo" >
-                                <a href="">
+                                <a href="/">
                                     <img className="penci-mainlogo penci-limg penci-logo"
                                         src={"/assets/images/logo/logo.png"}
                                     />
