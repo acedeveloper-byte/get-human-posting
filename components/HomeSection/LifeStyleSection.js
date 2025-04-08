@@ -27,7 +27,7 @@ const LifeStyleSection = () => {
                                         <section class="home-featured-cat mag-cat-style-6">
                                             <div
                                                 class="penci-border-arrow penci-homepage-title penci-magazine-title style-13 pcalign-left pciconp-right pcicon-right">
-                                                <h3 class="inner-arrow"> <span> <a href="category/life-style/style/index.html">Latest in
+                                                <h3 class="inner-arrow"> <span> <a href="#">Latest in
                                                     Style</a> </span> </h3>
                                             </div>
                                             <div class="home-featured-cat-wrapper">
@@ -38,12 +38,12 @@ const LifeStyleSection = () => {
                                                                 <div class="mag-post-box hentry first-post">
                                                                     <div class="magcat-thumb"> <img class="penci-image-holder penci-lazyimg"
                                                                         src={`${HOST}resources/post/${itex.image}`}
-                                                                        href={`/${itex.title}`}
+                                                                        href={`/${itex.url}`}
                                                                         title={`${itex.title}`} /> </div>
                                                                     <div class="magcat-detail">
                                                                         <div class="mag-header">
                                                                             <h3 class="magcat-titlte entry-title"><a
-                                                                                href={`/${itex.title}`}>{itex.title}</a> </h3>
+                                                                                href={`/${itex.url}`}>{itex.title}</a> </h3>
                                                                             <div class="grid-post-box-meta mag-meta"> <span
                                                                                 class="featc-author author-italic author">by <a class="url fn n"
                                                                                     href="author/admin/index.html">Penci Design</a></span> <span

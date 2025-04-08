@@ -1,4 +1,5 @@
 import { AllPostBytitle } from '@/utils/apicall/post_by_title'
+import { HOST } from '@/utils/static'
 import moment from 'moment'
 import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
@@ -7,7 +8,6 @@ import { Col, Container, Row } from 'react-bootstrap'
 const Postdetails = () => {
 
     const params = useParams()
-    const { title } = params
     const [data, setData] = useState([])
     const [user_data, setUser] = useState(false);
 
@@ -30,7 +30,7 @@ const Postdetails = () => {
             <Row>
                 <Col md={8}>
                     <div style={{
-                        backgroundImage: `url(https://api.acedigitalsolution.com/resources/post/file-1744094791225.jpg)`,
+                        backgroundImage: `url(${HOST}resources/post/${data.image})`,
                         backgroundSize: "cover", height: "300px",
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center",

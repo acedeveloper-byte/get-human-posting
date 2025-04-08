@@ -44,7 +44,7 @@ const TechSection = () => {
                                                                         <div class="penci-bgmain">
                                                                             <div class="pcbg-thumb">
                                                                                 <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
-                                                                                    href={`/${itx.title}`}
+                                                                                    href={`/${itx.url}`}
                                                                                     title={`${itx.title}`}></a>
                                                                                     <img
                                                                                         src={`${HOST}resources/post/${itx.image}`}
@@ -53,9 +53,9 @@ const TechSection = () => {
                                                                             </div>
                                                                             <div class="pcbg-content">
                                                                                 <div class="pcbg-content-flex"> <a class="pcbg-bgoverlay"
-                                                                                    href={`/${itx.title}`} title={`${itx.title}`}></a>
+                                                                                    href={`/${itx.url}`} title={`${itx.title}`}></a>
                                                                                     <div class="pcbg-content-inner bgcontent-block"> <a
-                                                                                        href={`/${itx.title}`} title={`${itx.title}`}
+                                                                                        href={`/${itx.url}`} title={`${itx.title}`}
                                                                                         class="pcbg-bgoverlaytext active-overlay item-hover"></a>
                                                                                         <div class="pcbg-heading item-hover">
                                                                                             <h3 class="pcbg-title"> <a
@@ -264,5 +264,5 @@ const TechSection = () => {
 export default TechSection
 
 
-// href={`/${itx.title}`}
+// href={`/${itx.url}`}
 // title={`${itx.title}`}
