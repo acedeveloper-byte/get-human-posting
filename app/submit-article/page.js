@@ -149,13 +149,13 @@ const page = () => {
                 )}
               </Form.Group>
 
-              <Button type="submit" >Submit Form</Button>
-              {/* 
-              {user_data?.user_name ?
+              {/* <Button type="submit">Submit Form</Button> */}
+
+              {user_data.user_name ?
                 <Button type="submit">Submit Form</Button>
                 :
                 <Button type="button" onClick={() => router.push("/login")}>Please login to create a post</Button>
-              } */}
+              }
             </Form>
           </Container>
         </Card.Body>
