@@ -41,7 +41,7 @@ const page = () => {
                         <article id="post-434" class="item hentry">
                           <div class="thumbnail">
                             <a
-                              href="../../gemma-ward-used-to-wish-fast-fashion-was-less-prevalent-by-now/"
+                              href={`${HOST}resources/post/${item.image}`}
                               title={item.title} className='text-decoration-none'>
                               <img
                                 src={`${HOST}resources/post/${item.image}`}
@@ -53,7 +53,7 @@ const page = () => {
                           <div class="grid-header-box">
                             <span class="cat">
                               <a class="penci-cat-name penci-cat-3" href="#" rel="category tag">
-                                <span>Fashion</span>
+                                <span>  {item.category}</span>
                               </a>
                             </span>
 
@@ -78,7 +78,7 @@ const page = () => {
                           </div>
 
                           <div class="penci-readmore-btn penci-btn-make-button penci-btn-align-center">
-                            <a class="penci-btn-readmore" href="../../gemma-ward-used-to-wish-fast-fashion-was-less-prevalent-by-now/">
+                            <a class="penci-btn-readmore"  href={`/${item.url}`}>
                               Read The Article <i class="penci-faicon fa fa-angle-double-right"></i>
                             </a>
                           </div>

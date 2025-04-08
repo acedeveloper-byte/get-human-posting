@@ -35,17 +35,19 @@ const Header = () => {
                         </div>
                         <div className="penci-menu-wrap">
                             <ul id="menu-menu" className="menu">
+
                                 <li id="menu-item-50"
                                     class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-has-children menu-item-has-label ajax-mega-menu menu-item-50">
-                                    <a href="">{pathname === "/login" ? "" : "HOME"}</a>
+                                    <a href="/">{pathname === "/login" ? "" : "HOME"}</a>
                                 </li>
+
                                 <li id="menu-item-52"
                                     className="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu penci-megapos-flexible penci-mega-menu pcmn-ajxd menu-item-has-children menu-item-52">
-                                    <a href="#">Life Style</a>
+                                    <a href="/">Life Style</a>
                                 </li>
                                 <li id="menu-item-53"
                                     className="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu penci-megapos-flexible penci-mega-menu pcmn-ajxd menu-item-53">
-                                    <a href="#">Fashion</a>
+                                    <a href="/">Fashion</a>
                                 </li>
                             </ul>
                             <div id="logo" >
@@ -71,12 +73,20 @@ const Header = () => {
                                     <>
                                         <li id="menu-item-167"
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567"><a
-                                                href="/submit-article">SUBMIT ARTICLE</a></li>                                 <li id="menu-item-167"
+                                                href="/submit-article">SUBMIT ARTICLE</a></li>
+
+                                        <li id="menu-item-167"
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567"><a
+                                                href="/your-posts">My Profile </a></li>
+
+
+                                        <li id="menu-item-167"
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567"><a
+                                                href="#" onClick={() => handleLogout()}>Logout</a></li> </> : <li id="menu-item-167"
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567"><a
-                                                        href="#" onClick={() => handleLogout()}>Logout</a></li> </> : <li id="menu-item-167"
-                                                            class="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567"><a
-                                                                href="/login">{pathname === "/login" ? "" : "LOGIN"}</a></li>
+                                                        href="/login">{pathname === "/login" ? "" : "LOGIN"}</a></li>
                                 }
+
 
                             </ul>
                         </div>

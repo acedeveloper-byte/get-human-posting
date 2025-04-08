@@ -53,7 +53,7 @@ const page = () => {
           <Container fluid>
             <Form noValidate onSubmit={formik.handleSubmit}>
               <Row className="mb-3">
-                <Form.Group as={Col} md="4" controlId="title">
+                <Form.Group as={Col} md="8" controlId="title">
                   <Form.Label>Title</Form.Label>
                   <Form.Control
                     type="text"
@@ -66,7 +66,7 @@ const page = () => {
                   </Form.Control.Feedback>
                 </Form.Group>
 
-                <Form.Group as={Col} md="4" controlId="category">
+                <Form.Group as={Col} md="8" controlId="category">
                   <Form.Label>Category</Form.Label>
                   <Form.Select {...formik.getFieldProps("category")}>
                     {[
@@ -110,7 +110,7 @@ const page = () => {
                     )}
                   </Form.Select>
                 </Form.Group>
-                <Form.Group className="mb-3" as={Col} md="4" controlId="file">
+                <Form.Group className="mb-3" as={Col} md="8" controlId="file">
                   <Form.Label>Upload File</Form.Label>
                   <Form.Control
                     type="file"
@@ -121,7 +121,7 @@ const page = () => {
 
 
 
-              <Form.Group className="mb-3">
+              <Form.Group className="mb-3" as={Col} md="8">
                 <Form.Label>Content</Form.Label>
                 <Editor
                   apiKey='js3uunm9tdph718l08kpjj9r8xwtv0wpuezj2nzvnjnuvpsa'
@@ -129,6 +129,7 @@ const page = () => {
                   value={formik.values.content}
                   onEditorChange={(content) => formik.setFieldValue("content", content)}
                   init={{
+
                     height: 500,
                     menubar: false,
                     plugins: [
@@ -148,8 +149,7 @@ const page = () => {
                 )}
               </Form.Group>
 
-              <Button type="submit">Submit Form</Button>
-
+              <Button type="submit" >Submit Form</Button>
               {/* 
               {user_data?.user_name ?
                 <Button type="submit">Submit Form</Button>

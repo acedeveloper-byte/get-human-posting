@@ -12,8 +12,8 @@ import { useEffect, useState } from "react";
 export default function Home() {
 
   const [data, setData] = useState([])
-  useEffect(async () => {
-    await AllPost(setData)
+  useEffect( () => {
+     AllPost(setData)
   }, [])
 
   return (
