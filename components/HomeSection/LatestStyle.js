@@ -1,6 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { AllPost } from '@/utils/apicall/fetchAllPost'
+import { HOST } from '@/utils/static'
+import { truncateHTML } from '@/utils/functions/truncate'
+
 
 const LatestStyle = () => {
+
+    const [data, setData] = useState([])
+    const  [ dataHealthy , setDataHealthy] = useState([])
+    const  [ dataFashion , setDataFashion] = useState([])
+    useEffect(() => {
+        AllPost(setData, "Latest")
+        AllPost(setDataHealthy, "Healthy")
+        AllPost(setDataFashion, "Fashion")
+    }, [])
+
+
+    
     return (
         <>
             <section
@@ -49,129 +65,38 @@ const LatestStyle = () => {
                                             </div>
                                             <div class="home-featured-cat-wrapper">
                                                 <div class="home-featured-cat-content pwf-id-default style-10">
-                                                    <div class="mag-post-box hentry first-post">
-                                                        <div class="magcat-thumb"> <img class="penci-image-holder penci-lazy"
-                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/8-1-585x390.jpeg"
-                                                            href="the-ultimate-napa-valley-tour-eat-and-drink-with-tls-editor/index.html"
-                                                            title="The Ultimate Napa Valley Tour: Eat and Drink With T+L&#8217;s Editor" />
-                                                        </div>
-                                                        <div class="magcat-detail">
-                                                            <div class="mag-header">
-                                                                <h3 class="magcat-titlte entry-title"><a
-                                                                    href="the-ultimate-napa-valley-tour-eat-and-drink-with-tls-editor/index.html">The
-                                                                    Ultimate Napa Valley Tour: Eat and Drink With T+L&#8217;s Editor</a> </h3>
-                                                                <div class="grid-post-box-meta mag-meta"> <span
-                                                                    class="featc-author author-italic author vcard">by <a
+
+                                                    {data.map((itex, index) => {
+
+                                                        return (
+                                                            <div class={index + 1 > 2 ? "mag-post-box hentry" : "mag-post-box hentry first-post"}>
+                                                                <div class="magcat-thumb">
+                                                                    <img class="penci-image-holder penci-lazy"
+                                                                        src={`${HOST}resources/post/${itex.image}`}
+                                                                        href={`/${itex.title}`}
+                                                                        title={`${itex.title}`} />
+                                                                </div>
+                                                                <div class="magcat-detail">
+                                                                    <div class="mag-header">
+                                                                        <h3 class="magcat-titlte entry-title"><a
+                                                                            href={`/${itex.title}`}> {itex.title}</a> </h3>
+                                                                        <div class="grid-post-box-meta mag-meta"> <span
+                                                                            class="featc-author author-italic author vcard">by <a
+                                                                                class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
+                                                                        </span> <span class="featc-date"><time class="entry-date published"
+                                                                            datetime="2021-07-30T08:20:08+00:00">July 30, 2021</time></span> </div>
+                                                                    </div>
+                                                                    <div class="mag-excerpt entry-content">
+                                                                    <p dangerouslySetInnerHTML={{ __html: truncateHTML(itex.content, 100) }} />
+                                                                    </div>
+                                                                    <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
                                                                         class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
-                                                                </span> <span class="featc-date"><time class="entry-date published"
-                                                                    datetime="2021-07-30T08:20:08+00:00">July 30, 2021</time></span> </div>
+                                                                    </span> </div>
+                                                                </div>
                                                             </div>
-                                                            <div class="mag-excerpt entry-content">
-                                                                <p>Luxury travel is back. The pandemic-weary population is emerging from lockdowns
-                                                                    with the goal of relaxing and reviving senses dulled by one zoom meeting too
-                                                                    &#8230;</p>
-                                                            </div>
-                                                            <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
-                                                            </span> </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mag-post-box hentry first-post">
-                                                        <div class="magcat-thumb"> <img class="penci-image-holder penci-lazy"
-                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/15-585x390.jpeg"
-                                                            href="how-biometrics-may-be-key-in-reducing-the-hassles-of-travel/index.html"
-                                                            title="How Biometrics May Be Key In Reducing The Hassles Of Travel" /> </div>
-                                                        <div class="magcat-detail">
-                                                            <div class="mag-header">
-                                                                <h3 class="magcat-titlte entry-title"><a
-                                                                    href="how-biometrics-may-be-key-in-reducing-the-hassles-of-travel/index.html">How
-                                                                    Biometrics May Be Key In Reducing The Hassles Of Travel</a> </h3>
-                                                                <div class="grid-post-box-meta mag-meta"> <span
-                                                                    class="featc-author author-italic author vcard">by <a
-                                                                        class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
-                                                                </span> <span class="featc-date"><time class="entry-date published"
-                                                                    datetime="2021-07-30T08:04:48+00:00">July 30, 2021</time></span> </div>
-                                                            </div>
-                                                            <div class="mag-excerpt entry-content">
-                                                                <p>Luxury travel is back. The pandemic-weary population is emerging from lockdowns
-                                                                    with the goal of relaxing and reviving senses dulled by one zoom meeting too
-                                                                    &#8230;</p>
-                                                            </div>
-                                                            <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
-                                                            </span> </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mag-post-box hentry">
-                                                        <div class="magcat-thumb"> <img class="penci-image-holder penci-lazy small-fix-size"
-                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/22-585x390.jpeg"
-                                                            href="how-you-can-take-part-in-national-travel-and-tourism-week/index.html"
-                                                            title="How You Can Take Part in National Travel and Tourism Week" /> </div>
-                                                        <div class="magcat-detail">
-                                                            <h3 class="magcat-titlte entry-title"><a
-                                                                href="how-you-can-take-part-in-national-travel-and-tourism-week/index.html">How
-                                                                You Can Take Part in National Travel and Tourism Week</a> </h3>
-                                                            <div class="grid-post-box-meta mag-meta"> <span class="featc-date"><time
-                                                                class="entry-date published" datetime="2021-07-30T07:49:38+00:00">July 30,
-                                                                2021</time></span> </div>
-                                                            <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
-                                                            </span> </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mag-post-box hentry">
-                                                        <div class="magcat-thumb"> <img class="penci-image-holder penci-lazy small-fix-size"
-                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/29-585x390.jpeg"
-                                                            href="this-travel-website-offers-a-suite-alternative-to-airbnb-around/index.html"
-                                                            title="This Travel Website Offers a &#8216;Suite&#8217; Alternative to Airbnb Around">
-                                                        </img> </div>
-                                                        <div class="magcat-detail">
-                                                            <h3 class="magcat-titlte entry-title"><a
-                                                                href="this-travel-website-offers-a-suite-alternative-to-airbnb-around/index.html">This
-                                                                Travel Website Offers a &#8216;Suite&#8217; Alternative to Airbnb Around</a> </h3>
-                                                            <div class="grid-post-box-meta mag-meta"> <span class="featc-date"><time
-                                                                class="entry-date published" datetime="2021-07-30T04:36:52+00:00">July 30,
-                                                                2021</time></span> </div>
-                                                            <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
-                                                            </span> </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mag-post-box hentry">
-                                                        <div class="magcat-thumb"> <img class="penci-image-holder penci-lazy small-fix-size"
-                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/36-585x390.jpeg"
-                                                            href="the-reason-why-solo-travel-can-be-good-for-your-soul-and-pocket/index.html"
-                                                            title="The Reason Why Solo Travel Can Be Good for Your Soul and Pocket" /> </div>
-                                                        <div class="magcat-detail">
-                                                            <h3 class="magcat-titlte entry-title"><a
-                                                                href="the-reason-why-solo-travel-can-be-good-for-your-soul-and-pocket/index.html">The
-                                                                Reason Why Solo Travel Can Be Good for Your Soul and Pocket</a> </h3>
-                                                            <div class="grid-post-box-meta mag-meta"> <span class="featc-date"><time
-                                                                class="entry-date published" datetime="2021-07-30T04:21:39+00:00">July 30,
-                                                                2021</time></span> </div>
-                                                            <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
-                                                            </span> </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mag-post-box hentry">
-                                                        <div class="magcat-thumb"> <img class="penci-image-holder penci-lazy small-fix-size"
-                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/43-585x390.jpeg"
-                                                            href="black-travel-vibes-brazil-is-the-bucket-list-trip-you-need-to-take/index.html"
-                                                            title="Black Travel Vibes: Brazil is the Bucket List Trip You Need to Take" />
-                                                        </div>
-                                                        <div class="magcat-detail">
-                                                            <h3 class="magcat-titlte entry-title"><a
-                                                                href="black-travel-vibes-brazil-is-the-bucket-list-trip-you-need-to-take/index.html">Black
-                                                                Travel Vibes: Brazil is the Bucket List Trip You Need to Take</a> </h3>
-                                                            <div class="grid-post-box-meta mag-meta"> <span class="featc-date"><time
-                                                                class="entry-date published" datetime="2021-07-30T04:05:24+00:00">July 30,
-                                                                2021</time></span> </div>
-                                                            <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
-                                                            </span> </div>
-                                                        </div>
-                                                    </div>
+                                                        )
+                                                    })}
+                                                  
                                                 </div>
                                                 <div class="penci-loader-effect penci-loading-animation-9">
                                                     <div class="penci-loading-circle">
@@ -201,7 +126,7 @@ const LatestStyle = () => {
                                     <div style={{ textAlign: "center" }}> <a style={{ display: "inline-block", maxWidth: "728px" }}
 
                                         href="https://1.envato.market/YYJ4P" target="_blank"><img loading="lazy" decoding="async"
-                                            src="wp-content/uploads/2021/08/banner-home.jpg" width="728" height="90" alt="banner" /></a>
+                                            src="/wp-content/uploads/2021/08/banner-home.jpg" width="728" height="90" alt="banner" /></a>
                                     </div>
                                 </div>
                             </div>
@@ -217,17 +142,7 @@ const LatestStyle = () => {
                                                     Fashion</a> </span> </h3>
                                                 <nav data-ppp="6" data-query_type="ajaxtab" data-blockid="pencifeatured_cat_86443"
                                                     data-more="" class="pcnav-lgroup">
-                                                    <ul class="pcflx">
-                                                        <li class="all visible"><a data-paged="1" data-maxp="2"
-                                                            class="pc-ajaxfil-link current-item" data-id="default" href="#"
-                                                            aria-label="Paged">All</a></li>
-                                                        <li><a href="#" aria-label="Category" data-id="f24703432d30d017c77eb42a5907d61e"
-                                                            class="pc-ajaxfil-link" data-paged="1" data-cat="7">Culture</a></li>
-                                                        <li><a href="#" aria-label="Category" data-id="eac8beb08d6840f9bed8e9970c72f10f"
-                                                            class="pc-ajaxfil-link" data-paged="1" data-cat="10">Technology</a></li>
-                                                        <li><a href="#" aria-label="Category" data-id="6fc3c1fc3c471e7569cb840c2b1d996b"
-                                                            class="pc-ajaxfil-link" data-paged="1" data-cat="11">Travel</a></li>
-                                                    </ul>
+                                            
                                                     <ul class="pcflx-nav">
                                                         <li class="pcaj-nav-item pcaj-prev"><a
                                                             class="disable pc-ajaxfil-link pcaj-nav-link prev" data-id="" href="#"
@@ -241,7 +156,34 @@ const LatestStyle = () => {
                                             <div class="home-featured-cat-wrapper">
                                                 <div class="home-featured-cat-content pwf-id-default style-13">
                                                     <ul class="penci-grid penci-grid-maglayout penci-fea-cat-style-13">
-                                                        <li class="grid-style">
+                                             {dataFashion.map(( itm , ix) => {
+                                                return (
+                                                    <li class="grid-style">
+                                                    <article id="post-434" class="item hentry">
+                                                        <div class="thumbnail"> 
+                                                            <img class="penci-image-holder penci-lazy"
+                                                                 src={`${HOST}resources/post/${itm.image}`}
+                                                                 href={`/${itm.title}`}         
+                                                                        title={itm.title} />
+                                                        </div>
+                                                        <div class="grid-header-box">
+                                                            <h2 class="grid-title entry-title"><a
+                                                                 href={`/${itm.title}`}>
+                                                                {itm.title} </a> </h2>
+                                                            <div class="grid-post-box-meta"> <span
+                                                                class="featc-author author-italic author vcard">by <a
+                                                                    class="author-url url fn n" href="/">Penci Design</a>
+                                                            </span> <span class="featc-date"><time class="entry-date published"
+                                                                datetime="2021-07-30T08:31:58+00:00">July 30, 2021</time></span> </div>
+                                                            <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
+                                                                class="author-url url fn n" href="/">Penci Design</a>
+                                                            </span> </div>
+                                                        </div>
+                                                    </article>
+                                                </li>
+                                                )
+                                             })}
+                                                        {/* <li class="grid-style">
                                                             <article id="post-434" class="item hentry">
                                                                 <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
                                                                     src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/2-1-585x390.jpeg"
@@ -371,7 +313,7 @@ const LatestStyle = () => {
                                                                     </span> </div>
                                                                 </div>
                                                             </article>
-                                                        </li>
+                                                        </li> */}
                                                     </ul>
                                                 </div>
                                                 <div class="penci-loader-effect penci-loading-animation-9">
@@ -393,7 +335,7 @@ const LatestStyle = () => {
                                             </div>
                                         </section>
                                     </div>
-                                    <style> </style>
+                            
                                 </div>
                             </div>
                             <div
@@ -409,181 +351,39 @@ const LatestStyle = () => {
                                         <div class="penci-wrapper-posts-ajax">
                                             <div class="penci-wrapper-posts-content pwid-default">
                                                 <ul data-layout="list" class="penci-wrapper-data penci-grid penci-shortcode-render">
-                                                    <li class="list-post penci-item-listp">
+                                                   {dataHealthy.map(( itx ,ix) =>  {
+                                                    return (
+                                                        <li class="list-post penci-item-listp">
                                                         <article id="post-422" class="item hentry">
                                                             <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/5-1-585x390.jpeg"
-                                                                href="how-to-get-your-partner-on-board-with-a-healthy-lifestyle-change-with-you/index.html"
-                                                                title="How To Get Your Partner On Board With A Healthy Lifestyle Change With You">
-                                                            </img> </div>
+                                                                 src={`${HOST}resources/post/${itx.image}`}
+                                                                href={`/${itx.title}`}
+                                                                // href="how-to-get-your-partner-on-board-with-a-healthy-lifestyle-change-with-you/index.html"
+                                                                title={itx.title} />
+                                                             </div>
                                                             <div class="content-list-right content-list-center">
                                                                 <div class="header-list-style">
                                                                     <h2 class="penci-entry-title entry-title grid-title"><a
-                                                                        href="how-to-get-your-partner-on-board-with-a-healthy-lifestyle-change-with-you/index.html">How
-                                                                        To Get Your Partner On Board With A Healthy Lifestyle Change With You</a>
+                                                                        href={`/${itx.title}`}>{itx.title}</a>
                                                                     </h2>
                                                                     <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                        class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
+                                                                        class="author-url url fn n" href="/">Penci Design</a>
                                                                     </span> </div>
                                                                     <div class="grid-post-box-meta"> <span
                                                                         class="otherl-date-author author-italic author vcard">by <a
-                                                                            class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
+                                                                            class="author-url url fn n" href="/">Penci Design</a>
                                                                     </span> <span class="otherl-date"><time class="entry-date published"
                                                                         datetime="2021-07-30T08:26:21+00:00">July 30, 2021</time></span> </div>
                                                                 </div>
-                                                                <div class="item-content entry-content">
-                                                                    <p>Luxury travel is back. The pandemic-weary population is emerging from lockdowns
-                                                                        with the goal of relaxing and reviving senses dulled by one zoom meeting too
-                                                                        many. Whether it is finally &#8230;</p>
-                                                                </div>
+                                                                <div className="item-content entry-content">
+  <p dangerouslySetInnerHTML={{ __html: truncateHTML(itx.content, 100) }} />
+</div>
                                                             </div>
                                                         </article>
                                                     </li>
-                                                    <li class="list-post penci-item-listp">
-                                                        <article id="post-391" class="item hentry">
-                                                            <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/12-585x390.jpeg"
-                                                                href="here-are-10-easy-ways-to-live-a-longer-and-healthier-life-right-now/index.html"
-                                                                title="Here Are 10 Easy Ways To Live A Longer and Healthier Life Right Now" />
-                                                            </div>
-                                                            <div class="content-list-right content-list-center">
-                                                                <div class="header-list-style">
-                                                                    <h2 class="penci-entry-title entry-title grid-title"><a
-                                                                        href="here-are-10-easy-ways-to-live-a-longer-and-healthier-life-right-now/index.html">Here
-                                                                        Are 10 Easy Ways To Live A Longer and Healthier Life Right Now</a> </h2>
-                                                                    <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                        class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
-                                                                    </span> </div>
-                                                                    <div class="grid-post-box-meta"> <span
-                                                                        class="otherl-date-author author-italic author vcard">by <a
-                                                                            class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
-                                                                    </span> <span class="otherl-date"><time class="entry-date published"
-                                                                        datetime="2021-07-30T08:08:44+00:00">July 30, 2021</time></span> </div>
-                                                                </div>
-                                                                <div class="item-content entry-content">
-                                                                    <p>Luxury travel is back. The pandemic-weary population is emerging from lockdowns
-                                                                        with the goal of relaxing and reviving senses dulled by one zoom meeting too
-                                                                        many. Whether it is finally &#8230;</p>
-                                                                </div>
-                                                            </div>
-                                                        </article>
-                                                    </li>
-                                                    <li class="list-post penci-item-listp">
-                                                        <article id="post-366" class="item hentry">
-                                                            <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/19-585x390.jpeg"
-                                                                href="this-calculator-will-guess-how-many-healthy-years-of-life-you-have/index.html"
-                                                                title="This Calculator Will Guess How Many Healthy Years of Life You Have" />
-                                                            </div>
-                                                            <div class="content-list-right content-list-center">
-                                                                <div class="header-list-style">
-                                                                    <h2 class="penci-entry-title entry-title grid-title"><a
-                                                                        href="this-calculator-will-guess-how-many-healthy-years-of-life-you-have/index.html">This
-                                                                        Calculator Will Guess How Many Healthy Years of Life You Have</a> </h2>
-                                                                    <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                        class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
-                                                                    </span> </div>
-                                                                    <div class="grid-post-box-meta"> <span
-                                                                        class="otherl-date-author author-italic author vcard">by <a
-                                                                            class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
-                                                                    </span> <span class="otherl-date"><time class="entry-date published"
-                                                                        datetime="2021-07-30T07:56:01+00:00">July 30, 2021</time></span> </div>
-                                                                </div>
-                                                                <div class="item-content entry-content">
-                                                                    <p>Luxury travel is back. The pandemic-weary population is emerging from lockdowns
-                                                                        with the goal of relaxing and reviving senses dulled by one zoom meeting too
-                                                                        many. Whether it is finally &#8230;</p>
-                                                                </div>
-                                                            </div>
-                                                        </article>
-                                                    </li>
-                                                    <li class="list-post penci-item-listp">
-                                                        <article id="post-338" class="item hentry">
-                                                            <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/26-585x390.jpeg"
-                                                                href="is-noise-pollution-the-next-big-public-health-crisis/index.html"
-                                                                title="Is Noise Pollution the Next Big Public-Health Crisis In Next Decade?" />
-                                                            </div>
-                                                            <div class="content-list-right content-list-center">
-                                                                <div class="header-list-style">
-                                                                    <h2 class="penci-entry-title entry-title grid-title"><a
-                                                                        href="is-noise-pollution-the-next-big-public-health-crisis/index.html">Is
-                                                                        Noise Pollution the Next Big Public-Health Crisis In Next Decade?</a> </h2>
-                                                                    <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                        class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
-                                                                    </span> </div>
-                                                                    <div class="grid-post-box-meta"> <span
-                                                                        class="otherl-date-author author-italic author vcard">by <a
-                                                                            class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
-                                                                    </span> <span class="otherl-date"><time class="entry-date published"
-                                                                        datetime="2021-07-30T07:38:13+00:00">July 30, 2021</time></span> </div>
-                                                                </div>
-                                                                <div class="item-content entry-content">
-                                                                    <p>Luxury travel is back. The pandemic-weary population is emerging from lockdowns
-                                                                        with the goal of relaxing and reviving senses dulled by one zoom meeting too
-                                                                        many. Whether it is finally &#8230;</p>
-                                                                </div>
-                                                            </div>
-                                                        </article>
-                                                    </li>
-                                                    <li class="list-post penci-item-listp">
-                                                        <article id="post-310" class="item hentry">
-                                                            <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/33-585x390.jpeg"
-                                                                href="health-matters-lifting-your-mood-improving-your-health/index.html"
-                                                                title="Health Matters: Lifting your Mood and Improving your Health Today" />
-                                                            </div>
-                                                            <div class="content-list-right content-list-center">
-                                                                <div class="header-list-style">
-                                                                    <h2 class="penci-entry-title entry-title grid-title"><a
-                                                                        href="health-matters-lifting-your-mood-improving-your-health/index.html">Health
-                                                                        Matters: Lifting your Mood and Improving your Health Today</a> </h2>
-                                                                    <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                        class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
-                                                                    </span> </div>
-                                                                    <div class="grid-post-box-meta"> <span
-                                                                        class="otherl-date-author author-italic author vcard">by <a
-                                                                            class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
-                                                                    </span> <span class="otherl-date"><time class="entry-date published"
-                                                                        datetime="2021-07-30T04:27:36+00:00">July 30, 2021</time></span> </div>
-                                                                </div>
-                                                                <div class="item-content entry-content">
-                                                                    <p>Luxury travel is back. The pandemic-weary population is emerging from lockdowns
-                                                                        with the goal of relaxing and reviving senses dulled by one zoom meeting too
-                                                                        many. Whether it is finally &#8230;</p>
-                                                                </div>
-                                                            </div>
-                                                        </article>
-                                                    </li>
-                                                    <li class="list-post penci-item-listp">
-                                                        <article id="post-278" class="item hentry">
-                                                            <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/41-585x390.jpeg"
-                                                                href="doctors-reveal-15-things-you-should-do-to-avoid-having-a-stroke/index.html"
-                                                                title="Doctors Reveal 15 Things You Should Do to Avoid Having a Stroke" />
-                                                            </div>
-                                                            <div class="content-list-right content-list-center">
-                                                                <div class="header-list-style">
-                                                                    <h2 class="penci-entry-title entry-title grid-title"><a
-                                                                        href="doctors-reveal-15-things-you-should-do-to-avoid-having-a-stroke/index.html">Doctors
-                                                                        Reveal 15 Things You Should Do to Avoid Having a Stroke</a> </h2>
-                                                                    <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                        class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
-                                                                    </span> </div>
-                                                                    <div class="grid-post-box-meta"> <span
-                                                                        class="otherl-date-author author-italic author vcard">by <a
-                                                                            class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
-                                                                    </span> <span class="otherl-date"><time class="entry-date published"
-                                                                        datetime="2021-07-30T04:10:37+00:00">July 30, 2021</time></span> </div>
-                                                                </div>
-                                                                <div class="item-content entry-content">
-                                                                    <p>Luxury travel is back. The pandemic-weary population is emerging from lockdowns
-                                                                        with the goal of relaxing and reviving senses dulled by one zoom meeting too
-                                                                        many. Whether it is finally &#8230;</p>
-                                                                </div>
-                                                            </div>
-                                                        </article>
-                                                    </li>
+                                                    )
+                                                   })}
+
                                                 </ul>
                                             </div>
                                         </div>

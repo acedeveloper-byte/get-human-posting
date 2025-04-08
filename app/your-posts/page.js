@@ -9,6 +9,7 @@ import { HOST } from '@/utils/static';
 const page = () => {
   const [data, setdata] = useState([])
   const [user, setuser] = useState({})
+  
   useEffect(() => {
     const user_data = localStorage.getItem("auth_data");
     var parseData = JSON.parse(user_data)
@@ -17,7 +18,6 @@ const page = () => {
   }, [])
 
 
-  console.log("data:", data)
   return (
     <>
       <div id="soledad_wrapper" class="wrapper-boxed header-style-header-10 penci-hlogo-center header-search-style-default">
