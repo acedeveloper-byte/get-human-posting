@@ -1,6 +1,14 @@
-import React from 'react'
+import { AllPost } from '@/utils/apicall/fetchAllPost'
+import { HOST } from '@/utils/static'
+import React, { useEffect, useState } from 'react'
 
 const TechSection = () => {
+
+    const [data, setData] = useState([])
+    useEffect(() => {
+        AllPost(setData, "Tech")
+    }, [])
+
     return (
         <>
 
@@ -28,48 +36,51 @@ const TechSection = () => {
                                             <div class="penci-biggrid-inner default">
                                                 <div class="penci-big-grid-ajax-data">
                                                     <div class="penci-clearfix penci-biggrid-data penci-dblock penci-fixh">
-                                                        <div class="penci-bgitem pcbg-big-item bgitem-1">
-                                                            <div class="penci-bgitin">
-                                                                <div class="penci-bgmain">
-                                                                    <div class="pcbg-thumb">
-                                                                        <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
-                                                                            href="could-high-flying-drones-power-your-home-one-day/index.html"
-                                                                            title="Could High-flying Drones Power Your Home One Day In Future?"></a>
-                                                                            <img
-                                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/7-1-1170x780.jpeg"
-                                                                                data_bg_hidpi="https://soledaddemo.Author.net/wp-content/uploads/2021/07/7-1-585x390.jpeg"
-                                                                                class="penci-lazy penci-image-holder" />
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="pcbg-content">
-                                                                        <div class="pcbg-content-flex"> <a class="pcbg-bgoverlay"
-                                                                            href="could-high-flying-drones-power-your-home-one-day/index.html"
-                                                                            title="Could High-flying Drones Power Your Home One Day In Future?"></a>
-                                                                            <div class="pcbg-content-inner bgcontent-block"> <a
-                                                                                href="could-high-flying-drones-power-your-home-one-day/index.html"
-                                                                                title="Could High-flying Drones Power Your Home One Day In Future?"
-                                                                                class="pcbg-bgoverlaytext active-overlay item-hover"></a>
-                                                                                <div class="pcbg-heading item-hover">
-                                                                                    <h3 class="pcbg-title"> <a
-                                                                                        href="could-high-flying-drones-power-your-home-one-day/index.html">
-                                                                                        Could High-flying Drones Power Your Home One Day In Future? </a> </h3>
+                                                        {data.slice(0, 5).map((itx, idx) => {
+                                                            return (
+                                                                // <div class="penci-bgitem pcbg-big-item bgitem-1">
+                                                                <div class={`${idx + 1 < 1 ? `penci-bgitem bgitem-${idx + 1}` : `penci-bgitem pcbg-big-item bgitem-${idx + 1}`}`}>
+                                                                    <div class="penci-bgitin">
+                                                                        <div class="penci-bgmain">
+                                                                            <div class="pcbg-thumb">
+                                                                                <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
+                                                                                    href={`/${itx.title}`}
+                                                                                    title={`${itx.title}`}></a>
+                                                                                    <img
+                                                                                        src={`${HOST}resources/post/${itx.image}`}
+                                                                                        class="penci-lazy penci-image-holder" />
                                                                                 </div>
-                                                                                <div class="grid-post-box-meta pcbg-meta item-hover">
-                                                                                    <div class="pcbg-meta-desc"> <span
-                                                                                        class="bg-date-author author-italic author vcard"> by <a
-                                                                                            class="author-url url fn n" href="author/admin/index.html">Penci
-                                                                                            Design</a> </span> <span class="bg-date"><time
-                                                                                                class="entry-date published"
-                                                                                                datetime="2021-07-30T08:22:14+00:00">July 30, 2021</time></span>
+                                                                            </div>
+                                                                            <div class="pcbg-content">
+                                                                                <div class="pcbg-content-flex"> <a class="pcbg-bgoverlay"
+                                                                                    href={`/${itx.title}`} title={`${itx.title}`}></a>
+                                                                                    <div class="pcbg-content-inner bgcontent-block"> <a
+                                                                                        href={`/${itx.title}`} title={`${itx.title}`}
+                                                                                        class="pcbg-bgoverlaytext active-overlay item-hover"></a>
+                                                                                        <div class="pcbg-heading item-hover">
+                                                                                            <h3 class="pcbg-title"> <a
+                                                                                                href="could-high-flying-drones-power-your-home-one-day/index.html">
+                                                                                                {itx.title} </a> </h3>
+                                                                                        </div>
+                                                                                        <div class="grid-post-box-meta pcbg-meta item-hover">
+                                                                                            <div class="pcbg-meta-desc"> <span
+                                                                                                class="bg-date-author author-italic author vcard"> by <a
+                                                                                                    class="author-url url fn n" href="author/admin/index.html">Penci
+                                                                                                    Design</a> </span> <span class="bg-date"><time
+                                                                                                        class="entry-date published"
+                                                                                                        datetime="2021-07-30T08:22:14+00:00">July 30, 2021</time></span>
+                                                                                            </div>
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="penci-bgitem bgitem-2">
+                                                            )
+                                                        })}
+
+                                                        {/* <div class="penci-bgitem bgitem-2">
                                                             <div class="penci-bgitin">
                                                                 <div class="penci-bgmain">
                                                                     <div class="pcbg-thumb">
@@ -234,7 +245,7 @@ const TechSection = () => {
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                        </div> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -251,3 +262,7 @@ const TechSection = () => {
 }
 
 export default TechSection
+
+
+// href={`/${itx.title}`}
+// title={`${itx.title}`}
