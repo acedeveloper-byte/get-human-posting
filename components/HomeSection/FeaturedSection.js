@@ -39,10 +39,8 @@ const FeaturedSection = () => {
                                                                         <div class="penci-bgmain">
                                                                             <div class="pcbg-thumb">
 
-                                                                                <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
-                                                                                    href="10-best-workspace-gadgets-to-totally-upgrade-your-desk-right-now/index.html"
-                                                                                    title="10 Best Workspace Gadgets To Totally Upgrade Your Desk Right Now"></a>
-                                                                                    <img
+                                                                                <div class="pcbg-thumbin">
+                                                                                    <a class="pcbg-bgoverlay"></a>                                                                                    <img
                                                                                         src={`${HOST}resources/post/${item.image}`}
                                                                                         class="penci-lazy penci-image-holder" />
                                                                                 </div>
@@ -52,15 +50,15 @@ const FeaturedSection = () => {
 
                                                                                 <div class="pcbg-content-flex">
                                                                                     <a class="pcbg-bgoverlay active-overlay"
-                                                                                        href={`/${item.title}`}
+                                                                                        href={`/${item.url}`}
                                                                                         title={`${item.title}`}></a>
                                                                                     <div class="pcbg-content-inner bgcontent-block"> <a
-                                                                                        href={`/${item.title}`}
+                                                                                        href={`/${item.url}`}
                                                                                         title={`${item.title}`}
                                                                                         class="pcbg-bgoverlaytext item-hover"></a>
                                                                                         <div class="pcbg-heading item-hover">
                                                                                             <h3 class="pcbg-title"> <a
-                                                                                                href={`/${item.title}`}>
+                                                                                                href={`/${item.url}`}>
                                                                                                 {item.title} </a>
                                                                                             </h3>
                                                                                         </div>

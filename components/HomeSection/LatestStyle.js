@@ -7,8 +7,8 @@ import { truncateHTML } from '@/utils/functions/truncate'
 const LatestStyle = () => {
 
     const [data, setData] = useState([])
-    const  [ dataHealthy , setDataHealthy] = useState([])
-    const  [ dataFashion , setDataFashion] = useState([])
+    const [dataHealthy, setDataHealthy] = useState([])
+    const [dataFashion, setDataFashion] = useState([])
     useEffect(() => {
         AllPost(setData, "Latest")
         AllPost(setDataHealthy, "Healthy")
@@ -16,7 +16,7 @@ const LatestStyle = () => {
     }, [])
 
 
-    
+
     return (
         <>
             <section
@@ -82,21 +82,21 @@ const LatestStyle = () => {
                                                                             href={`/${itex.title}`}> {itex.title}</a> </h3>
                                                                         <div class="grid-post-box-meta mag-meta"> <span
                                                                             class="featc-author author-italic author vcard">by <a
-                                                                                class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
+                                                                                class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
                                                                         </span> <span class="featc-date"><time class="entry-date published"
                                                                             datetime="2021-07-30T08:20:08+00:00">July 30, 2021</time></span> </div>
                                                                     </div>
                                                                     <div class="mag-excerpt entry-content">
-                                                                    <p dangerouslySetInnerHTML={{ __html: truncateHTML(itex.content, 100) }} />
+                                                                        <p dangerouslySetInnerHTML={{ __html: truncateHTML(itex.content, 100) }} />
                                                                     </div>
                                                                     <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                        class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
+                                                                        class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
                                                                     </span> </div>
                                                                 </div>
                                                             </div>
                                                         )
                                                     })}
-                                                  
+
                                                 </div>
                                                 <div class="penci-loader-effect penci-loading-animation-9">
                                                     <div class="penci-loading-circle">
@@ -142,7 +142,7 @@ const LatestStyle = () => {
                                                     Fashion</a> </span> </h3>
                                                 <nav data-ppp="6" data-query_type="ajaxtab" data-blockid="pencifeatured_cat_86443"
                                                     data-more="" class="pcnav-lgroup">
-                                            
+
                                                     <ul class="pcflx-nav">
                                                         <li class="pcaj-nav-item pcaj-prev"><a
                                                             class="disable pc-ajaxfil-link pcaj-nav-link prev" data-id="" href="#"
@@ -156,33 +156,33 @@ const LatestStyle = () => {
                                             <div class="home-featured-cat-wrapper">
                                                 <div class="home-featured-cat-content pwf-id-default style-13">
                                                     <ul class="penci-grid penci-grid-maglayout penci-fea-cat-style-13">
-                                             {dataFashion.map(( itm , ix) => {
-                                                return (
-                                                    <li class="grid-style">
-                                                    <article id="post-434" class="item hentry">
-                                                        <div class="thumbnail"> 
-                                                            <img class="penci-image-holder penci-lazy"
-                                                                 src={`${HOST}resources/post/${itm.image}`}
-                                                                 href={`/${itm.title}`}         
-                                                                        title={itm.title} />
-                                                        </div>
-                                                        <div class="grid-header-box">
-                                                            <h2 class="grid-title entry-title"><a
-                                                                 href={`/${itm.title}`}>
-                                                                {itm.title} </a> </h2>
-                                                            <div class="grid-post-box-meta"> <span
-                                                                class="featc-author author-italic author vcard">by <a
-                                                                    class="author-url url fn n" href="/">Penci Design</a>
-                                                            </span> <span class="featc-date"><time class="entry-date published"
-                                                                datetime="2021-07-30T08:31:58+00:00">July 30, 2021</time></span> </div>
-                                                            <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                class="author-url url fn n" href="/">Penci Design</a>
-                                                            </span> </div>
-                                                        </div>
-                                                    </article>
-                                                </li>
-                                                )
-                                             })}
+                                                        {dataFashion.map((itm, ix) => {
+                                                            return (
+                                                                <li class="grid-style">
+                                                                    <article id="post-434" class="item hentry">
+                                                                        <div class="thumbnail">
+                                                                            <img class="penci-image-holder penci-lazy"
+                                                                                src={`${HOST}resources/post/${itm.image}`}
+                                                                                href={`/${itm.title}`}
+                                                                                title={itm.title} />
+                                                                        </div>
+                                                                        <div class="grid-header-box">
+                                                                            <h2 class="grid-title entry-title"><a
+                                                                                href={`/${itm.title}`}>
+                                                                                {itm.title} </a> </h2>
+                                                                            <div class="grid-post-box-meta"> <span
+                                                                                class="featc-author author-italic author vcard">by <a
+                                                                                    class="author-url url fn n" href="/">Penci Design</a>
+                                                                            </span> <span class="featc-date"><time class="entry-date published"
+                                                                                datetime="2021-07-30T08:31:58+00:00">July 30, 2021</time></span> </div>
+                                                                            <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
+                                                                                class="author-url url fn n" href="/">Penci Design</a>
+                                                                            </span> </div>
+                                                                        </div>
+                                                                    </article>
+                                                                </li>
+                                                            )
+                                                        })}
                                                         {/* <li class="grid-style">
                                                             <article id="post-434" class="item hentry">
                                                                 <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
@@ -196,11 +196,11 @@ const LatestStyle = () => {
                                                                         Ward Used To Wish Fast Fashion Was Less Prevalent By Now</a> </h2>
                                                                     <div class="grid-post-box-meta"> <span
                                                                         class="featc-author author-italic author vcard">by <a
-                                                                            class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
+                                                                            class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
                                                                     </span> <span class="featc-date"><time class="entry-date published"
                                                                         datetime="2021-07-30T08:31:58+00:00">July 30, 2021</time></span> </div>
                                                                     <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                        class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
+                                                                        class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
                                                                     </span> </div>
                                                                 </div>
                                                             </article>
@@ -218,11 +218,11 @@ const LatestStyle = () => {
                                                                         Fashion: Tell Us About The Oldest Item of Clothing You Own</a> </h2>
                                                                     <div class="grid-post-box-meta"> <span
                                                                         class="featc-author author-italic author vcard">by <a
-                                                                            class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
+                                                                            class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
                                                                     </span> <span class="featc-date"><time class="entry-date published"
                                                                         datetime="2021-07-30T08:17:10+00:00">July 30, 2021</time></span> </div>
                                                                     <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                        class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
+                                                                        class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
                                                                     </span> </div>
                                                                 </div>
                                                             </article>
@@ -241,11 +241,11 @@ const LatestStyle = () => {
                                                                     </h2>
                                                                     <div class="grid-post-box-meta"> <span
                                                                         class="featc-author author-italic author vcard">by <a
-                                                                            class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
+                                                                            class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
                                                                     </span> <span class="featc-date"><time class="entry-date published"
                                                                         datetime="2021-07-30T08:02:53+00:00">July 30, 2021</time></span> </div>
                                                                     <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                        class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
+                                                                        class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
                                                                     </span> </div>
                                                                 </div>
                                                             </article>
@@ -262,11 +262,11 @@ const LatestStyle = () => {
                                                                         Gala 2019: Lady Gaga Makes Her Way To Fashion Event</a> </h2>
                                                                     <div class="grid-post-box-meta"> <span
                                                                         class="featc-author author-italic author vcard">by <a
-                                                                            class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
+                                                                            class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
                                                                     </span> <span class="featc-date"><time class="entry-date published"
                                                                         datetime="2021-07-30T07:45:09+00:00">July 30, 2021</time></span> </div>
                                                                     <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                        class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
+                                                                        class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
                                                                     </span> </div>
                                                                 </div>
                                                             </article>
@@ -283,11 +283,11 @@ const LatestStyle = () => {
                                                                         Clothing Is Finally Having Its Fashion Moment</a> </h2>
                                                                     <div class="grid-post-box-meta"> <span
                                                                         class="featc-author author-italic author vcard">by <a
-                                                                            class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
+                                                                            class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
                                                                     </span> <span class="featc-date"><time class="entry-date published"
                                                                         datetime="2021-07-30T04:34:30+00:00">July 30, 2021</time></span> </div>
                                                                     <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                        class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
+                                                                        class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
                                                                     </span> </div>
                                                                 </div>
                                                             </article>
@@ -305,11 +305,11 @@ const LatestStyle = () => {
                                                                         Fashion: A Plus-Size Opportunity in China Fashion Market</a> </h2>
                                                                     <div class="grid-post-box-meta"> <span
                                                                         class="featc-author author-italic author vcard">by <a
-                                                                            class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
+                                                                            class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
                                                                     </span> <span class="featc-date"><time class="entry-date published"
                                                                         datetime="2021-07-30T04:17:24+00:00">July 30, 2021</time></span> </div>
                                                                     <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                        class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
+                                                                        class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
                                                                     </span> </div>
                                                                 </div>
                                                             </article>
@@ -335,7 +335,7 @@ const LatestStyle = () => {
                                             </div>
                                         </section>
                                     </div>
-                            
+
                                 </div>
                             </div>
                             <div
@@ -351,38 +351,38 @@ const LatestStyle = () => {
                                         <div class="penci-wrapper-posts-ajax">
                                             <div class="penci-wrapper-posts-content pwid-default">
                                                 <ul data-layout="list" class="penci-wrapper-data penci-grid penci-shortcode-render">
-                                                   {dataHealthy.map(( itx ,ix) =>  {
-                                                    return (
-                                                        <li class="list-post penci-item-listp">
-                                                        <article id="post-422" class="item hentry">
-                                                            <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                 src={`${HOST}resources/post/${itx.image}`}
-                                                                href={`/${itx.title}`}
-                                                                // href="how-to-get-your-partner-on-board-with-a-healthy-lifestyle-change-with-you/index.html"
-                                                                title={itx.title} />
-                                                             </div>
-                                                            <div class="content-list-right content-list-center">
-                                                                <div class="header-list-style">
-                                                                    <h2 class="penci-entry-title entry-title grid-title"><a
-                                                                        href={`/${itx.title}`}>{itx.title}</a>
-                                                                    </h2>
-                                                                    <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                        class="author-url url fn n" href="/">Penci Design</a>
-                                                                    </span> </div>
-                                                                    <div class="grid-post-box-meta"> <span
-                                                                        class="otherl-date-author author-italic author vcard">by <a
-                                                                            class="author-url url fn n" href="/">Penci Design</a>
-                                                                    </span> <span class="otherl-date"><time class="entry-date published"
-                                                                        datetime="2021-07-30T08:26:21+00:00">July 30, 2021</time></span> </div>
-                                                                </div>
-                                                                <div className="item-content entry-content">
-  <p dangerouslySetInnerHTML={{ __html: truncateHTML(itx.content, 100) }} />
-</div>
-                                                            </div>
-                                                        </article>
-                                                    </li>
-                                                    )
-                                                   })}
+                                                    {dataHealthy.map((itx, ix) => {
+                                                        return (
+                                                            <li class="list-post penci-item-listp">
+                                                                <article id="post-422" class="item hentry">
+                                                                    <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
+                                                                        src={`${HOST}resources/post/${itx.image}`}
+                                                                        href={`/${itx.title}`}
+                                                                        // href="how-to-get-your-partner-on-board-with-a-healthy-lifestyle-change-with-you/index.html"
+                                                                        title={itx.title} />
+                                                                    </div>
+                                                                    <div class="content-list-right content-list-center">
+                                                                        <div class="header-list-style">
+                                                                            <h2 class="penci-entry-title entry-title grid-title"><a
+                                                                                href={`/${itx.title}`}>{itx.title}</a>
+                                                                            </h2>
+                                                                            <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
+                                                                                class="author-url url fn n" href="/">Penci Design</a>
+                                                                            </span> </div>
+                                                                            <div class="grid-post-box-meta"> <span
+                                                                                class="otherl-date-author author-italic author vcard">by <a
+                                                                                    class="author-url url fn n" href="/">Penci Design</a>
+                                                                            </span> <span class="otherl-date"><time class="entry-date published"
+                                                                                datetime="2021-07-30T08:26:21+00:00">July 30, 2021</time></span> </div>
+                                                                        </div>
+                                                                        <div className="item-content entry-content">
+                                                                            <p dangerouslySetInnerHTML={{ __html: truncateHTML(itx.content, 100) }} />
+                                                                        </div>
+                                                                    </div>
+                                                                </article>
+                                                            </li>
+                                                        )
+                                                    })}
 
                                                 </ul>
                                             </div>

@@ -1,4 +1,5 @@
 import { AllPostBytitle } from '@/utils/apicall/post_by_title'
+import { HOST } from '@/utils/static'
 import moment from 'moment'
 import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
@@ -7,15 +8,14 @@ import { Col, Container, Row } from 'react-bootstrap'
 const Postdetails = () => {
 
     const params = useParams()
-    const { title } = params
     const [data, setData] = useState([])
-      const [user_data, setUser] = useState(false);
-    
-    useEffect(() => {   
+    const [user_data, setUser] = useState(false);
+
+    useEffect(() => {
         if (localStorage.getItem("auth_data")) {
             setUser(JSON.parse(localStorage.getItem("auth_data")))
-          }
-      
+        }
+
         const callapi = async () => {
             await AllPostBytitle(setData, params.title)
         }
@@ -30,9 +30,8 @@ const Postdetails = () => {
             <Row>
                 <Col md={8}>
                     <div style={{
-                        backgroundImage: `url(https://api.acedigitalsolution.com/resources/post/file-1744094791225.jpg)`,
-                        backgroundSize: "cover", // Equivalent to objectFit for backgrounds
-                        height: "300px", // Use a fixed height or make sure the parent has one
+                        backgroundImage: `url(${HOST}resources/post/${data.image})`,
+                        backgroundSize: "cover", height: "300px",
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center",
                     }}>
@@ -41,16 +40,17 @@ const Postdetails = () => {
                     <div className="container mt-2">
                         <div className='row'>
 
-                    <Col  md={2}>
-                        Author : <b>{user_data?.user_name}</b>
-                    </Col>
-                    <Col md={3}>
-                        Published on : <b>{moment(data.createdAt).format("MMMM Do YYYY")}</b>
-                    </Col>
+                            <Col md={2}>
+                                Author : <b>{user_data?.user_name}</b>
+                            </Col>
+                            <Col md={3}>
+                                Published on : <b>{moment(data.createdAt).format("MMMM Do YYYY")}</b>
+                            </Col>
                         </div>
                     </div>
                     <div className="container mt-4" dangerouslySetInnerHTML={{
-                        __html: data.content}} />
+                        __html: data.content
+                    }} />
                 </Col>
                 <Col md={4}>
                     <div id="sidebar"
