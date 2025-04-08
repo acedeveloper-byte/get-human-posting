@@ -151,7 +151,7 @@ const page = () => {
 
               {/* <Button type="submit">Submit Form</Button> */}
 
-              <Form.Group as={Col} md={4}>
+              <Form.Group as={Col} md={8}>
 
                 {user_data.user_name ?
                   <Button type="submit">Submit Form</Button>

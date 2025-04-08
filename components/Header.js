@@ -71,8 +71,15 @@ const Header = () => {
                                         href="#">Tech</a></li>
 
                                 <li id="menu-item-167"
-                                    class="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567"><a
-                                        href="/submit-article">SUBMIT ARTICLE</a></li>
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567">
+
+                                    {user?.user_name ?
+                                        <a href="/submit-article">SUBMIT ARTICLE</a>
+                                        :
+                                        <a href="/submit-article">SUBMIT ARTICLE</a>}
+                                </li>
+
+
                                 {user?.user_name ?
                                     <>
 
@@ -107,7 +114,7 @@ const Header = () => {
                         </div>
                     </div>
                 </nav>
-            </header>
+            </header >
         </>
     )
 }
