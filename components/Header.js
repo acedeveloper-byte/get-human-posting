@@ -13,13 +13,10 @@ const Header = () => {
             setUser(JSON.parse(localStorage.getItem("auth_data")))
         }
     }, [])
-
-
     const handleLogout = () => {
         localStorage.clear()
         router.push('/login')
     }
-
 
 
     return (
