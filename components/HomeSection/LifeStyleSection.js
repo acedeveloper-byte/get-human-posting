@@ -63,25 +63,32 @@ const LifeStyleSection = () => {
 
                                                     </div>
                                                     <div class="cat-right">
-                                                        <div class="mag-post-box hentry">
-                                                            <div class="magcat-thumb"> <img class="penci-image-holder penci-lazy small-fix-sizeimg"
-                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/13-585x390.jpeg"
-                                                                href="the-best-street-style-from-tbilisi-fashion-week-fall-2019-high-end/index.html"
-                                                                title="The Best Street Style From Tbilisi Fashion Week Fall 2019 High End" />
-                                                            </div>
-                                                            <div class="magcat-detail">
-                                                                <h3 class="magcat-titlte entry-title"><a
-                                                                    href="the-best-street-style-from-tbilisi-fashion-week-fall-2019-high-end/index.html">The
-                                                                    Best Street Style From Tbilisi Fashion Week Fall 2019 High End</a> </h3>
-                                                                <div class="grid-post-box-meta mag-meta"> <span class="featc-date"><time
-                                                                    class="entry-date published" datetime="2021-07-30T08:08:29+00:00">July 30,
-                                                                    2021</time></span> </div>
-                                                                <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                    class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
-                                                                </span> </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="mag-post-box hentry">
+
+                                                        {data.slice(1, 4).map((idx, indx) => {
+                                                            return (
+                                                                <div class="mag-post-box hentry">
+                                                                    <div class="magcat-thumb">
+                                                                        <img class="penci-image-holder penci-lazy small-fix-sizeimg"
+                                                                            src={`${HOST}resources/post/${idx.image}`}
+                                                                            href={`/${idx.title}`}
+                                                                            title={`${idx.title}`} />
+                                                                    </div>
+                                                                    <div class="magcat-detail">
+                                                                        <h3 class="magcat-titlte entry-title"><a
+                                                                            href={`/${idx.title}`}>{idx.title}</a> </h3>
+                                                                        <div class="grid-post-box-meta mag-meta"> <span class="featc-date"><time
+                                                                            class="entry-date published" datetime="2021-07-30T08:08:29+00:00">July 30,
+                                                                            2021</time></span> </div>
+                                                                        <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
+                                                                            class="author-url url fn n" href="#">Penci Design</a>
+                                                                        </span> </div>
+                                                                    </div>
+                                                                </div>
+                                                            )
+                                                        })}
+
+
+                                                        {/* <div class="mag-post-box hentry">
                                                             <div class="magcat-thumb"> <img class="penci-image-holder penci-lazy small-fix-sizeimg"
                                                                 src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/20-585x390.jpeg"
                                                                 href="meghan-markles-royal-style-a-detailed-guide-to-the-duchess/index.html"
@@ -143,13 +150,12 @@ const LifeStyleSection = () => {
                                                                     </span>
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                        </div> */}
                                                     </div>
                                                 </div>
                                             </div>
                                         </section>
                                     </div>
-                                    <style> </style>
                                 </div>
                             </div>
                         </div>
