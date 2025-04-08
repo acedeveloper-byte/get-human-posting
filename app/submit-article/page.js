@@ -71,6 +71,10 @@ const page = () => {
                   <Form.Select {...formik.getFieldProps("category")}>
                     {[
                       { "value": "", "label": "Choose Categories" },
+                      { "value": "413", "label": "Lifestyle" },
+                      { "value": "413", "label": "Latest" },
+                      { "value": "413", "label": "Featured" },
+                      { "value": "413", "label": "Tech" },
                       { "value": "413", "label": "Business" },
                       { "value": "410", "label": "Design" },
                       { "value": "7", "label": "Domain Names" },

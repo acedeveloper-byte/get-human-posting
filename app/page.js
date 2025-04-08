@@ -1,6 +1,6 @@
 'use client'
 import Header from "@/components/Header";
-import StylingSection from "@/components/HomeSection/LifeStyleSection";
+import LifeStyleSection from "@/components/HomeSection/LifeStyleSection";
 import LatestStyle from "@/components/HomeSection/LatestStyle";
 import FeaturedSection from "@/components/HomeSection/FeaturedSection";
 import TechSection from "@/components/HomeSection/TechSection";
@@ -23,7 +23,7 @@ export default function Home() {
       <div id="soledad_wrapper" class="wrapper-boxed header-style-header-10 penci-hlogo-center header-search-style-default" style={{ transform: "none" }}>
         <Header />
         <FeaturedSection />
-        <StylingSection />
+        <LifeStyleSection />
         <CategorySection />
         <LatestStyle />
         <TechSection />

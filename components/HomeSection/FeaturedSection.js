@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react'
 const FeaturedSection = () => {
 
     const [data, setData] = useState([])
-    useEffect(async () => {
+    useEffect(() => {
         AllPost(setData, "Featured")
     }, [])
 
@@ -31,7 +31,7 @@ const FeaturedSection = () => {
                                                     <div class="penci-clearfix penci-biggrid-data penci-dblock penci-fixh">
 
                                                         {data.slice(0, 5).map((item, idx) => {
-                                                            console.log(idx + 1)
+
                                                             return (
 
                                                                 <div class={`${idx + 1 === 5 ? `penci-bgitem bgitem-0` : `penci-bgitem bgitem-${idx + 1}`}`}>

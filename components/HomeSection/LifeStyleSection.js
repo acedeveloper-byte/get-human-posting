@@ -1,7 +1,14 @@
+import { AllPost } from '@/utils/apicall/fetchAllPost'
+import { HOST } from '@/utils/static'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-const StylingSection = () => {
+const LifeStyleSection = () => {
+
+    const [data, setData] = useState([])
+    useEffect(() => {
+        AllPost(setData, "Lifestyle")
+    }, [])
     return (
         <>
             <section
@@ -26,33 +33,34 @@ const StylingSection = () => {
                                             <div class="home-featured-cat-wrapper">
                                                 <div class="home-featured-cat-content pwf-id-default style-6">
                                                     <div class="cat-left">
-                                                        <div class="mag-post-box hentry first-post">
-                                                            <div class="magcat-thumb"> <img class="penci-image-holder penci-lazyimg"
-                                                                src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/6-1-585x390.jpeg"
-                                                                href="a-fairytale-brand-pretty-little-thing-joins-fashion-top-brands-worldwide/index.html"
-                                                                title="&#8216;A Fairytale Brand&#8217;: Pretty Little Thing Joins Fashion Top Brands Worldwide" /> </div>
-                                                            <div class="magcat-detail">
-                                                                <div class="mag-header">
-                                                                    <h3 class="magcat-titlte entry-title"><a
-                                                                        href="a-fairytale-brand-pretty-little-thing-joins-fashion-top-brands-worldwide/index.html">&#8216;A
-                                                                        Fairytale Brand&#8217;: Pretty Little Thing Joins Fashion Top Brands
-                                                                        Worldwide</a> </h3>
-                                                                    <div class="grid-post-box-meta mag-meta"> <span
-                                                                        class="featc-author author-italic author">by <a class="url fn n"
-                                                                            href="author/admin/index.html">Penci Design</a></span> <span
-                                                                                class="featc-date"><time class="entry-date published"
-                                                                                    datetime="2021-07-30T08:24:33+00:00">July 30, 2021</time></span> </div>
+                                                        {data.slice(0, 1).map((itex, idx) => {
+                                                            return (
+                                                                <div class="mag-post-box hentry first-post">
+                                                                    <div class="magcat-thumb"> <img class="penci-image-holder penci-lazyimg"
+                                                                        src={`${HOST}resources/post/${itex.image}`}
+                                                                        href={`/${itex.title}`}
+                                                                        title={`${itex.title}`} /> </div>
+                                                                    <div class="magcat-detail">
+                                                                        <div class="mag-header">
+                                                                            <h3 class="magcat-titlte entry-title"><a
+                                                                                href={`/${itex.title}`}>{itex.title}</a> </h3>
+                                                                            <div class="grid-post-box-meta mag-meta"> <span
+                                                                                class="featc-author author-italic author">by <a class="url fn n"
+                                                                                    href="author/admin/index.html">Penci Design</a></span> <span
+                                                                                        class="featc-date"><time class="entry-date published"
+                                                                                            datetime="2021-07-30T08:24:33+00:00">July 30, 2021</time></span> </div>
+                                                                        </div>
+                                                                        <div class="mag-excerpt entry-content">
+                                                                            <p>{itex.title}</p>
+                                                                        </div>
+                                                                        <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
+                                                                            class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
+                                                                        </span> </div>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="mag-excerpt entry-content">
-                                                                    <p>Luxury travel is back. The pandemic-weary population is emerging from lockdowns
-                                                                        with the goal of relaxing and reviving senses dulled by one zoom meeting too
-                                                                        &#8230;</p>
-                                                                </div>
-                                                                <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                    class="author-url url fn n" href="author/admin/index.html">Penci Design</a>
-                                                                </span> </div>
-                                                            </div>
-                                                        </div>
+                                                            )
+                                                        })}
+
                                                     </div>
                                                     <div class="cat-right">
                                                         <div class="mag-post-box hentry">
@@ -220,4 +228,4 @@ const StylingSection = () => {
     )
 }
 
-export default StylingSection
+export default LifeStyleSection
