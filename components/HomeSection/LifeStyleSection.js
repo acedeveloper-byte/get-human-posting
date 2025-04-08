@@ -63,7 +63,6 @@ const LifeStyleSection = () => {
 
                                                     </div>
                                                     <div class="cat-right">
-
                                                         {data.slice(1, 5).map((idx, indx) => {
                                                             return (
                                                                 <div class="mag-post-box hentry">
