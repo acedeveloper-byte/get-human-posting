@@ -5,11 +5,12 @@ import Header from '@/components/Header'
 import "../globals.css";
 import { GetAllPostByUserId } from '@/utils/apicall/GetAllPostByUserId';
 import { HOST } from '@/utils/static';
+import { truncateHTML } from '@/utils/functions/truncate';
 
 const page = () => {
   const [data, setdata] = useState([])
   const [user, setuser] = useState({})
-  
+
   useEffect(() => {
     const user_data = localStorage.getItem("auth_data");
     var parseData = JSON.parse(user_data)
@@ -71,9 +72,10 @@ const page = () => {
 
                           </div>
 
-                          {/* <div class="item-content entry-content">
-                            <div dangerouslySetInnerHTML={{ __html: item.content }} />
-                          </div>  ... */}
+                          <div class="item-content entry-content">
+                            <p dangerouslySetInnerHTML={{ __html: truncateHTML(item.conten, 100) }} />
+
+                          </div>
 
                           <div class="penci-readmore-btn penci-btn-make-button penci-btn-align-center">
                             <a class="penci-btn-readmore" href="../../gemma-ward-used-to-wish-fast-fashion-was-less-prevalent-by-now/">
