@@ -1,4 +1,5 @@
 import { AllPostBytitle } from '@/utils/apicall/post_by_title'
+import moment from 'moment'
 import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
@@ -8,13 +9,20 @@ const Postdetails = () => {
     const params = useParams()
     const { title } = params
     const [data, setData] = useState([])
-
-    useEffect(() => {
+      const [user_data, setUser] = useState(false);
+    
+    useEffect(() => {   
+        if (localStorage.getItem("auth_data")) {
+            setUser(JSON.parse(localStorage.getItem("auth_data")))
+          }
+      
         const callapi = async () => {
             await AllPostBytitle(setData, params.title)
         }
         callapi()
     }, [])
+
+    console.log(data)
 
     return (
 
@@ -30,15 +38,19 @@ const Postdetails = () => {
                     }}>
 
                     </div>
-                    <div dangerouslySetInnerHTML={{
-                        __html: `<!html>
-                        <head>
-                        </head>
-                        <body>
-                        <h1>
-                        Kya Haal hai brody</h1>
-                        </body>
-                        <html>`}} />
+                    <div className="container mt-2">
+                        <div className='row'>
+
+                    <Col  md={2}>
+                        Author : <b>{user_data?.user_name}</b>
+                    </Col>
+                    <Col md={3}>
+                        Published on : <b>{moment(data.createdAt).format("MMMM Do YYYY")}</b>
+                    </Col>
+                        </div>
+                    </div>
+                    <div className="container mt-4" dangerouslySetInnerHTML={{
+                        __html: data.content}} />
                 </Col>
                 <Col md={4}>
                     <div id="sidebar"

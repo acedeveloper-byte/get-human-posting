@@ -5,7 +5,7 @@ export const AllPostBytitle = (setData, value) => {
 
     const options = {
         method: 'GET',
-        url: `${HOST}post/fetch-all-post-by-title/${value}`,
+        url: `${HOST}post/fetch-all-post-by-url/${value}`,
         headers: { 'User-Agent': 'insomnia/10.3.1' }
     };
 
