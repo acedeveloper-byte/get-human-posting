@@ -1,6 +1,15 @@
-import React from 'react'
+import { FetchAllCategory } from '@/utils/apicall/fetchAllCategory'
+import React, { useEffect, useState } from 'react'
 
 const CategorySection = () => {
+
+    const [data, setData] = useState([])
+    useEffect(() => {
+        FetchAllCategory(setData)
+    }, [])
+
+    console.log("data::", data)
+
     return (
         <>
             <section
@@ -20,179 +29,41 @@ const CategorySection = () => {
                                         <div class="penci-clearfix penci-biggrid penci-bgstyle-1 penci-bgel">
                                             <div class="penci-biggrid-inner default">
                                                 <div class="penci-clearfix penci-biggrid-data penci-dflex">
-                                                    <div class="penci-bgitem elementor-repeater-item-17beedc">
-                                                        <div class="penci-bgitin">
-                                                            <div class="penci-bgmain">
-                                                                <div class="pcbg-thumb">
-                                                                    <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
-                                                                        href="category/fashion/index.html" title="Fashion"></a>
-                                                                        <img
-                                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/08/fashion-300x300.jpg"
-                                                                            class="penci-lazy penci-image-holder" />
-                                                                    </div>
-                                                                </div>
-                                                                <div class="pcbg-content">
-                                                                    <div class="pcbg-content-flex pcbg-overlap-hover"> <a class="pcbg-cbgoverlap"
-                                                                        href="category/fashion/index.html" title="Fashion"></a> <a
-                                                                            class="pcbg-bgoverlay active-overlay" href="category/fashion/index.html"
-                                                                            title="Fashion"></a>
-                                                                        <div class="pcbg-content-inner bgcontent-block"> <a
-                                                                            href="category/fashion/index.html" title="Fashion"
-                                                                            class="pcbg-bgoverlaytext item-hover"></a>
-                                                                            <div class="pcbg-heading item-hover">
-                                                                                <h3 class="pcbg-title"><a href="category/fashion/index.html">Fashion</a>
-                                                                                </h3>
+                                                    {data.map((item, index) => {
+                                                        return (
+                                                            <div class="penci-bgitem elementor-repeater-item-17beedc">
+                                                                <div class="penci-bgitin">
+                                                                    <div class="penci-bgmain">
+                                                                        <div class="pcbg-thumb">
+                                                                            <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
+                                                                                href={`/category/${item.label}`} title={item.label}></a>
+                                                                                <img
+                                                                                    src="https://soledaddemo.Author.net/wp-content/uploads/2021/08/fashion-300x300.jpg"
+                                                                                    class="penci-lazy penci-image-holder" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="pcbg-content">
+                                                                            <div class="pcbg-content-flex pcbg-overlap-hover"> <a class="pcbg-cbgoverlap"
+                                                                                href={`/category/${item.label}`} title={item.title}></a> <a
+                                                                                    class="pcbg-bgoverlay active-overlay" href={`/category/${item.label}`}
+                                                                                    title={item.title}></a>
+                                                                                <div class="pcbg-content-inner bgcontent-block"> <a
+                                                                                    href={`/category/${item.label}`} title={item.title}
+                                                                                    class="pcbg-bgoverlaytext item-hover"></a>
+                                                                                    <div class="pcbg-heading item-hover">
+                                                                                        <h3 class="pcbg-title"><a href={`/category/${item.label}`} >{item.title}</a>
+                                                                                        </h3>
+                                                                                    </div>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="penci-bgitem elementor-repeater-item-1667a51">
-                                                        <div class="penci-bgitin">
-                                                            <div class="penci-bgmain">
-                                                                <div class="pcbg-thumb">
-                                                                    <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
-                                                                        href="category/food/index.html" title="Food"></a>
-                                                                        <img
-                                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/08/food-300x300.jpg"
-                                                                            class="penci-lazy penci-image-holder" />
-                                                                    </div>
-                                                                </div>
-                                                                <div class="pcbg-content">
-                                                                    <div class="pcbg-content-flex pcbg-overlap-hover"> <a class="pcbg-cbgoverlap"
-                                                                        href="category/food/index.html" title="Food"></a> <a
-                                                                            class="pcbg-bgoverlay active-overlay" href="category/food/index.html"
-                                                                            title="Food"></a>
-                                                                        <div class="pcbg-content-inner bgcontent-block"> <a
-                                                                            href="category/food/index.html" title="Food"
-                                                                            class="pcbg-bgoverlaytext item-hover"></a>
-                                                                            <div class="pcbg-heading item-hover">
-                                                                                <h3 class="pcbg-title"><a href="category/food/index.html">Food</a></h3>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="penci-bgitem elementor-repeater-item-953d092">
-                                                        <div class="penci-bgitin">
-                                                            <div class="penci-bgmain">
-                                                                <div class="pcbg-thumb">
-                                                                    <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
-                                                                        href="category/technology/index.html" title="Technology"></a>
-                                                                        <img
-                                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/08/tech-300x300.jpg"
-                                                                            class="penci-lazy penci-image-holder" />
-                                                                    </div>
-                                                                </div>
-                                                                <div class="pcbg-content">
-                                                                    <div class="pcbg-content-flex pcbg-overlap-hover"> <a class="pcbg-cbgoverlap"
-                                                                        href="category/technology/index.html" title="Technology"></a> <a
-                                                                            class="pcbg-bgoverlay active-overlay" href="category/technology/index.html"
-                                                                            title="Technology"></a>
-                                                                        <div class="pcbg-content-inner bgcontent-block"> <a
-                                                                            href="category/technology/index.html" title="Technology"
-                                                                            class="pcbg-bgoverlaytext item-hover"></a>
-                                                                            <div class="pcbg-heading item-hover">
-                                                                                <h3 class="pcbg-title"><a
-                                                                                    href="category/technology/index.html">Technology</a></h3>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="penci-bgitem elementor-repeater-item-80f0ea0">
-                                                        <div class="penci-bgitin">
-                                                            <div class="penci-bgmain">
-                                                                <div class="pcbg-thumb">
-                                                                    <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
-                                                                        href="category/life-style/style/index.html" title="Style"></a>
-                                                                        <img
-                                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/08/style-300x300.jpg"
-                                                                            class="penci-lazy penci-image-holder" />
-                                                                    </div>
-                                                                </div>
-                                                                <div class="pcbg-content">
-                                                                    <div class="pcbg-content-flex pcbg-overlap-hover"> <a class="pcbg-cbgoverlap"
-                                                                        href="category/life-style/style/index.html" title="Style"></a> <a
-                                                                            class="pcbg-bgoverlay active-overlay"
-                                                                            href="category/life-style/style/index.html" title="Style"></a>
-                                                                        <div class="pcbg-content-inner bgcontent-block"> <a
-                                                                            href="category/life-style/style/index.html" title="Style"
-                                                                            class="pcbg-bgoverlaytext item-hover"></a>
-                                                                            <div class="pcbg-heading item-hover">
-                                                                                <h3 class="pcbg-title"><a
-                                                                                    href="category/life-style/style/index.html">Style</a></h3>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="penci-bgitem elementor-repeater-item-1a68081">
-                                                        <div class="penci-bgitin">
-                                                            <div class="penci-bgmain">
-                                                                <div class="pcbg-thumb">
-                                                                    <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
-                                                                        href="category/life-style/healthy-living/index.html" title="Living"></a>
-                                                                        <img
-                                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/08/living-300x300.jpg"
-                                                                            class="penci-lazy penci-image-holder" />
-                                                                    </div>
-                                                                </div>
-                                                                <div class="pcbg-content">
-                                                                    <div class="pcbg-content-flex pcbg-overlap-hover"> <a class="pcbg-cbgoverlap"
-                                                                        href="category/life-style/healthy-living/index.html" title="Living"></a> <a
-                                                                            class="pcbg-bgoverlay active-overlay"
-                                                                            href="category/life-style/healthy-living/index.html" title="Living"></a>
-                                                                        <div class="pcbg-content-inner bgcontent-block"> <a
-                                                                            href="category/life-style/healthy-living/index.html" title="Living"
-                                                                            class="pcbg-bgoverlaytext item-hover"></a>
-                                                                            <div class="pcbg-heading item-hover">
-                                                                                <h3 class="pcbg-title"><a
-                                                                                    href="category/life-style/healthy-living/index.html">Living</a></h3>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="penci-bgitem elementor-repeater-item-cf4b5ca">
-                                                        <div class="penci-bgitin">
-                                                            <div class="penci-bgmain">
-                                                                <div class="pcbg-thumb">
-                                                                    <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
-                                                                        href="category/life-style/healthy-living/index.html" title="Culture"></a>
-                                                                        <img
-                                                                            src="https://soledaddemo.Author.net/wp-content/uploads/2021/08/culture-300x300.jpg"
-                                                                            class="penci-lazy penci-image-holder" />
-                                                                    </div>
-                                                                </div>
-                                                                <div class="pcbg-content">
-                                                                    <div class="pcbg-content-flex pcbg-overlap-hover"> <a class="pcbg-cbgoverlap"
-                                                                        href="category/life-style/healthy-living/index.html" title="Culture"></a> <a
-                                                                            class="pcbg-bgoverlay active-overlay"
-                                                                            href="category/life-style/healthy-living/index.html" title="Culture"></a>
-                                                                        <div class="pcbg-content-inner bgcontent-block"> <a
-                                                                            href="category/life-style/healthy-living/index.html" title="Culture"
-                                                                            class="pcbg-bgoverlaytext item-hover"></a>
-                                                                            <div class="pcbg-heading item-hover">
-                                                                                <h3 class="pcbg-title"><a
-                                                                                    href="category/life-style/healthy-living/index.html">Culture</a></h3>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                        )
+                                                    })}
+
+
                                                 </div>
                                             </div>
                                         </div>
