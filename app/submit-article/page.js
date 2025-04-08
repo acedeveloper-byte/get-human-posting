@@ -75,6 +75,8 @@ const page = () => {
                       { "value": "413", "label": "Latest" },
                       { "value": "413", "label": "Featured" },
                       { "value": "413", "label": "Tech" },
+                      { "value": "413", "label": "Healthy" },
+                      { "value": "413", "label": "Fashion" },
                       { "value": "413", "label": "Business" },
                       { "value": "410", "label": "Design" },
                       { "value": "7", "label": "Domain Names" },
