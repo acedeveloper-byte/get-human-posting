@@ -76,7 +76,7 @@ const Header = () => {
                                     {user?.user_name ?
                                         <a href="/submit-article">SUBMIT ARTICLE</a>
                                         :
-                                        <a href="/submit-article">SUBMIT ARTICLE</a>}
+                                        <a href="/login">SUBMIT ARTICLE</a>}
                                 </li>
 
 
