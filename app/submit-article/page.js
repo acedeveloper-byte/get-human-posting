@@ -11,7 +11,7 @@ import { Guest_Posting_APi } from "@/utils/apicall/create_post";
 
 const page = () => {
   const [user_data, setUser] = useState(false);
-  const [loading , setloading] = useState(false)
+  const [loading, setloading] = useState(false)
   const editorRef = useRef(null);
   const router = useRouter()
   useEffect(() => {
@@ -26,8 +26,8 @@ const page = () => {
     content: Yup.string().required("Content is required"),
     category: Yup.string().required("Category is required"),
     file: Yup.mixed()
-    .required("File is required")
-    .test("fileExists", "Please upload a file", value => value instanceof File),
+      .required("File is required")
+      .test("fileExists", "Please upload a file", value => value instanceof File),
   });
 
   const formik = useFormik({
@@ -120,7 +120,7 @@ const page = () => {
                     onChange={(event) => formik.setFieldValue("file", event.currentTarget.files[0])}
                     isInvalid={formik.touched.file && !!formik.errors.file}
                   />
-                   <Form.Control.Feedback type="invalid">
+                  <Form.Control.Feedback type="invalid">
                     {formik.errors.file}
                   </Form.Control.Feedback>
                 </Form.Group>
@@ -148,7 +148,7 @@ const page = () => {
                       'bold italic forecolor | alignleft aligncenter ' +
                       'alignright alignjustify | bullist numlist outdent indent | ' +
                       'removeformat | help',
-                    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+                    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px  } '
                   }}
                 />
                 {formik.touched.content && formik.errors.content && (
@@ -161,7 +161,7 @@ const page = () => {
               <Form.Group as={Col} md={8}>
 
                 {user_data.user_name ?
-                  <Button type="submit">{loading ?  <Spinner /> : "Submit Form"}</Button>
+                  <Button type="submit">{loading ? <Spinner /> : "Submit Form"}</Button>
                   :
                   <Button type="button" onClick={() => router.push("/login")}>Please login to create a post</Button>
                 }

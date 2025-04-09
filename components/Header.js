@@ -23,27 +23,23 @@ const Header = () => {
         <>
             <header id="header" className="header-header-10 has-bottom-line" >
                 <nav id="navigation" className="header-layout-bottom header-10 menu-style-1" role="navigation" >
-              
+
                     <div className="container">
-                    <div id="logo">
-                                <a href="/">
-                                    <img className="penci-mainlogo penci-limg penci-logo"
-                                        src={"/assets/images/logo/logo.png"}
-                                    />
-                                </a>
-                            </div>
-                        <div className="button-menu-mobile header-10"></div>
-                        <div className="penci-mobile-hlogo"> <a href="/"><img fetchPriority="high"
-                            className="penci-mainlogo penci-mainlogo-mb penci-limg"
-                            src="/assets/images/logo/logo.png"
-                            alt="Guest Posting" width="600" height="151" /></a>
+                        <div id="logo">
+                            <a href="/">
+                                <img className="penci-mainlogo penci-limg penci-logo"
+                                    src={"/assets/images/logo/logo.png"}
+                                />
+                            </a>
                         </div>
+                        <div className="button-menu-mobile header-10"></div>
                         <div className="penci-menu-wrap">
                             <ul id="menu-menu" className="menu">
 
                                 <li id="menu-item-50"
                                     class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-has-children menu-item-has-label ajax-mega-menu menu-item-50">
                                     <a href="/">{pathname === "/login" ? "" : "HOME"}</a>
+
                                 </li>
 
                                 <li id="menu-item-52"
@@ -55,7 +51,7 @@ const Header = () => {
                                     <a href="/category/Fashion  ">Fashion</a>
                                 </li>
                             </ul>
-                            
+
                             <ul id="menu-menu-second" className="menu">
                                 <li id="menu-item-54"
                                     className="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu penci-megapos-flexible penci-mega-menu pcmn-ajxd menu-item-54">
@@ -92,6 +88,7 @@ const Header = () => {
 
 
                             </ul>
+
                         </div>
                         <div className="penci-header-extra">
 

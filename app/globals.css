@@ -15707,3 +15707,6 @@ button:hover {
   cursor: pointer;
   border-radius: 50%;
 }
+.tox-statusbar {
+ display : none !important; 
+}
