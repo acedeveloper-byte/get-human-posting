@@ -30,8 +30,10 @@ const FeaturedSection = () => {
 
     const [data, setData] = useState(DATA)
     useEffect(() => {
+        setTimeout(() => {
             
             AllPost(setData, "Featured")
+        }, 5000)
     }, [])
 
     return (

@@ -55,32 +55,13 @@ const CategoryDetails = () => {
                     <div id="sidebar"
                         className="penci-sidebar-right penci-sidebar-content style-15 pcalign-left pcsb-boxed-widget pciconp-right pcicon-right penci-sticky-sidebar">
                         <div className="theiaStickySidebar">
-                            <aside id="penci_social_widget-2" className="widget penci_social_widget">
-                                <h3 className="widget-title penci-border-arrow"><span className="inner-arrow">Keep in touch</span></h3>
-                                <div className="widget-social pc_aligncenter show-text remove-border-radius penci-social-colored "> <a
-                                    href="https://www.facebook.com/envato/" aria-label="Facebook" rel="noreferrer" target="_blank"><i
-                                        className="penci-faicon fa fa-facebook" style={{ fontsize: "14px" }}></i> <span
-                                            style={{ fontSize: "13px" }}>Facebook</span></a> <a href="https://twitter.com/envato/"
-                                                aria-label="Twitter" rel="noreferrer" target="_blank"><i className="penci-faicon penciicon-x-twitter"
-                                                    style={{ fontsize: "14px" }}></i> <span style={{ fontSize: "13px" }}>Twitter</span></a> <a
-                                                        href="https://www.instagram.com/envato/" aria-label="Instagram" rel="noreferrer" target="_blank"><i
-                                                            className="penci-faicon fa fa-instagram" style={{ fontsize: "14px" }}></i> <span
-                                                                style={{ fontSize: "13px" }}>Instagram</span></a> <a href="https://pinterest.com/envato/"
-                                                                    aria-label="Pinterest" rel="noreferrer" target="_blank"><i className="penci-faicon fa fa-pinterest"
-                                                                        style={{ fontsize: "14px" }}></i> <span style={{ fontSize: "13px" }}>Pinterest</span></a> <a
-                                                                            href="https://www.youtube.com/c/envato/" aria-label="Youtube" rel="noreferrer" target="_blank"><i
-                                                                                className="penci-faicon fa fa-youtube-play" style={{ fontsize: "14px" }}></i> <span
-                                                                                    style={{ fontSize: "13px" }}>Youtube</span></a> <a
-                                                                                        href="../cdn-cgi/l/email-protection.html#acd5c3d9dec1cdc5c0ecc4c3dfd8c1cdc5c082cfc3c1"
-                                                                                        aria-label="Email" rel="noreferrer" target="_blank"><i className="penci-faicon fa fa-envelope"
-                                                                                            style={{ fontsize: "14px" }}></i> <span style={{ fontSize: "13px" }}>Email</span></a> </div>
-                            </aside>
+                      
                             <aside id="custom_html-4" className="widget_text widget widget_custom_html">
                                 <div className="textwidget custom-html-widget"><a href="https://1.envato.market/YYJ4P" target="_blank"
                                     rel="noopener"><img className=" penci-lazy penci-lazy"
                                         src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20333'%3E%3C/svg%3E"
                                         data-src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/imgsidebar.jpg"
-                                        alt="Top Selling Multipurpose WP Theme" width="400" height="333" /></a></div>
+                                        alt="" width="400" height="333" /></a></div>
                             </aside>
                             <aside id="penci_popular_news_widget-2" className="widget penci_popular_news_widget">
                                 <h3 className="widget-title penci-border-arrow"><span className="inner-arrow">Popular Posts</span></h3>

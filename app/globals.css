@@ -4462,7 +4462,8 @@ ul.penci-topbar-menu ul.sub-menu > li:first-child > a {
 }
 
 #navigation .menu {
-  float: left;
+  float: right;
+  margin-left: 10px;
 }
 
 #navigation .menu > ul > li,
@@ -4555,6 +4556,7 @@ ul.penci-topbar-menu ul.sub-menu > li:first-child > a {
 #logo a {
   display: inline-block;
   vertical-align: top;
+  margin-right :  10px
 }
 
 .penci-mobile-hlogo {
@@ -15661,3 +15663,47 @@ button:hover {
 
 
 
+.horizontal-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 16px; /* optional spacing between items */
+  padding-bottom: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 4px;
+}
+
+
+.scroll-btn.left {
+  left: -20px;
+  width: 44px;
+  height: 43px;
+}
+
+.scroll-btn.right {
+  right: -20px;
+  width: 44px;
+  height: 43px;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+}
