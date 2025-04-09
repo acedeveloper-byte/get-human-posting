@@ -8,7 +8,6 @@ const RecentPosts = () => {
         RecentPostsApi(setData)
     }, [])
 
-    console.log("data:", data)
     return (
         <>
             <aside id="penci_popular_news_widget-2" className="widget penci_popular_news_widget">
