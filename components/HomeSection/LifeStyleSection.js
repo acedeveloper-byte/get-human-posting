@@ -1,6 +1,5 @@
 import { AllPost } from '@/utils/apicall/fetchAllPost'
 import { HOST } from '@/utils/static'
-import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 const DATA = [
     {
