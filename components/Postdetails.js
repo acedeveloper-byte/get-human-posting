@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 
-const CategoryDetails = () => {
+const PostDetails = () => {
 
     const params = useParams()
     const [data, setData] = useState([])
@@ -218,5 +218,5 @@ const CategoryDetails = () => {
     )
 }
 
-export default CategoryDetails
+export default PostDetails
 
