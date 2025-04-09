@@ -48,26 +48,26 @@ const Header = () => {
 
                                 <li id="menu-item-52"
                                     className="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu penci-megapos-flexible penci-mega-menu pcmn-ajxd menu-item-has-children menu-item-52">
-                                    <a href="/">Life Style</a>
+                                    <a href="/category/Lifestyle">Life Style</a>
                                 </li>
                                 <li id="menu-item-53"
                                     className="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu penci-megapos-flexible penci-mega-menu pcmn-ajxd menu-item-53">
-                                    <a href="/">Fashion</a>
+                                    <a href="/category/Fashion  ">Fashion</a>
                                 </li>
                             </ul>
                             
                             <ul id="menu-menu-second" className="menu">
                                 <li id="menu-item-54"
                                     className="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu penci-megapos-flexible penci-mega-menu pcmn-ajxd menu-item-54">
-                                    <a href="#">Food</a>
+                                    <a href="/category/Food">Food</a>
                                 </li>
                                 <li id="menu-item-55"
                                     className="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu penci-megapos-flexible penci-mega-menu pcmn-ajxd menu-item-55">
-                                    <a href="#">Travel</a>
+                                    <a href="/category/Travel">Travel</a>
                                 </li>
                                 <li id="menu-item-1567"
                                     className="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567"><a
-                                        href="#">Tech</a></li>
+                                        href="/category/Tech">Tech</a></li>
 
                                 <li id="menu-item-167"
                                     class="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567">
