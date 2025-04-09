@@ -3,24 +3,24 @@ import { HOST } from '@/utils/static'
 import React, { useEffect, useState } from 'react'
 const DATA = [
     {
-        id :1 ,
-        image:"placeholder.png"
+        id: 1,
+        image: "placeholder.png"
     },
     {
-        id :2 ,
-        image:"placeholder.png"
+        id: 2,
+        image: "placeholder.png"
     },
     {
-        id :3 ,
-        image:"placeholder.png"
+        id: 3,
+        image: "placeholder.png"
     },
     {
-        id :4 ,
-        image:"placeholder.png"
+        id: 4,
+        image: "placeholder.png"
     },
     {
-        id :5,
-        image:"placeholder.png"
+        id: 5,
+        image: "placeholder.png"
     },
 ]
 const LifeStyleSection = () => {
@@ -105,8 +105,6 @@ const LifeStyleSection = () => {
                                                                 </div>
                                                             )
                                                         })}
-
-
 
                                                     </div>
                                                 </div>
