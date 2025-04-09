@@ -3,7 +3,6 @@ import { AllPost } from '@/utils/apicall/fetchAllPost'
 import { HOST } from '@/utils/static'
 import { truncateHTML } from '@/utils/functions/truncate'
 
-
 const DATA = [
     {
         id :1 ,
@@ -26,7 +25,6 @@ const DATA = [
         image:"placeholder.png"
     },
 ]
-
 const LatestStyle = () => {
 
     const [data, setData] = useState(DATA)
@@ -206,7 +204,6 @@ const LatestStyle = () => {
                                                                 </li>
                                                             )
                                                         })}
-                                                       
                                                     </ul>
                                                 </div>
                                                 <div class="penci-loader-effect penci-loading-animation-9">
@@ -297,7 +294,37 @@ const LatestStyle = () => {
                                     <div id="sidebar"
                                         class="penci-sidebar-content penci-sidebar-content-vc style-15 pcalign-left pcsb-boxed-widget pciconp-right pcicon-right">
                                         <div class="theiaStickySidebar">
-                                       
+                                            <aside id="penci_social_widget-2" class="widget penci_social_widget">
+                                                <h3 class="widget-title penci-border-arrow"><span class="inner-arrow">Keep in touch</span>
+                                                </h3>
+                                                <div
+                                                    class="widget-social pc_aligncenter show-text remove-border-radius penci-social-colored ">
+                                                    <a href="https://www.facebook.com/envato/" aria-label="Facebook" rel="noreferrer"
+                                                        target="_blank"><i class="penci-faicon fa fa-facebook" style={{ fontSize: "14px" }}></i>
+                                                        <span style={{ fontSize: "13px" }}>Facebook</span></a> <a href="https://twitter.com/envato/"
+                                                            aria-label="Twitter" rel="noreferrer" target="_blank"><i
+                                                                class="penci-faicon penciicon-x-twitter" style={{ fontSize: "14px" }}></i> <span
+                                                                    style={{ fontSize: "13px" }}>Twitter</span></a> <a href="https://www.instagram.com/envato/"
+                                                                        aria-label="Instagram" rel="noreferrer" target="_blank"><i
+                                                                            class="penci-faicon fa fa-instagram" style={{ fontSize: "14px" }}></i> <span
+                                                                                style={{ fontSize: "13px" }}>Instagram</span></a> <a href="https://pinterest.com/envato/"
+                                                                                    aria-label="Pinterest" rel="noreferrer" target="_blank"><i
+                                                                                        class="penci-faicon fa fa-pinterest" style={{ fontSize: "14px" }}></i> <span
+                                                                                            style={{ fontSize: "13px" }}>Pinterest</span></a> <a
+                                                                                                href="https://www.youtube.com/c/envato/" aria-label="Youtube" rel="noreferrer"
+                                                                                                target="_blank"><i class="penci-faicon fa fa-youtube-play" style={{ fontSize: "14px" }}></i>
+                                                        <span style={{ fontSize: "13px" }}>Youtube</span></a> <a
+                                                            href="cdn-cgi/l/email-protection.html#8bf2e4fef9e6eae2e7cbe3e4f8ffe6eae2e7a5e8e4e6"
+                                                            aria-label="Email" rel="noreferrer" target="_blank"><i
+                                                                class="penci-faicon fa fa-envelope" style={{ fontSize: "14px" }}></i> <span
+                                                                    style={{ fontSize: "13px" }}>Email</span></a> </div>
+                                            </aside>
+                                            <aside id="custom_html-4" class="widget_text widget widget_custom_html">
+                                                <div class="textwidget custom-html-widget"><a href="https://1.envato.market/YYJ4P"
+                                                    target="_blank" rel="noopener"><img loading="lazy" decoding="async"
+                                                        src="wp-content/uploads/2021/07/imgsidebar.jpg"
+                                                        alt="Top Selling Multipurpose WP Theme" width="400" height="333" /></a></div>
+                                            </aside>
                                             <aside id="penci_popular_news_widget-2" class="widget penci_popular_news_widget">
                                                 <h3 class="widget-title penci-border-arrow"><span class="inner-arrow">Popular Posts</span>
                                                 </h3>

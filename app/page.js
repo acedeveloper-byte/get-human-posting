@@ -23,7 +23,7 @@ export default function Home() {
         <FeaturedSection />
         <LifeStyleSection />
         <CategorySection />
-        <LatestStyle />
+        {/* <LatestStyle /> */}
         <TechSection />
         <Footer />
 
