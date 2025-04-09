@@ -12,7 +12,6 @@ export const FetchAllCategory = (setData, value) => {
     axios.request(options)
         .then(function (response) {
 
-            // setData
             console.log("setData", response.data);
             setData(response.data.response)
         }).catch(function (error) {

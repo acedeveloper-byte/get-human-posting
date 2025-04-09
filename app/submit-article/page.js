@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { Card, Form, Col, Container, Row, Button } from "react-bootstrap";
+import { Card, Form, Col, Container, Row, Button, Spinner } from "react-bootstrap";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Editor } from '@tinymce/tinymce-react';
@@ -11,6 +11,7 @@ import { Guest_Posting_APi } from "@/utils/apicall/create_post";
 
 const page = () => {
   const [user_data, setUser] = useState(false);
+  const [loading , setloading] = useState(false)
   const editorRef = useRef(null);
   const router = useRouter()
   useEffect(() => {
@@ -24,7 +25,9 @@ const page = () => {
     title: Yup.string().required("Title is required"),
     content: Yup.string().required("Content is required"),
     category: Yup.string().required("Category is required"),
-    file: Yup.string().required("file is required"),
+    file: Yup.mixed()
+    .required("File is required")
+    .test("fileExists", "Please upload a file", value => value instanceof File),
   });
 
   const formik = useFormik({
@@ -39,7 +42,7 @@ const page = () => {
       // { title, status, content, category, user_id }
       const valuess = { title: values.title, file: values.file, status: true, content: values.content, category: values.category, user_id: user_data._id }
 
-      await Guest_Posting_APi(valuess, router)
+      await Guest_Posting_APi(valuess, router, setloading)
 
     },
   });
@@ -115,7 +118,11 @@ const page = () => {
                   <Form.Control
                     type="file"
                     onChange={(event) => formik.setFieldValue("file", event.currentTarget.files[0])}
+                    isInvalid={formik.touched.file && !!formik.errors.file}
                   />
+                   <Form.Control.Feedback type="invalid">
+                    {formik.errors.file}
+                  </Form.Control.Feedback>
                 </Form.Group>
               </Row>
 
@@ -154,7 +161,7 @@ const page = () => {
               <Form.Group as={Col} md={8}>
 
                 {user_data.user_name ?
-                  <Button type="submit">Submit Form</Button>
+                  <Button type="submit">{loading ?  <Spinner /> : "Submit Form"}</Button>
                   :
                   <Button type="button" onClick={() => router.push("/login")}>Please login to create a post</Button>
                 }

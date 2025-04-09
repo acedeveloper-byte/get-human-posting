@@ -26,6 +26,10 @@ export default function Home() {
         <LatestStyle />
         <TechSection />
         <Footer />
+
+
+      
+
       </div>
     </div>
   );

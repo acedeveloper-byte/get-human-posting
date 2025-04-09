@@ -4,11 +4,34 @@ import { HOST } from '@/utils/static'
 import { truncateHTML } from '@/utils/functions/truncate'
 
 
+const DATA = [
+    {
+        id :1 ,
+        image:"placeholder.png"
+    },
+    {
+        id :2 ,
+        image:"placeholder.png"
+    },
+    {
+        id :3 ,
+        image:"placeholder.png"
+    },
+    {
+        id :4 ,
+        image:"placeholder.png"
+    },
+    {
+        id :5,
+        image:"placeholder.png"
+    },
+]
+
 const LatestStyle = () => {
 
-    const [data, setData] = useState([])
-    const [dataHealthy, setDataHealthy] = useState([])
-    const [dataFashion, setDataFashion] = useState([])
+    const [data, setData] = useState(DATA)
+    const [dataHealthy, setDataHealthy] = useState(DATA)
+    const [dataFashion, setDataFashion] = useState(DATA)
     useEffect(() => {
         AllPost(setData, "Latest")
         AllPost(setDataHealthy, "Healthy")
@@ -183,137 +206,7 @@ const LatestStyle = () => {
                                                                 </li>
                                                             )
                                                         })}
-                                                        {/* <li class="grid-style">
-                                                            <article id="post-434" class="item hentry">
-                                                                <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                    src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/2-1-585x390.jpeg"
-                                                                    href="gemma-ward-used-to-wish-fast-fashion-was-less-prevalent-by-now/index.html"
-                                                                    title="Gemma Ward Used To Wish Fast Fashion Was Less Prevalent By Now" />
-                                                                </div>
-                                                                <div class="grid-header-box">
-                                                                    <h2 class="grid-title entry-title"><a
-                                                                        href="gemma-ward-used-to-wish-fast-fashion-was-less-prevalent-by-now/index.html">Gemma
-                                                                        Ward Used To Wish Fast Fashion Was Less Prevalent By Now</a> </h2>
-                                                                    <div class="grid-post-box-meta"> <span
-                                                                        class="featc-author author-italic author vcard">by <a
-                                                                            class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
-                                                                    </span> <span class="featc-date"><time class="entry-date published"
-                                                                        datetime="2021-07-30T08:31:58+00:00">July 30, 2021</time></span> </div>
-                                                                    <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                        class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
-                                                                    </span> </div>
-                                                                </div>
-                                                            </article>
-                                                        </li>
-                                                        <li class="grid-style">
-                                                            <article id="post-406" class="item hentry">
-                                                                <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                    src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/9-585x390.jpeg"
-                                                                    href="slow-fashion-tell-us-about-the-oldest-item-of-clothing-you-own/index.html"
-                                                                    title="Slow Fashion: Tell Us About The Oldest Item of Clothing You Own" />
-                                                                </div>
-                                                                <div class="grid-header-box">
-                                                                    <h2 class="grid-title entry-title"><a
-                                                                        href="slow-fashion-tell-us-about-the-oldest-item-of-clothing-you-own/index.html">Slow
-                                                                        Fashion: Tell Us About The Oldest Item of Clothing You Own</a> </h2>
-                                                                    <div class="grid-post-box-meta"> <span
-                                                                        class="featc-author author-italic author vcard">by <a
-                                                                            class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
-                                                                    </span> <span class="featc-date"><time class="entry-date published"
-                                                                        datetime="2021-07-30T08:17:10+00:00">July 30, 2021</time></span> </div>
-                                                                    <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                        class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
-                                                                    </span> </div>
-                                                                </div>
-                                                            </article>
-                                                        </li>
-                                                        <li class="grid-style">
-                                                            <article id="post-378" class="item hentry">
-                                                                <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                    src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/16-585x390.jpeg"
-                                                                    href="23-best-womens-watches-2019-top-fashion-watches-for-women/index.html"
-                                                                    title="23 Best Women&#8217;s Watches 2019 &#8211; Top Fashion Watches For Women">
-                                                                </img> </div>
-                                                                <div class="grid-header-box">
-                                                                    <h2 class="grid-title entry-title"><a
-                                                                        href="23-best-womens-watches-2019-top-fashion-watches-for-women/index.html">23
-                                                                        Best Women&#8217;s Watches 2019 &#8211; Top Fashion Watches For Women</a>
-                                                                    </h2>
-                                                                    <div class="grid-post-box-meta"> <span
-                                                                        class="featc-author author-italic author vcard">by <a
-                                                                            class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
-                                                                    </span> <span class="featc-date"><time class="entry-date published"
-                                                                        datetime="2021-07-30T08:02:53+00:00">July 30, 2021</time></span> </div>
-                                                                    <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                        class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
-                                                                    </span> </div>
-                                                                </div>
-                                                            </article>
-                                                        </li>
-                                                        <li class="grid-style">
-                                                            <article id="post-350" class="item hentry">
-                                                                <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                    src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/23-585x390.jpeg"
-                                                                    href="met-gala-2019-lady-gaga-makes-her-way-to-fashion-event/index.html"
-                                                                    title="Met Gala 2019: Lady Gaga Makes Her Way To Fashion Event" /> </div>
-                                                                <div class="grid-header-box">
-                                                                    <h2 class="grid-title entry-title"><a
-                                                                        href="met-gala-2019-lady-gaga-makes-her-way-to-fashion-event/index.html">Met
-                                                                        Gala 2019: Lady Gaga Makes Her Way To Fashion Event</a> </h2>
-                                                                    <div class="grid-post-box-meta"> <span
-                                                                        class="featc-author author-italic author vcard">by <a
-                                                                            class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
-                                                                    </span> <span class="featc-date"><time class="entry-date published"
-                                                                        datetime="2021-07-30T07:45:09+00:00">July 30, 2021</time></span> </div>
-                                                                    <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                        class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
-                                                                    </span> </div>
-                                                                </div>
-                                                            </article>
-                                                        </li>
-                                                        <li class="grid-style">
-                                                            <article id="post-322" class="item hentry">
-                                                                <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                    src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/30-585x390.jpeg"
-                                                                    href="gender-fluid-clothing-is-finally-having-its-fashion-moment/index.html"
-                                                                    title="Gender-fluid Clothing Is Finally Having Its Fashion Moment" /> </div>
-                                                                <div class="grid-header-box">
-                                                                    <h2 class="grid-title entry-title"><a
-                                                                        href="gender-fluid-clothing-is-finally-having-its-fashion-moment/index.html">Gender-fluid
-                                                                        Clothing Is Finally Having Its Fashion Moment</a> </h2>
-                                                                    <div class="grid-post-box-meta"> <span
-                                                                        class="featc-author author-italic author vcard">by <a
-                                                                            class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
-                                                                    </span> <span class="featc-date"><time class="entry-date published"
-                                                                        datetime="2021-07-30T04:34:30+00:00">July 30, 2021</time></span> </div>
-                                                                    <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                        class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
-                                                                    </span> </div>
-                                                                </div>
-                                                            </article>
-                                                        </li>
-                                                        <li class="grid-style">
-                                                            <article id="post-290" class="item hentry">
-                                                                <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
-                                                                    src="https://soledaddemo.Author.net/wp-content/uploads/2021/07/38-585x390.jpeg"
-                                                                    href="inclusive-fashion-a-plus-size-opportunity-in-china-fashion-market/index.html"
-                                                                    title="Inclusive Fashion: A Plus-Size Opportunity in China Fashion Market" />
-                                                                </div>
-                                                                <div class="grid-header-box">
-                                                                    <h2 class="grid-title entry-title"><a
-                                                                        href="inclusive-fashion-a-plus-size-opportunity-in-china-fashion-market/index.html">Inclusive
-                                                                        Fashion: A Plus-Size Opportunity in China Fashion Market</a> </h2>
-                                                                    <div class="grid-post-box-meta"> <span
-                                                                        class="featc-author author-italic author vcard">by <a
-                                                                            class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
-                                                                    </span> <span class="featc-date"><time class="entry-date published"
-                                                                        datetime="2021-07-30T04:17:24+00:00">July 30, 2021</time></span> </div>
-                                                                    <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                        class="author-url url fn n" href={`/${itex.url}`}>Penci Design</a>
-                                                                    </span> </div>
-                                                                </div>
-                                                            </article>
-                                                        </li> */}
+                                                       
                                                     </ul>
                                                 </div>
                                                 <div class="penci-loader-effect penci-loading-animation-9">
@@ -404,37 +297,7 @@ const LatestStyle = () => {
                                     <div id="sidebar"
                                         class="penci-sidebar-content penci-sidebar-content-vc style-15 pcalign-left pcsb-boxed-widget pciconp-right pcicon-right">
                                         <div class="theiaStickySidebar">
-                                            <aside id="penci_social_widget-2" class="widget penci_social_widget">
-                                                <h3 class="widget-title penci-border-arrow"><span class="inner-arrow">Keep in touch</span>
-                                                </h3>
-                                                <div
-                                                    class="widget-social pc_aligncenter show-text remove-border-radius penci-social-colored ">
-                                                    <a href="https://www.facebook.com/envato/" aria-label="Facebook" rel="noreferrer"
-                                                        target="_blank"><i class="penci-faicon fa fa-facebook" style={{ fontSize: "14px" }}></i>
-                                                        <span style={{ fontSize: "13px" }}>Facebook</span></a> <a href="https://twitter.com/envato/"
-                                                            aria-label="Twitter" rel="noreferrer" target="_blank"><i
-                                                                class="penci-faicon penciicon-x-twitter" style={{ fontSize: "14px" }}></i> <span
-                                                                    style={{ fontSize: "13px" }}>Twitter</span></a> <a href="https://www.instagram.com/envato/"
-                                                                        aria-label="Instagram" rel="noreferrer" target="_blank"><i
-                                                                            class="penci-faicon fa fa-instagram" style={{ fontSize: "14px" }}></i> <span
-                                                                                style={{ fontSize: "13px" }}>Instagram</span></a> <a href="https://pinterest.com/envato/"
-                                                                                    aria-label="Pinterest" rel="noreferrer" target="_blank"><i
-                                                                                        class="penci-faicon fa fa-pinterest" style={{ fontSize: "14px" }}></i> <span
-                                                                                            style={{ fontSize: "13px" }}>Pinterest</span></a> <a
-                                                                                                href="https://www.youtube.com/c/envato/" aria-label="Youtube" rel="noreferrer"
-                                                                                                target="_blank"><i class="penci-faicon fa fa-youtube-play" style={{ fontSize: "14px" }}></i>
-                                                        <span style={{ fontSize: "13px" }}>Youtube</span></a> <a
-                                                            href="cdn-cgi/l/email-protection.html#8bf2e4fef9e6eae2e7cbe3e4f8ffe6eae2e7a5e8e4e6"
-                                                            aria-label="Email" rel="noreferrer" target="_blank"><i
-                                                                class="penci-faicon fa fa-envelope" style={{ fontSize: "14px" }}></i> <span
-                                                                    style={{ fontSize: "13px" }}>Email</span></a> </div>
-                                            </aside>
-                                            <aside id="custom_html-4" class="widget_text widget widget_custom_html">
-                                                <div class="textwidget custom-html-widget"><a href="https://1.envato.market/YYJ4P"
-                                                    target="_blank" rel="noopener"><img loading="lazy" decoding="async"
-                                                        src="wp-content/uploads/2021/07/imgsidebar.jpg"
-                                                        alt="Top Selling Multipurpose WP Theme" width="400" height="333" /></a></div>
-                                            </aside>
+                                       
                                             <aside id="penci_popular_news_widget-2" class="widget penci_popular_news_widget">
                                                 <h3 class="widget-title penci-border-arrow"><span class="inner-arrow">Popular Posts</span>
                                                 </h3>

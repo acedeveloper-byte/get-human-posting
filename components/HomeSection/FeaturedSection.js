@@ -2,11 +2,38 @@ import { AllPost } from '@/utils/apicall/fetchAllPost'
 import { HOST } from '@/utils/static'
 import React, { useEffect, useState } from 'react'
 
+import Placeholder from 'react-bootstrap/Placeholder';
+
+const DATA = [
+    {
+        id :1 ,
+        image:"placeholder.png"
+    },
+    {
+        id :2 ,
+        image:"placeholder.png"
+    },
+    {
+        id :3 ,
+        image:"placeholder.png"
+    },
+    {
+        id :4 ,
+        image:"placeholder.png"
+    },
+    {
+        id :5,
+        image:"placeholder.png"
+    },
+]
 const FeaturedSection = () => {
 
-    const [data, setData] = useState([])
+    const [data, setData] = useState(DATA)
     useEffect(() => {
-        AllPost(setData, "Featured")
+        setTimeout(() => {
+            
+            AllPost(setData, "Featured")
+        }, 5000)
     }, [])
 
     return (
@@ -29,56 +56,56 @@ const FeaturedSection = () => {
                                             <div class="penci-biggrid-inner default">
                                                 <div class="penci-big-grid-ajax-data">
                                                     <div class="penci-clearfix penci-biggrid-data penci-dblock penci-fixh">
+                                                {
 
-                                                        {data.slice(0, 5).map((item, idx) => {
+data.slice(0, 5).map((item, idx) => {
 
-                                                            return (
+    return (
 
-                                                                <div class={`${idx + 1 === 5 ? `penci-bgitem bgitem-0` : `penci-bgitem bgitem-${idx + 1}`}`}>
-                                                                    <div class="penci-bgitin">
-                                                                        <div class="penci-bgmain">
-                                                                            <div class="pcbg-thumb">
+        <div class={`${idx + 1 === 5 ? `penci-bgitem bgitem-0` : `penci-bgitem bgitem-${idx + 1}`}`}>
+            <div class="penci-bgitin">
+                <div class="penci-bgmain">
+                    <div class="pcbg-thumb">
 
-                                                                                <div class="pcbg-thumbin">
-                                                                                    <a class="pcbg-bgoverlay"></a>                                                                                    <img
-                                                                                        src={`${HOST}resources/post/${item.image}`}
-                                                                                        class="penci-lazy penci-image-holder" />
-                                                                                </div>
-                                                                            </div>
+                        <div class="pcbg-thumbin">
+                            <a class="pcbg-bgoverlay"></a>                                                                                    <img
+                                src={`${HOST}resources/post/${item.image}`}
+                                class="penci-lazy penci-image-holder" />
+                        </div>
+                    </div>
 
-                                                                            <div class="pcbg-content">
+                    <div class="pcbg-content">
 
-                                                                                <div class="pcbg-content-flex">
-                                                                                    <a class="pcbg-bgoverlay active-overlay"
-                                                                                        href={`/${item.url}`}
-                                                                                        title={`${item.title}`}></a>
-                                                                                    <div class="pcbg-content-inner bgcontent-block"> <a
-                                                                                        href={`/${item.url}`}
-                                                                                        title={`${item.title}`}
-                                                                                        class="pcbg-bgoverlaytext item-hover"></a>
-                                                                                        <div class="pcbg-heading item-hover">
-                                                                                            <h3 class="pcbg-title"> <a
-                                                                                                href={`/${item.url}`}>
-                                                                                                {item.title} </a>
-                                                                                            </h3>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-
-
-                                                                            </div>
+                        <div class="pcbg-content-flex">
+                            <a class="pcbg-bgoverlay active-overlay"
+                                href={`/${item.url}`}
+                                title={`${item.title}`}></a>
+                            <div class="pcbg-content-inner bgcontent-block"> <a
+                                href={`/${item.url}`}
+                                title={`${item.title}`}
+                                class="pcbg-bgoverlaytext item-hover"></a>
+                                <div class="pcbg-heading item-hover">
+                                    <h3 class="pcbg-title"> <a
+                                        href={`/${item.url}`}>
+                                        {item.title} </a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
 
 
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            )
-                                                        }
-                                                        )}
+                    </div>
 
 
+                </div>
+            </div>
+        </div>
+    )
+}
+)}
                                                     </div>
                                                 </div>
+                                               
                                             </div>
                                         </div>
                                     </div>
@@ -93,3 +120,17 @@ const FeaturedSection = () => {
 }
 
 export default FeaturedSection
+
+
+
+export function CardExample() {
+  return (
+    <div className="d-flex justify-content-around">
+        <p aria-hidden="true">
+        <Placeholder xs={6} />
+      </p>
+
+      <Placeholder.Button xs={4} aria-hidden="true" />
+    </div>
+  );
+}

@@ -70,32 +70,7 @@ const Page = () => {
           className="penci-sidebar-right penci-sidebar-content style-15 pcalign-left pcsb-boxed-widget pciconp-right pcicon-right penci-sticky-sidebar"
         >
           <div className="theiaStickySidebar">
-            <aside id="penci_social_widget-2" className="widget penci_social_widget">
-              <h3 className="widget-title penci-border-arrow">
-                <span className="inner-arrow">Keep in touch</span>
-              </h3>
-              <div className="widget-social pc_aligncenter show-text remove-border-radius penci-social-colored">
-                <a
-                  href="https://www.facebook.com/envato/"
-                  aria-label="Facebook"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <i className="penci-faicon fa fa-facebook" style={{ fontSize: '14px' }}></i>
-                  <span style={{ fontSize: '13px' }}>Facebook</span>
-                </a>
-                <a
-                  href="https://twitter.com/envato/"
-                  aria-label="Twitter"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <i className="penci-faicon penciicon-x-twitter" style={{ fontSize: '14px' }}></i>
-                  <span style={{ fontSize: '13px' }}>Twitter</span>
-                </a>
-                {/* Add the rest the same way */}
-              </div>
-            </aside>
+       
           </div>
         </div>
       </div>

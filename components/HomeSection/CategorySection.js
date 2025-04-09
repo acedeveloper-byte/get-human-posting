@@ -1,15 +1,47 @@
+import { IoChevronForward } from "react-icons/io5";
+import { IoChevronBack } from "react-icons/io5";
 import { FetchAllCategory } from '@/utils/apicall/fetchAllCategory'
 import React, { useEffect, useState } from 'react'
+import { HOST } from "@/utils/static";
 
+const DATA = [
+    {
+        id :1 ,
+        image:"placeholder.png"
+    },
+    {
+        id :2 ,
+        image:"placeholder.png"
+    },
+    {
+        id :3 ,
+        image:"placeholder.png"
+    },
+    {
+        id :4 ,
+        image:"placeholder.png"
+    },
+    {
+        id :5,
+        image:"placeholder.png"
+    },
+]
 const CategorySection = () => {
 
-    const [data, setData] = useState([])
+    const [data, setData] = useState(DATA)
     useEffect(() => {
         FetchAllCategory(setData)
     }, [])
 
-    console.log("data::", data)
-
+    const scrollLeft = () => {
+        const container = document.getElementById("scrollable-grid");
+        container.scrollBy({ left: -300, behavior: 'smooth' });
+      };
+      
+      const scrollRight = () => {
+        const container = document.getElementById("scrollable-grid");
+        container.scrollBy({ left: 300, behavior: 'smooth' });
+      };
     return (
         <>
             <section
@@ -28,8 +60,20 @@ const CategorySection = () => {
                                         class="penci-clearfix penci-biggrid-wrapper penci-grid-col-6 penci-grid-mcol-2 penci-bgrid-based-custom penci-bgrid-style-1 pcbg-ficonpo-top-right pcbg-reiconpo-top-left penci-bgrid-content-on pencibg-imageh-zoom-in pencibg-texth-none pencibg-textani-movetop textop">
                                         <div class="penci-clearfix penci-biggrid penci-bgstyle-1 penci-bgel">
                                             <div class="penci-biggrid-inner default">
-                                                <div class="penci-clearfix penci-biggrid-data penci-dflex">
+                                                <div>
+
+                                            <button className="scroll-btn left" onClick={() => scrollLeft()}>
+                                            <IoChevronBack />
+                                             </button>
+                                             <button className="scroll-btn right" onClick={() => scrollRight()}>
+                                             <IoChevronForward />
+
+                                             </button>
+                                                </div>
+
+                                                <div id="scrollable-grid" class="penci-clearfix penci-biggrid-data penci-dflex horizontal-scroll">
                                                     {data.map((item, index) => {
+                                                        item.image  = "placeholder.png"
                                                         return (
                                                             <div class="penci-bgitem elementor-repeater-item-17beedc">
                                                                 <div class="penci-bgitin">
@@ -38,7 +82,8 @@ const CategorySection = () => {
                                                                             <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
                                                                                 href={`/category/${item.label}`} title={item.label}></a>
                                                                                 <img
-                                                                                    src="https://soledaddemo.Author.net/wp-content/uploads/2021/08/fashion-300x300.jpg"
+                                                                                                                       src={`${HOST}resources/post/${item.image}`}
+                                                                                   
                                                                                     class="penci-lazy penci-image-holder" />
                                                                             </div>
                                                                         </div>
@@ -65,6 +110,7 @@ const CategorySection = () => {
 
 
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
