@@ -15710,3 +15710,45 @@ button:hover {
 .tox-statusbar {
  display : none !important; 
 }
+
+.more-menu .dropdown-menu {
+  display: none;
+}
+
+.more-menu:hover .dropdown-menu {
+  display: block;
+  position: absolute;
+  z-index: 999999;
+  background: white;
+  padding: 10px;
+  width:220px;
+  right : 5px
+}
+
+.more-menu .dropdown-menu li {
+  padding: 10px;
+    border-bottom : 1px solid whitesmoke ;
+}
+.more-menu .dropdown-menu li:hover {
+  background: #7b7b7b1c;
+}
+
+.more-menu .dropdown-menu li a  {
+  text-decoration:  none;
+  font-size: 15px;
+  color :  black;
+  font-family: var(--pchead-font);
+}
+
+
+.category-scroll {
+  max-height: 200px; /* Adjust as needed */
+  overflow-y: auto;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+}
+
+
+

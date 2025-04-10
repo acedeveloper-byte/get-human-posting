@@ -1,6 +1,7 @@
 'use client'
 import { usePathname, useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
+import { Dropdown } from 'react-bootstrap'
 
 
 const Header = () => {
@@ -36,58 +37,92 @@ const Header = () => {
                         <div className="penci-menu-wrap">
                             <ul id="menu-menu" className="menu">
 
-                                <li id="menu-item-50"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-has-children menu-item-has-label ajax-mega-menu menu-item-50">
-                                    <a href="/">{pathname === "/login" ? "" : "HOME"}</a>
 
-                                </li>
-
-                                <li id="menu-item-52"
-                                    className="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu penci-megapos-flexible penci-mega-menu pcmn-ajxd menu-item-has-children menu-item-52">
-                                    <a href="/category/Lifestyle">Life Style</a>
-                                </li>
-                                <li id="menu-item-53"
-                                    className="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu penci-megapos-flexible penci-mega-menu pcmn-ajxd menu-item-53">
-                                    <a href="/category/Fashion  ">Fashion</a>
-                                </li>
                             </ul>
 
-                            <ul id="menu-menu-second" className="menu">
-                                <li id="menu-item-54"
-                                    className="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu penci-megapos-flexible penci-mega-menu pcmn-ajxd menu-item-54">
-                                    <a href="/category/Food">Food</a>
-                                </li>
-                                <li id="menu-item-55"
-                                    className="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu penci-megapos-flexible penci-mega-menu pcmn-ajxd menu-item-55">
-                                    <a href="/category/Travel">Travel</a>
-                                </li>
-                                <li id="menu-item-1567"
-                                    className="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567"><a
-                                        href="/category/Tech">Tech</a></li>
 
-                                <li id="menu-item-167"
-                                    class="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567">
-
-                                    {user?.user_name ?
-                                        <a href="/submit-article">SUBMIT ARTICLE</a>
-                                        :
-                                        <a href="/login">SUBMIT ARTICLE</a>}
+                            {/* Dropdown for Additional Items */}
+                            <ul id="menu-menu-second" className="menu d-flex align-items-center list-unstyled mb-0">
+                                {/* Always Visible Items */}
+                                <li className="nav-item me-3">
+                                    <a className="nav-link" href="/">{pathname === "/login" ? "" : "HOME"}</a>
                                 </li>
 
-                                {user?.user_name ?
+
+                                <li>
+                                    {user?.user_name ? (
+                                        <a className="dropdown-item" href="/submit-article">SUBMIT ARTICLE</a>
+                                    ) : (
+                                        <a className="dropdown-item" href="/login">SUBMIT ARTICLE</a>
+                                    )}
+                                </li> {user?.user_name ? (
                                     <>
-                                        <li id="menu-item-167"
-                                            class="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567"><a
-                                                href="/your-posts">My Profile </a></li>
-                                        <li id="menu-item-167"
-                                            class="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567"><a
-                                                href="#" onClick={() => handleLogout()}>Logout</a></li> </> : <li id="menu-item-167"
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category ajax-mega-menu menu-item-1567"><a
-                                                        href="/login">{pathname === "/login" ? "" : "LOGIN"}</a></li>
-                                }
+                                        <li><a className="dropdown-item" href="/your-posts">My Profile</a></li>
+                                        <li>
+                                            <a className="dropdown-item" href="#" onClick={handleLogout}>Logout</a>
+                                        </li>
+                                    </>
+                                ) : (
+                                    <li>
+                                        <a className="dropdown-item" href="/login">{pathname === "/login" ? "" : "LOGIN"}</a>
+                                    </li>
+                                )}
+                                {/* More Dropdown */}
+                                <li className="nav-item more-menu">
+                                    <a
+                                        className="nav-link dropdown-toggle"
+                                        href="#"
+                                        role="button"
+                                        id="moreMenuLink"
+                                    >
+                                        More ▾
+                                    </a>
+
+                                    <ul className="dropdown-menu category-scroll list-unstyled mb-0" aria-labelledby="moreMenuLink">
+
+                                        <>
+                                            {[
+
+                                                { "value": "413", "label": "Lifestyle" },
+                                                { "value": "413", "label": "Latest" },
+                                                { "value": "413", "label": "Featured" },
+                                                { "value": "413", "label": "Tech" },
+                                                { "value": "413", "label": "Healthy" },
+                                                { "value": "413", "label": "Fashion" },
+                                                { "value": "413", "label": "Business" },
+                                                { "value": "410", "label": "Design" },
+                                                { "value": "7", "label": "Domain Names" },
+                                                { "value": "426", "label": "Education" },
+                                                { "value": "411", "label": "Entertainment" },
+                                                { "value": "416", "label": "Home & Lifestyle" },
+                                                { "value": "425", "label": "Marketing" },
+                                                { "value": "6", "label": "Digital Marketing", "indent": true },
+                                                { "value": "5", "label": "SEO", "indent": true },
+                                                { "value": "4", "label": "Social Media", "indent": true },
+                                                { "value": "412", "label": "Music" },
+                                                { "value": "1", "label": "Other" },
+                                                { "value": "437", "label": "Politics" },
+                                                { "value": "436", "label": "Real Estate" },
+                                                { "value": "415", "label": "Sports" },
+                                                { "value": "414", "label": "Technology" },
+                                                { "value": "418", "label": "Travel" },
+                                                { "value": "299", "label": "Video" },
+                                                { "value": "8", "label": "Web Hosting" },
+                                                { "value": "9", "label": "Web Security" },
+                                                { "value": "417", "label": "Wellness" },
+                                                { "value": "10", "label": "Writing" }].map((item, index) => {
+                                                    return (
+                                                        <li><a style={item.indent ? { paddingLeft: "1.5rem" } : {}} href={`/category/${item.label}`}>{item.label}</a></li>
+                                                    )
+                                                })}
+                                        </>
 
 
+
+                                    </ul>
+                                </li>
                             </ul>
+
 
                         </div>
                         <div className="penci-header-extra">
