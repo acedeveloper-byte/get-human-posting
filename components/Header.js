@@ -75,7 +75,7 @@ const Header = () => {
                                         role="button"
                                         id="moreMenuLink"
                                     >
-                                        More ▾
+                                        More
                                     </a>
 
                                     <ul className="dropdown-menu category-scroll list-unstyled mb-0" aria-labelledby="moreMenuLink">
@@ -96,9 +96,9 @@ const Header = () => {
                                                 { "value": "411", "label": "Entertainment" },
                                                 { "value": "416", "label": "Home & Lifestyle" },
                                                 { "value": "425", "label": "Marketing" },
-                                                { "value": "6", "label": "Digital Marketing", "indent": true },
-                                                { "value": "5", "label": "SEO", "indent": true },
-                                                { "value": "4", "label": "Social Media", "indent": true },
+                                                { "value": "6", "label": "Digital Marketing" },
+                                                { "value": "5", "label": "SEO" },
+                                                { "value": "4", "label": "Social Media" },
                                                 { "value": "412", "label": "Music" },
                                                 { "value": "1", "label": "Other" },
                                                 { "value": "437", "label": "Politics" },
@@ -112,21 +112,15 @@ const Header = () => {
                                                 { "value": "417", "label": "Wellness" },
                                                 { "value": "10", "label": "Writing" }].map((item, index) => {
                                                     return (
-                                                        <li><a style={item.indent ? { paddingLeft: "1.5rem" } : {}} href={`/category/${item.label}`}>{item.label}</a></li>
+                                                        <li ><a href={`/category/${item.label}`}>{item.label}</a></li>
                                                     )
                                                 })}
                                         </>
-
-
-
                                     </ul>
                                 </li>
                             </ul>
-
-
                         </div>
                         <div className="penci-header-extra">
-
                             <div id="top-search" className="penci-top-search pcheader-icon top-search-classNamees"> <a href="#"
                                 className="search-click" aria-label="Search"> <i className="penciicon-magnifiying-glass"></i> </a>
                                 <div className="show-search pcbds-default">

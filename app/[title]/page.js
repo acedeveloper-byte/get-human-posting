@@ -12,7 +12,6 @@ const page = () => {
     < >
       <Header />
       <div className='penci-single-wrapper'>
-
         <Postdetails />
       </div>
       <Footer />

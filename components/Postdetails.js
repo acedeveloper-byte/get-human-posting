@@ -56,7 +56,7 @@ const PostDetails = () => {
                     <div id="sidebar"
                         className="penci-sidebar-right penci-sidebar-content style-15 pcalign-left pcsb-boxed-widget pciconp-right pcicon-right penci-sticky-sidebar">
                         <div className="theiaStickySidebar">
-                      
+
                             <aside id="custom_html-4" className="widget_text widget widget_custom_html">
                                 <div className="textwidget custom-html-widget"><a href="https://1.envato.market/YYJ4P" target="_blank"
                                     rel="noopener"><img className=" penci-lazy penci-lazy"
@@ -64,30 +64,10 @@ const PostDetails = () => {
                                         data-src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/imgsidebar.jpg"
                                         alt="" width="400" height="333" /></a></div>
                             </aside>
-                            
-                          <RecentPosts />
 
-                            <aside id="categories-5" className="widget widget_categories">
-                                <h3 className="widget-title penci-border-arrow"><span className="inner-arrow">Categories</span></h3>
-                                <ul>
-                                    <li className="cat-item cat-item-7"><a href="../category/life-style/culture/index.html">Culture <span
-                                        className="category-item-count">(11)</span></a> </li>
-                                    <li className="cat-item cat-item-3"><a href="../category/fashion/index.html">Fashion <span
-                                        className="category-item-count">(11)</span></a> </li>
-                                    <li className="cat-item cat-item-4"><a href="">Featured <span
-                                        className="category-item-count">(9)</span></a> </li>
-                                    <li className="cat-item cat-item-5"><a href="../category/food/index.html">Food <span
-                                        className="category-item-count">(11)</span></a> </li>
-                                    <li className="cat-item cat-item-8"><a href="../category/life-style/healthy-living/index.html">Healthy
-                                        Living <span className="category-item-count">(11)</span></a> </li>
-                                    <li className="cat-item cat-item-9"><a href="../category/life-style/style/index.html">Style <span
-                                        className="category-item-count">(11)</span></a> </li>
-                                    <li className="cat-item cat-item-10"><a href="../category/technology/index.html">Technology <span
-                                        className="category-item-count">(12)</span></a> </li>
-                                    <li className="cat-item cat-item-11"><a href="../category/travel/index.html">Travel <span
-                                        className="category-item-count">(12)</span></a> </li>
-                                </ul>
-                            </aside>
+                            <RecentPosts />
+
+
                             <aside id="mc4wp_form_widget-2"
                                 className="penci-mc4wp-widget penci-mailchimp-s1 widget widget_mc4wp_form_widget">
                                 <h3 className="widget-title penci-border-arrow"><span className="inner-arrow">Subscribe Newsletter</span></h3>
