@@ -13,7 +13,6 @@ export const AllPostBytitle = (setData, value) => {
         .then(function (response) {
 
             // setData
-            console.log("setData", response.data);
             setData(response.data.response)
         }).catch(function (error) {
             console.error(error);

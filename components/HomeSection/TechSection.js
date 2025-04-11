@@ -1,32 +1,38 @@
 import { AllPost } from '@/utils/apicall/fetchAllPost'
 import { HOST } from '@/utils/static'
+import moment from 'moment'
 import React, { useEffect, useState } from 'react'
 const DATA = [
     {
-        id :1 ,
-        image:"placeholder.png"
+        id: 1,
+        image: "placeholder.png"
     },
     {
-        id :2 ,
-        image:"placeholder.png"
+        id: 2,
+        image: "placeholder.png"
     },
     {
-        id :3 ,
-        image:"placeholder.png"
+        id: 3,
+        image: "placeholder.png"
     },
     {
-        id :4 ,
-        image:"placeholder.png"
+        id: 4,
+        image: "placeholder.png"
     },
     {
-        id :5,
-        image:"placeholder.png"
+        id: 5,
+        image: "placeholder.png"
     },
 ]
 const TechSection = () => {
 
     const [data, setData] = useState(DATA)
+    const [user, setuser] = useState({})
+
     useEffect(() => {
+        if (localStorage.getItem("auth_data")) {
+            setuser(JSON.parse(localStorage.getItem("auth_data")))
+        }
         AllPost(setData, "Tech")
     }, [])
 
@@ -80,16 +86,17 @@ const TechSection = () => {
                                                                                         class="pcbg-bgoverlaytext active-overlay item-hover"></a>
                                                                                         <div class="pcbg-heading item-hover">
                                                                                             <h3 class="pcbg-title"> <a
-                                                                                                href="could-high-flying-drones-power-your-home-one-day/index.html">
+                                                                                                href={`/${itx.url}`}>
                                                                                                 {itx.title} </a> </h3>
                                                                                         </div>
                                                                                         <div class="grid-post-box-meta pcbg-meta item-hover">
                                                                                             <div class="pcbg-meta-desc"> <span
                                                                                                 class="bg-date-author author-italic author vcard"> by <a
-                                                                                                    class="author-url url fn n" href="author/admin/index.html">Penci
-                                                                                                    Design</a> </span> <span class="bg-date"><time
-                                                                                                        class="entry-date published"
-                                                                                                        datetime="2021-07-30T08:22:14+00:00">July 30, 2021</time></span>
+                                                                                                    class="author-url url fn n" href="#">
+                                                                                                    {user.user_name}
+                                                                                                </a> </span> <span class="bg-date"><time
+                                                                                                    class="entry-date published"
+                                                                                                >{moment(itx.createdAt).format("MMMM Do yy")}</time></span>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -101,7 +108,7 @@ const TechSection = () => {
                                                             )
                                                         })}
 
-                                                      
+
                                                     </div>
                                                 </div>
                                             </div>

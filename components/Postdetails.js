@@ -1,10 +1,13 @@
+
+import { LuPencilLine } from "react-icons/lu";
 import { AllPostBytitle } from '@/utils/apicall/post_by_title'
 import { HOST } from '@/utils/static'
 import moment from 'moment'
 import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Button, Col, Container, Row } from 'react-bootstrap'
 import RecentPosts from './RecentPosts'
+import Link from "next/link";
 
 const PostDetails = () => {
 
@@ -16,7 +19,6 @@ const PostDetails = () => {
         if (localStorage.getItem("auth_data")) {
             setUser(JSON.parse(localStorage.getItem("auth_data")))
         }
-
         const callapi = async () => {
             await AllPostBytitle(setData, params.title)
         }
@@ -28,7 +30,7 @@ const PostDetails = () => {
 
         <Container fluid className='penci-single-block inview'>
             <Row>
-                <Col md={8}>
+            <Col md={8}>
                     <div style={{
                         backgroundImage: `url(${HOST}resources/post/${data.image})`,
                         backgroundSize: "cover", height: "300px",
@@ -39,12 +41,16 @@ const PostDetails = () => {
                     </div>
                     <div className="container mt-2">
                         <div className='row'>
-
                             <Col md={2}>
                                 Author : <b>{user_data?.user_name}</b>
                             </Col>
                             <Col md={3}>
                                 Published on : <b>{moment(data.createdAt).format("MMMM Do YYYY")}</b>
+                            </Col>
+                            <Col md={4} style={{ justifyContent: "flex-end", display: "flex" }}>
+                                <span>
+                                    <Button variant={"primary"} style={{ borderRadius: "10px", margin: 0, paading: 0 }}><Link href={`/post/${data.url}`} className="text-decoration-none text-white"> <LuPencilLine size={20} />Edit </Link></Button>
+                                </span>
                             </Col>
                         </div>
                     </div>

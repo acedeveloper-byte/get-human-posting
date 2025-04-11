@@ -6,24 +6,24 @@ import { HOST } from "@/utils/static";
 
 const DATA = [
     {
-        id :1 ,
-        image:"placeholder.png"
+        id: 1,
+        image: "placeholder.png"
     },
     {
-        id :2 ,
-        image:"placeholder.png"
+        id: 2,
+        image: "placeholder.png"
     },
     {
-        id :3 ,
-        image:"placeholder.png"
+        id: 3,
+        image: "placeholder.png"
     },
     {
-        id :4 ,
-        image:"placeholder.png"
+        id: 4,
+        image: "placeholder.png"
     },
     {
-        id :5,
-        image:"placeholder.png"
+        id: 5,
+        image: "placeholder.png"
     },
 ]
 const CategorySection = () => {
@@ -36,12 +36,12 @@ const CategorySection = () => {
     const scrollLeft = () => {
         const container = document.getElementById("scrollable-grid");
         container.scrollBy({ left: -300, behavior: 'smooth' });
-      };
-      
-      const scrollRight = () => {
+    };
+
+    const scrollRight = () => {
         const container = document.getElementById("scrollable-grid");
         container.scrollBy({ left: 300, behavior: 'smooth' });
-      };
+    };
     return (
         <>
             <section
@@ -62,18 +62,18 @@ const CategorySection = () => {
                                             <div class="penci-biggrid-inner default">
                                                 <div>
 
-                                            <button className="scroll-btn left" onClick={() => scrollLeft()}>
-                                            <IoChevronBack />
-                                             </button>
-                                             <button className="scroll-btn right" onClick={() => scrollRight()}>
-                                             <IoChevronForward />
+                                                    <button className="scroll-btn left" onClick={() => scrollLeft()}>
+                                                        <IoChevronBack />
+                                                    </button>
+                                                    <button className="scroll-btn right" onClick={() => scrollRight()}>
+                                                        <IoChevronForward />
 
-                                             </button>
+                                                    </button>
                                                 </div>
 
                                                 <div id="scrollable-grid" class="penci-clearfix penci-biggrid-data penci-dflex horizontal-scroll">
                                                     {data.map((item, index) => {
-                                                        item.image  = "placeholder.png"
+                                                        item.image = "placeholder.png"
                                                         return (
                                                             <div class="penci-bgitem elementor-repeater-item-17beedc">
                                                                 <div class="penci-bgitin">
@@ -82,8 +82,7 @@ const CategorySection = () => {
                                                                             <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
                                                                                 href={`/category/${item.label}`} title={item.label}></a>
                                                                                 <img
-                                                                                                                       src={`${HOST}resources/post/${item.image}`}
-                                                                                   
+                                                                                    src={item.imgSrc}
                                                                                     class="penci-lazy penci-image-holder" />
                                                                             </div>
                                                                         </div>

@@ -10,7 +10,6 @@ import { AllPost } from '@/utils/apicall/fetchAllPost';
 const CategoryPage = () => {
     const params = useParams()
     const [data, setData] = useState([])
-    console.log("params:", params)
     useEffect(() => {
 
 
@@ -19,7 +18,6 @@ const CategoryPage = () => {
         }
     }, []);
 
-    console.log(`""""""""""""""""`, data)
     return (
         <div id="soledad_wrapper" className="wrapper-boxed header-style-header-10 penci-hlogo-center header-search-style-default">
 
@@ -35,7 +33,7 @@ const CategoryPage = () => {
                                             <div className="thumbnail">
                                                 <a href={`/${item.url}`} className='text-decoration-none'>
                                                     <img
-                                                        src={`${HOST}resources/post/${item.image}`}
+                                                        src={item.itemSrc}
                                                         alt="Post Image"
                                                         loading="lazy"
                                                     />

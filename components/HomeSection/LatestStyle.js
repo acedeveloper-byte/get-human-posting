@@ -6,24 +6,24 @@ import RecentPosts from '../RecentPosts'
 
 const DATA = [
     {
-        id :1 ,
-        image:"placeholder.png"
+        id: 1,
+        image: "placeholder.png"
     },
     {
-        id :2 ,
-        image:"placeholder.png"
+        id: 2,
+        image: "placeholder.png"
     },
     {
-        id :3 ,
-        image:"placeholder.png"
+        id: 3,
+        image: "placeholder.png"
     },
     {
-        id :4 ,
-        image:"placeholder.png"
+        id: 4,
+        image: "placeholder.png"
     },
     {
-        id :5,
-        image:"placeholder.png"
+        id: 5,
+        image: "placeholder.png"
     },
 ]
 const LatestStyle = () => {
@@ -295,7 +295,7 @@ const LatestStyle = () => {
                                     <div id="sidebar"
                                         class="penci-sidebar-content penci-sidebar-content-vc style-15 pcalign-left pcsb-boxed-widget pciconp-right pcicon-right">
                                         <div class="theiaStickySidebar">
-                                            <aside id="penci_social_widget-2" class="widget penci_social_widget">
+                                            {/* <aside id="penci_social_widget-2" class="widget penci_social_widget">
                                                 <h3 class="widget-title penci-border-arrow"><span class="inner-arrow">Keep in touch</span>
                                                 </h3>
                                                 <div
@@ -319,15 +319,15 @@ const LatestStyle = () => {
                                                             aria-label="Email" rel="noreferrer" target="_blank"><i
                                                                 class="penci-faicon fa fa-envelope" style={{ fontSize: "14px" }}></i> <span
                                                                     style={{ fontSize: "13px" }}>Email</span></a> </div>
-                                            </aside>
-                                            <aside id="custom_html-4" class="widget_text widget widget_custom_html">
+                                            </aside> */}
+                                            {/* <aside id="custom_html-4" class="widget_text widget widget_custom_html">
                                                 <div class="textwidget custom-html-widget"><a href="https://1.envato.market/YYJ4P"
                                                     target="_blank" rel="noopener"><img loading="lazy" decoding="async"
                                                         src="wp-content/uploads/2021/07/imgsidebar.jpg"
                                                         alt="Top Selling Multipurpose WP Theme" width="400" height="333" /></a></div>
-                                            </aside>
+                                            </aside> */}
                                             <RecentPosts />
-                                            
+
                                             <aside id="categories-5" class="widget widget_categories">
                                                 <h3 class="widget-title penci-border-arrow"><span class="inner-arrow">Categories</span></h3>
                                                 <ul>
