@@ -104,6 +104,7 @@ const page = () => {
                     ].map((item, index) => {
                       return (
                         <>
+                          <option selected value={""}>Select Category</option>
                           <option value={item.value}>{item.label}</option>
                         </>
                       )
