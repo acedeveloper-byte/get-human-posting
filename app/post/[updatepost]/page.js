@@ -57,7 +57,7 @@ const page = () => {
             title: data_blog.title,
             content: data_blog.content,
             category: data_blog.category,
-            file: null,
+            file: data_blog.image,
         },
         validationSchema,
         onSubmit: async (values) => {
