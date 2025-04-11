@@ -1,8 +1,7 @@
 'use client'
 import { usePathname, useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
-import { Dropdown } from 'react-bootstrap'
-
+import { CgProfile } from "react-icons/cg";
 
 const Header = () => {
     const router = useRouter()
@@ -23,6 +22,15 @@ const Header = () => {
     return (
         <>
             <header id="header" className="header-header-10 has-bottom-line" >
+                <nav>
+                    <div style={{ textAlign: "center", alignItems: "center", justifyContent: "center" }}>
+                        <span>
+
+                            <CgProfile size={24} />                            Logged In as  : <strong>
+                                {user.user_name}</strong>
+                        </span>
+                    </div>
+                </nav>
                 <nav id="navigation" className="header-layout-bottom header-10 menu-style-1" role="navigation" >
 
                     <div className="container">
@@ -57,7 +65,13 @@ const Header = () => {
                                     )}
                                 </li> {user?.user_name ? (
                                     <>
-                                        <li><a className="dropdown-item" href="/your-posts">My Profile</a></li>
+
+                                        <li>
+                                            <a className="dropdown-item" href="/your-posts">
+                                                My Profile
+                                            </a>
+
+                                        </li>
                                         <li>
                                             <a className="dropdown-item" href="#" onClick={handleLogout}>Logout</a>
                                         </li>

@@ -21,6 +21,7 @@ const page = () => {
     const editorRef = useRef(null);
     const router = useRouter()
 
+    const [preview, setPreview] = useState({});
     useEffect(() => {
         if (localStorage.getItem("auth_data")) {
             setUser(JSON.parse(localStorage.getItem("auth_data")))
@@ -64,6 +65,7 @@ const page = () => {
         },
     });
 
+    console.log("preview:", preview?.name)
     return (
         <>
             <Header />
@@ -134,10 +136,12 @@ const page = () => {
                                     <Form.Label>Upload File</Form.Label>
                                     <Form.Control
                                         type="file"
-                                        onChange={(event) => formik.setFieldValue("file", event.currentTarget.files[0])}
+                                        onChange={(event) => {
+                                            formik.setFieldValue("file", event.currentTarget.files[0])
+                                            setPreview(event.currentTarget.files[0]);
+                                        }}
                                         isInvalid={formik.touched.file && !!formik.errors.file}
                                     />
-                                    <img src={`${HOST}resources/post/${data_blog.image}`} />
                                     <Form.Control.Feedback type="invalid">
                                         {formik.errors.file}
                                     </Form.Control.Feedback>
