@@ -18,6 +18,8 @@ export const GetAllPostByUserId = async (id, setData) => {
     if (resp.data.baseResponse.message === "REQUEST_FULLFILLED") {
         setData(resp.data.response)
     } else {
+        resp.data.length === 0 && alert("no post found")
+
         alert(resp.data.baseResponse.message)
     }
 
