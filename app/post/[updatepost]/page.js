@@ -46,9 +46,7 @@ const page = () => {
         title: Yup.string().required("Title is required"),
         content: Yup.string().required("Content is required"),
         category: Yup.string().required("Category is required"),
-        file: Yup.mixed()
-            .required("File is required")
-            .test("fileExists", "Please upload a file", value => value instanceof File),
+
     });
 
     const formik = useFormik({
@@ -57,13 +55,12 @@ const page = () => {
             title: data_blog.title,
             content: data_blog.content,
             category: data_blog.category,
-            file: data_blog.image,
+            file: null,
         },
         validationSchema,
         onSubmit: async (values) => {
-            const valuess = { title: values.title, file: values.file, status: true, url: params.updatepost, content: values.content, category: values.category, user_id: user_data._id }
+            const valuess = { title: values.title, file: values.file ? values.file : JSON.stringify(data_blog.imageObject), status: true, url: params.updatepost, content: values.content, category: values.category, user_id: user_data._id }
             await UpdatePost(valuess, router, setloading)
-
         },
     });
 

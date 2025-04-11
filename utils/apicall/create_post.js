@@ -1,7 +1,7 @@
 import axios from "axios";
 import { HOST } from "../static";
 
-export const Guest_Posting_APi = async (values, router , setloading) => {
+export const Guest_Posting_APi = async (values, router, setloading) => {
     setloading(true)
     try {
         setloading(true)
@@ -18,7 +18,7 @@ export const Guest_Posting_APi = async (values, router , setloading) => {
                 "accept": "*/*", // Accept all responses
             },
         });
-
+        // console.log(response.data)
         if (response.data.baseResponse?.message === "REQUEST_FULLFILLED") {
             setloading(false)
             // localStorage.setItem("auth_data", JSON.stringify(response.data.response));
@@ -32,5 +32,5 @@ export const Guest_Posting_APi = async (values, router , setloading) => {
         console.error("Error:", error);
         alert("Failed to submit form. Check console for details.");
     }
-    
+
 };
