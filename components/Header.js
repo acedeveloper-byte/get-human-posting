@@ -1,13 +1,19 @@
 'use client'
 import { usePathname, useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
-import { CgProfile } from "react-icons/cg";
+import { Offcanvas } from 'react-bootstrap';
+import { RiMenu2Line } from "react-icons/ri";
+
 
 const Header = () => {
     const router = useRouter()
     const pathname = usePathname()
     const [user, setUser] = useState({})
 
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     useEffect(() => {
         if (localStorage.getItem("auth_data")) {
             setUser(JSON.parse(localStorage.getItem("auth_data")))
@@ -17,6 +23,37 @@ const Header = () => {
         localStorage.clear()
     }
 
+    const categories = [
+        { value: "Lifestyle", label: "Lifestyle" },
+        { value: "Latest", label: "Latest Blog" },
+        { value: "Featured", label: "Featured Blog" },
+        { value: "Tech", label: "Technology" },
+        { value: "Healthy", label: "Healthy Lifestyle" },
+        { value: "Fashion", label: "Fashion" },
+        { value: "Business", label: "Business" },
+        { value: "Design", label: "Design" },
+        { value: "Domain Names", label: "Domain Names" },
+        { value: "Education", label: "Education" },
+        { value: "Entertainment", label: "Entertainment" },
+        { value: "Home & Lifestyle", label: "Home & Lifestyle" },
+        { value: "Marketing", label: "Marketing" },
+        { value: "Digital Marketing", label: "Digital Marketing" },
+        { value: "SEO", label: "SEO" },
+        { value: "Social Media", label: "Social Media" },
+        { value: "Music", label: "Music" },
+        { value: "Other", label: "Other" },
+        { value: "Politics", label: "Politics" },
+        { value: "Real Estate", label: "Real Estate" },
+        { value: "Sports", label: "Sports" },
+        { value: "Technology", label: "Technology" },
+        { value: "Travel", label: "Travel" },
+        { value: "Video", label: "Video" },
+        { value: "Web Hosting", label: "Web Hosting" },
+        { value: "Web Security", label: "Web Security" },
+        { value: "Wellness", label: "Wellness" },
+        { value: "Writing", label: "Writing" }
+      ];
+
 
     return (
         <>
@@ -25,6 +62,8 @@ const Header = () => {
                 <nav id="navigation" className="header-layout-bottom header-10 menu-style-1" role="navigation" >
 
                     <div className="container">
+                    <div  className="mobile-hamburger" ><RiMenu2Line onClick={() => handleShow()} size={25} /></div>
+
                         <div id="logo">
                             <a href="/">
                                 <img className="penci-mainlogo penci-limg penci-logo"
@@ -162,6 +201,60 @@ const Header = () => {
                     </div>
                 </nav>
             </header >
+            <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+        <ul className="list-unstyled">
+            <li className="mb-2">
+              <a className="nav-link" href="/">{pathname === "/login" ? "" : "HOME"}</a>
+            </li>
+            <li className="mb-2">
+              {user?.user_name ? (
+                <a className="nav-link" href="/submit-article">SUBMIT ARTICLE</a>
+              ) : (
+                <a className="nav-link" href="/login">SUBMIT ARTICLE</a>
+              )}
+            </li>
+            {!user?.user_name && pathname !== "/login" && (
+              <li className="mb-2">
+                <a className="nav-link" href="/login">LOGIN</a>
+              </li>
+            )}
+
+            {/* More Dropdown */}
+            <li className="mb-2 fw-bold mt-3">More Categories:</li>
+            {categories.map((item, index) => (
+              <li key={index}>
+                <a className="nav-link ps-3" href={`/category/${item.value}`}>{item.label}</a>
+              </li>
+            ))}
+
+            {/* Profile Dropdown */}
+            {user?.user_name && (
+              <>
+                <li className="mb-2 fw-bold mt-3">Profile:</li>
+                {[
+                  { value: `members/${user.user_name}`, label: "View Profile" },
+                  { value: `members/${user.user_name}`, label: "Settings" },
+                  { value: "login", label: "Logout" },
+                ].map((item, index) => (
+                  <li key={index}>
+                    {item.label === "Logout" ? (
+                      <a className="nav-link ps-3" href={`/${item.value}`} onClick={handleLogout}>
+                        {item.label}
+                      </a>
+                    ) : (
+                      <a className="nav-link ps-3" href={`/${item.value}`}>{item.label}</a>
+                    )}
+                  </li>
+                ))}
+              </>
+            )}
+          </ul>
+        </Offcanvas.Body>
+      </Offcanvas>
         </>
     )
 }
