@@ -5,7 +5,7 @@ import { Table } from 'react-bootstrap';
 
 const ViewProfile = ({ username = "mayank@work", name = "mayank@work" }) => {
     const  [user_info, setuser_info] = React.useState(null)
-    
+
     useEffect(() =>{
         if (localStorage.getItem("auth_data")) {
          const  user_data =  JSON.parse(localStorage.getItem("auth_data"))
@@ -55,7 +55,7 @@ const ViewProfile = ({ username = "mayank@work", name = "mayank@work" }) => {
                         </tr>
                         <tr>
                             <th>Website</th>
-                            <td>{user_info?.website} </td>
+                            <td> <a href={`${user_info?.website}`} _target="blank">{user_info?.website}</a> </td>
                         </tr>
                     </tbody>
                 </Table>
