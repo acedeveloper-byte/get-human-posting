@@ -55,7 +55,7 @@ const ViewProfile = ({ username = "mayank@work", name = "mayank@work" }) => {
                         </tr>
                         <tr>
                             <th>Website</th>
-                            <td> <a href={`${user_info?.website}`} _target="blank">{user_info?.website}</a> </td>
+                            <td> <a href={`${user_info?.website}`} _target="blank" className='text-decoration-none text-black'>{user_info?.website}</a> </td>
                         </tr>
                     </tbody>
                 </Table>
