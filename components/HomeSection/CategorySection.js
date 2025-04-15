@@ -60,15 +60,22 @@ const CategorySection = () => {
                                         class="penci-clearfix penci-biggrid-wrapper penci-grid-col-6 penci-grid-mcol-2 penci-bgrid-based-custom penci-bgrid-style-1 pcbg-ficonpo-top-right pcbg-reiconpo-top-left penci-bgrid-content-on pencibg-imageh-zoom-in pencibg-texth-none pencibg-textani-movetop textop">
                                         <div class="penci-clearfix penci-biggrid penci-bgstyle-1 penci-bgel">
                                             <div class="penci-biggrid-inner default">
-                                                <div>
+                                                <div className="scroll-btn-container">
 
-                                                    <button className="scroll-btn left" onClick={() => scrollLeft()}>
-                                                        <IoChevronBack />
-                                                    </button>
-                                                    <button className="scroll-btn right" onClick={() => scrollRight()}>
-                                                        <IoChevronForward />
+                                                    <div className="scroll-btn">
 
-                                                    </button>
+                                                        <button className="right" onClick={() => scrollRight()}>
+                                                            <IoChevronForward />
+
+                                                        </button>
+                                                    </div>
+                                                    <div className="scroll-btn">
+
+                                                        <button className="left" onClick={() => scrollLeft()}>
+                                                            <IoChevronBack />
+                                                        </button>
+                                                    </div>
+
                                                 </div>
 
                                                 <div id="scrollable-grid" class="penci-clearfix penci-biggrid-data penci-dflex horizontal-scroll">

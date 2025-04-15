@@ -15696,11 +15696,8 @@ button:hover {
 }
 
 .scroll-btn {
-  position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 5;
-  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   font-size: 24px;
@@ -15905,4 +15902,10 @@ button:hover {
 
 .secondary-tabs {
   margin-bottom: 20px;
+}
+
+.scroll-btn-container {
+  display: flex;
+  flex-direction: row-reverse;
+    padding :20px;
 }
