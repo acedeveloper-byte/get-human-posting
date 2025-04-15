@@ -125,8 +125,8 @@ const Header = () => {
 
                                     <ul className="dropdown-menu category-scroll list-unstyled mb-0" aria-labelledby="profileMenuLink">
                                         {[
-                                            { value: "profile", label: "View Profile" },
-                                            { value: "profile", label: "Settings" },
+                                            { value: `members/${user.user_name}`, label: "View Profile" },
+                                            { value: `members/${user.user_name}`, label: "Settings" },
                                             { value: "login", label: "Logout" },
                                         ].map((item, index) => (
                                             <li key={index}>

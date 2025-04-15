@@ -66,7 +66,7 @@ useEffect(() => {
 
       <div className="form-group">
         <label>Account Username</label>
-        <input type="text" value={"mayank.kumarace@gmail.com"} readOnly />
+        <input type="text" value={user?.email} readOnly />
       </div>
 
 

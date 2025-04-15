@@ -3,10 +3,10 @@ import axios from 'axios';
 import React, { useEffect } from 'react'
 import { Button, Col, FloatingLabel, Form, Table } from 'react-bootstrap';
 
-const EditProfile = ({ username, name  , setContentActiveTabs , setActiveTabs}) => {
+const EditProfile = ({ bio , website, name  , setContentActiveTabs , setActiveTabs}) => {
 
-    const [bio, setBio] = React.useState("")
-    const [website, setWebsite] = React.useState("")
+    const [bioo, setBio] = React.useState(bio)
+    const [websitee, setWebsite] = React.useState(website)
     const [user_data, setuser_data] = React.useState(null)
     const  [ disabled , setDisbaled] = React.useState(false)
          useEffect(() => {
@@ -20,8 +20,8 @@ const EditProfile = ({ username, name  , setContentActiveTabs , setActiveTabs}) 
 
     const handleSubmit = async (e) => {
         let data = JSON.stringify({
-            "bio": bio,
-            "website": website
+            "bio": bioo,
+            "website": websitee
         });
 
         let config = {
@@ -65,7 +65,8 @@ const EditProfile = ({ username, name  , setContentActiveTabs , setActiveTabs}) 
                             <td>
                                 <Form.Control
                                     as="textarea"
-                                    placeholder="Leave a comment here"
+                                    value={bioo  }
+                                    placeholder="Start here"
                                     style={{ height: '100px' }}
                                     onChange={(e) => setBio(e.target.value)}
                                     disabled={disabled}
@@ -80,6 +81,7 @@ const EditProfile = ({ username, name  , setContentActiveTabs , setActiveTabs}) 
                                     <Form.Control
                                         required
                                         type="text"
+                                        value={websitee }
                                         placeholder="Website"
                                         onChange={(e) => setWebsite(e.target.value)}
                                         disabled={disabled}
@@ -92,7 +94,7 @@ const EditProfile = ({ username, name  , setContentActiveTabs , setActiveTabs}) 
 
                 </Table>
                 <Form.Group as={Col} md="10" controlId="validationCustom01">
-                    <Button onClick={() => handleSubmit()}>Submit form</Button>
+                    <Button onClick={() => handleSubmit()}>Submit</Button>
                 </Form.Group>
             </div>
 

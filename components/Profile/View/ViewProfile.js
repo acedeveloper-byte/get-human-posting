@@ -5,6 +5,7 @@ import { Table } from 'react-bootstrap';
 
 const ViewProfile = ({ username = "mayank@work", name = "mayank@work" }) => {
     const  [user_info, setuser_info] = React.useState(null)
+    
     useEffect(() =>{
         if (localStorage.getItem("auth_data")) {
          const  user_data =  JSON.parse(localStorage.getItem("auth_data"))
