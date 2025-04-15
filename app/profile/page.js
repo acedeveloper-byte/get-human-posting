@@ -1,82 +1,75 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { Col, Container, Row } from 'react-bootstrap'
+import Banner from '@/components/Profile/Banner'
+import Categories_widget from '@/components/Categories_widget'
+import RecentPosts from '@/components/RecentPosts'
+import ProfileTabs from '@/components/Profile/ProfileTabs'
+import ViewProfile from '@/components/Profile/View/ViewProfile'
+import "bootstrap/dist/css/bootstrap.min.css";
+import EditProfile from '@/components/Profile/Edit/EditProfile'
+import EmailPasswordForm from '@/components/Profile/SettingsChangeDetails'
+
 
 const Page = () => {
+
+  const [getActiveTabs, setActiveTabs] = React.useState("Profile")
+  const [contentActiveTabs, setContentActiveTabs] = React.useState(getActiveTabs === "Settings" ? "General" : "View")
+  const [auth, setAuth] = useState({})
+  useEffect(() => {
+    if (localStorage.getItem("auth_data")) {
+      setAuth(JSON.parse(localStorage.getItem("auth_data")))
+    }
+  }, [])
+
+
   return (
-    <div>
-      {/* <Header /> */}
+    <>
+      <Header />
+      <Container>
+        <Row>
+          <Col md={8}>
+            <Banner username={auth.user_name} />
+            <ProfileTabs setActiveTabs={setActiveTabs} contentActiveTabs={contentActiveTabs} setContentActiveTabs={setContentActiveTabs} />
+            <div className="profile-content-container">
+              {getActiveTabs === "Profile" && contentActiveTabs === "View" && (
 
-      <div className="container penci_sidebar right-sidebar" style={{ transform: 'none' }}>
-        <div id="main" className="penci-layout-grid penci-main-sticky-sidebar">
-          <div className="theiaStickySidebar">
-            <div className="archive-box">
-              <div className="title-bar pcatitle-default">
-                <span>Author </span>
-                <h1 className="page-title">Penci Design</h1>
-              </div>
-            </div>
-
-            <div className="post-author abio-style-4 bioimg-square">
-              <div className="author-img">
-                <img
-                  alt="Author Avatar"
-                  src="https://secure.gravatar.com/avatar/8612232278edda9fe1d495399d2a552d?s=100&d=mm&r=g"
-                  className="penci-lazy avatar avatar-100 photo lazyloaded pcloaded"
-                  height="100"
-                  width="100"
-                  decoding="async"
-                  srcSet="https://secure.gravatar.com/avatar/8612232278edda9fe1d495399d2a552d?s=200&d=mm&r=g 2x"
-                />
-              </div>
-              <div className="author-content">
-                <h5>
-                  <a
-                    href="https://soledaddemo.pencidesign.net/author/admin/"
-                    title="Author Penci Design"
-                    rel="author"
-                  >
-                    Penci Design
-                  </a>
-                </h5>
-                <p>
-                  I’m originally from sleepy California in the US. I’m a crazy dreamer and with an insatiable desire for travel and adventure who could never settle.
-                </p>
-                <div className="bio-social">
-                  <a rel="noreferrer" target="_blank" className="author-social" href="https://pencidesign.net/">
-                    <i className="penci-faicon fa fa-globe"></i>
-                  </a>
-                  <a rel="noreferrer" target="_blank" className="author-social" href="https://facebook.com/envato">
-                    <i className="penci-faicon fa fa-facebook"></i>
-                  </a>
-                  <a rel="noreferrer" target="_blank" className="author-social" href="https://x.com/Envato">
-                    <i className="penci-faicon penciicon-x-twitter"></i>
-                  </a>
-                  <a rel="noreferrer" target="_blank" className="author-social" href="#">
-                    <i className="penci-faicon fa fa-youtube-play"></i>
-                  </a>
+                <div className="profile-view-content">
+                  <ViewProfile username={auth.user_name} name={auth.user_name} />
                 </div>
+              )}
+              {getActiveTabs === "Profile" && contentActiveTabs === "Edit" && (
+
+                <div className="profile-view-content">
+                  <EditProfile username={auth.user_name} name={auth.user_name} setActiveTabs={setActiveTabs} setContentActiveTabs={setContentActiveTabs} />
+                </div>
+              )}
+
+              {getActiveTabs === "Settings"  && (
+                <div className="profile-view-content">
+                  <EmailPasswordForm />
+                </div>
+              )}
+            </div>
+          </Col>
+          <Col md={4}>
+            <div id="sidebar"
+              className="penci-sidebar-right penci-sidebar-content style-15 pcalign-left pcsb-boxed-widget pciconp-right pcicon-right penci-sticky-sidebar">
+              <div
+                className="theiaStickySidebar">
+                <RecentPosts />
+                <Categories_widget />
               </div>
             </div>
 
-            {/* Additional content (posts, sidebar, widgets, etc.) goes here — already in JSX-friendly format */}
-          </div>
-        </div>
-
-        <div
-          id="sidebar"
-          className="penci-sidebar-right penci-sidebar-content style-15 pcalign-left pcsb-boxed-widget pciconp-right pcicon-right penci-sticky-sidebar"
-        >
-          <div className="theiaStickySidebar">
-       
-          </div>
-        </div>
-      </div>
-
+          </Col>
+        </Row>
+      </Container>
       <Footer />
-    </div>
+    </>
   )
 }
 

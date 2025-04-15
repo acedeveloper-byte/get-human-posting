@@ -6,7 +6,7 @@ export const FetchAllCategory = (setData, value) => {
     const options = {
         method: 'GET',
         url: `${HOST}category/fetch-all-category`,
-        headers: { 'User-Agent': 'insomnia/10.3.1' }
+        headers: {  }
     };
 
     axios.request(options)

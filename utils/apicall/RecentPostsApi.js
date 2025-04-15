@@ -6,7 +6,7 @@ export const RecentPostsApi = (setData, value) => {
     const options = {
         method: 'GET',
         url: `${HOST}post/fetch-all-post`,
-        headers: { 'User-Agent': 'insomnia/10.3.1' }
+        headers: { }
     };
 
     axios.request(options)

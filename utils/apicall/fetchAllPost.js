@@ -6,7 +6,7 @@ export const AllPost = (setData, value) => {
     const options = {
         method: 'GET',
         url: `${HOST}post/fetch-all-post-by-category/${value}`,
-        headers: { 'User-Agent': 'insomnia/10.3.1' }
+        headers: {  }
     };
 
     axios.request(options)

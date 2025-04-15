@@ -15,22 +15,13 @@ const Header = () => {
     }, [])
     const handleLogout = () => {
         localStorage.clear()
-        router.push('/login')
     }
 
 
     return (
         <>
             <header id="header" className="header-header-10 has-bottom-line" >
-                <nav>
-                    <div style={{ textAlign: "center", alignItems: "center", justifyContent: "center" }}>
-                        <span>
-
-                            <CgProfile size={24} />                            Logged In as  : <strong>
-                                {user.user_name}</strong>
-                        </span>
-                    </div>
-                </nav>
+          
                 <nav id="navigation" className="header-layout-bottom header-10 menu-style-1" role="navigation" >
 
                     <div className="container">
@@ -64,18 +55,7 @@ const Header = () => {
                                         <a className="dropdown-item" href="/login">SUBMIT ARTICLE</a>
                                     )}
                                 </li> {user?.user_name ? (
-                                    <>
-
-                                        <li>
-                                            <a className="dropdown-item" href="/your-posts">
-                                                My Profile
-                                            </a>
-
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item" href="#" onClick={handleLogout}>Logout</a>
-                                        </li>
-                                    </>
+                                  null
                                 ) : (
                                     <li>
                                         <a className="dropdown-item" href="/login">{pathname === "/login" ? "" : "LOGIN"}</a>
@@ -126,12 +106,44 @@ const Header = () => {
                                                 { "value": "Writing", "label": "Writing" }
                                             ].map((item, index) => {
                                                 return (
-                                                    <li ><a href={`/category/${item.value}`}>{item.label}</a></li>
+                                                    <li key={index} ><a href={`/category/${item.value}`}>{item.label}</a></li>
                                                 )
                                             })}
                                         </>
                                     </ul>
                                 </li>
+                                {user?.user_name && 
+                                <li className="nav-item profile-menu">
+                                    <a
+                                        className="nav-link dropdown-toggle"
+                                        href="#"
+                                        role="button"
+                                        id="profileMenuLink"
+                                    >
+                                        Profile
+                                    </a>
+
+                                    <ul className="dropdown-menu category-scroll list-unstyled mb-0" aria-labelledby="profileMenuLink">
+                                        {[
+                                            { value: "profile", label: "View Profile" },
+                                            { value: "profile", label: "Settings" },
+                                            { value: "login", label: "Logout" },
+                                        ].map((item, index) => (
+                                            <li key={index}>
+                    {item.label === "Logout" ?(
+
+                        <a href={`/${item.value}`} onClick={() =>  handleLogout()} >{item.label}</a>
+                    ) :(
+
+                    
+                        <a href={`/${item.value}`} >{item.label}</a>
+                    )}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </li>
+                                }
+
                             </ul>
                         </div>
                         <div className="penci-header-extra">

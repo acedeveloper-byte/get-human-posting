@@ -155,7 +155,9 @@ const page = () => {
   return (
     <>
       <Header />
-      <Login />
+        <section style ={{ height :  "50vh" , margin:"10%"}}>
+        <Login />
+      </section>
       <Footer />
     </>
   )
