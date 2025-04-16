@@ -3,7 +3,7 @@ import { usePathname, useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import { Offcanvas } from 'react-bootstrap';
 import { RiMenu2Line } from "react-icons/ri";
-
+import { RiCloseLargeLine } from "react-icons/ri";
 
 const Header = () => {
     const router = useRouter()
@@ -62,7 +62,7 @@ const Header = () => {
                 <nav id="navigation" className="header-layout-bottom header-10 menu-style-1" role="navigation" >
 
                     <div className="container">
-                    <div  className="mobile-hamburger" ><RiMenu2Line onClick={() => handleShow()} size={25} /></div>
+                    <div  className="mobile-hamburger" ><RiMenu2Line onClick={() => handleShow()} size={30} /></div>
 
                         <div id="logo">
                             <a href="/">
@@ -200,12 +200,18 @@ const Header = () => {
                         </div>
                     </div>
                 </nav>
-            </header >
+            </header>
             <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+        <Offcanvas.Header>
+
+            <div>
+            <img src="/assets/images/logo/logo.png"  />
+            </div>
+            <div className='button'>
+<RiCloseLargeLine  size={20} onClick={handleClose}/>
+</div>
         </Offcanvas.Header>
-        <Offcanvas.Body>
+        <Offcanvas.Body style={{ maxHeight: '80vh', overflowY: 'auto' }}>
         <ul className="list-unstyled">
             <li className="mb-2">
               <a className="nav-link" href="/">{pathname === "/login" ? "" : "HOME"}</a>

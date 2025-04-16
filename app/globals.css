@@ -15923,3 +15923,35 @@ button:hover {
     display: none;
   }
 }
+.offcanvas {
+  z-index: 1055 !important; /* Bootstrap default modal z-index */
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 300px; /* Or your preferred width */
+  height: 100%;
+  background-color: white;
+}
+
+
+.offcanvas-header  {
+  justify-content: space-between;
+  flex-direction: row; 
+  display: flex;
+  padding: 15px;
+}
+
+.offcanvas-body ul li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+.offcanvas-header button {
+  width:50px;
+  height :  50px
+}
+
+.offcanvas-header img {
+  width:60%;
+    height :  auto;
+    object-fit: cover;
+}
