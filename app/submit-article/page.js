@@ -26,8 +26,13 @@ const page = () => {
     content: Yup.string().required("Content is required"),
     category: Yup.string().required("Category is required"),
     file: Yup.mixed()
-      .required("File is required")
-      .test("fileExists", "Please upload a file", value => value instanceof File),
+    .required("File is required")
+    .test("fileExists", "Please upload a file", value => value instanceof File)
+    .test("fileType", "Only JPG and PNG files are allowed", value => {
+      if (!value) return false;
+      const allowedTypes = ['image/jpeg', 'image/png'];
+      return allowedTypes.includes(value.type);
+    })
   });
 
   const formik = useFormik({
