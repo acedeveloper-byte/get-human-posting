@@ -3,8 +3,6 @@ import { HOST } from "../static";
 
 export const Guest_Posting_APi = async (values, router, setloading) => {
     setloading(true)
-    try {
-        setloading(true)
         const form = new FormData();
         form.append("title", values.title);
         form.append("status", values.status.toString()); // Convert boolean to string
@@ -27,10 +25,6 @@ export const Guest_Posting_APi = async (values, router, setloading) => {
             setloading(false)
             alert("Error While Posting Blog");
         }
-    } catch (error) {
-        setloading(false)
-        console.error("Error:", error);
-        alert("Failed to submit form. Check console for details.");
-    }
+   
 
 };
