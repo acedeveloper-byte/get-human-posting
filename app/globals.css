@@ -15926,11 +15926,11 @@ button:hover {
 .offcanvas {
   z-index: 1055 !important; /* Bootstrap default modal z-index */
   position: fixed !important;
-  top: 0;
-  left: 0;
-  width: 300px; /* Or your preferred width */
-  height: 100%;
-  background-color: white;
+  top: 0 !important;
+  left: 0 !important;
+  width: 300px !important; /* Or your preferred width */
+  height: 100% !important; 
+  background-color: white !important;
 }
 
 
@@ -15954,4 +15954,25 @@ button:hover {
   width:60%;
     height :  auto;
     object-fit: cover;
+}
+
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .write-with-us {
+    padding: 16px;
+    max-width: 100%;
+    margin: 12px;
+    border-radius: 10px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .write-with-us {
+    padding: 16px;
+    max-width: 100%;
+    margin: 12px;
+    border-radius: 10px;
+  }
 }

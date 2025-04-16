@@ -72,6 +72,8 @@ const page = () => {
                 <Form.Group as={Col} md="8" controlId="category">
                   <Form.Label>Category</Form.Label>
                   <Form.Select {...formik.getFieldProps("category")}>
+                  <option selected value={""}>Select Category</option>
+
                     {[
                       { "value": "Lifestyle", "label": "Lifestyle" },
                       { "value": "Latest", "label": "Latest Blog" },
@@ -104,7 +106,6 @@ const page = () => {
                     ].map((item, index) => {
                       return (
                         <>
-                          <option selected value={""}>Select Category</option>
                           <option value={item.value}>{item.label}</option>
                         </>
                       )

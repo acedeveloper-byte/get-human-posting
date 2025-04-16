@@ -52,17 +52,17 @@ const Header = () => {
         { value: "Web Security", label: "Web Security" },
         { value: "Wellness", label: "Wellness" },
         { value: "Writing", label: "Writing" }
-      ];
+    ];
 
 
     return (
         <>
             <header id="header" className="header-header-10 has-bottom-line" >
-          
+
                 <nav id="navigation" className="header-layout-bottom header-10 menu-style-1" role="navigation" >
 
                     <div className="container">
-                    <div  className="mobile-hamburger" ><RiMenu2Line onClick={() => handleShow()} size={30} /></div>
+                        <div className="mobile-hamburger" ><RiMenu2Line onClick={() => handleShow()} size={30} /></div>
 
                         <div id="logo">
                             <a href="/">
@@ -94,7 +94,7 @@ const Header = () => {
                                         <a className="dropdown-item" href="/login">SUBMIT ARTICLE</a>
                                     )}
                                 </li> {user?.user_name ? (
-                                  null
+                                    null
                                 ) : (
                                     <li>
                                         <a className="dropdown-item" href="/login">{pathname === "/login" ? "" : "LOGIN"}</a>
@@ -151,36 +151,36 @@ const Header = () => {
                                         </>
                                     </ul>
                                 </li>
-                                {user?.user_name && 
-                                <li className="nav-item profile-menu">
-                                    <a
-                                        className="nav-link dropdown-toggle"
-                                        href="#"
-                                        role="button"
-                                        id="profileMenuLink"
-                                    >
-                                        Profile
-                                    </a>
+                                {user?.user_name &&
+                                    <li className="nav-item profile-menu">
+                                        <a
+                                            className="nav-link dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            id="profileMenuLink"
+                                        >
+                                            Profile
+                                        </a>
 
-                                    <ul className="dropdown-menu category-scroll list-unstyled mb-0" aria-labelledby="profileMenuLink">
-                                        {[
-                                            { value: `members/${user.user_name}`, label: "View Profile" },
-                                            { value: `members/${user.user_name}`, label: "Settings" },
-                                            { value: "login", label: "Logout" },
-                                        ].map((item, index) => (
-                                            <li key={index}>
-                    {item.label === "Logout" ?(
+                                        <ul className="dropdown-menu category-scroll list-unstyled mb-0" aria-labelledby="profileMenuLink">
+                                            {[
+                                                { value: `members/${user.user_name}`, label: "View Profile" },
+                                                { value: `members/${user.user_name}`, label: "Settings" },
+                                                { value: "login", label: "Logout" },
+                                            ].map((item, index) => (
+                                                <li key={index}>
+                                                    {item.label === "Logout" ? (
 
-                        <a href={`/${item.value}`} onClick={() =>  handleLogout()} >{item.label}</a>
-                    ) :(
+                                                        <a href={`/${item.value}`} onClick={() => handleLogout()} >{item.label}</a>
+                                                    ) : (
 
-                    
-                        <a href={`/${item.value}`} >{item.label}</a>
-                    )}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </li>
+
+                                                        <a href={`/${item.value}`} >{item.label}</a>
+                                                    )}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </li>
                                 }
 
                             </ul>
@@ -199,68 +199,68 @@ const Header = () => {
                             </div>
                         </div>
                     </div>
+
                 </nav>
             </header>
             <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header>
+                <Offcanvas.Header>
+                    <div>
+                        <img src="/assets/images/logo/logo.png" />
+                    </div>
+                    <div className='button'>
+                        <RiCloseLargeLine size={20} onClick={handleClose} />
+                    </div>
+                </Offcanvas.Header>
+                <Offcanvas.Body style={{ maxHeight: '80vh', overflowY: 'auto' }}>
+                    <ul className="list-unstyled">
+                        <li className="mb-2">
+                            <a className="nav-link" href="/">{pathname === "/login" ? "" : "HOME"}</a>
+                        </li>
+                        <li className="mb-2">
+                            {user?.user_name ? (
+                                <a className="nav-link" href="/submit-article">SUBMIT ARTICLE</a>
+                            ) : (
+                                <a className="nav-link" href="/login">SUBMIT ARTICLE</a>
+                            )}
+                        </li>
+                        {!user?.user_name && pathname !== "/login" && (
+                            <li className="mb-2">
+                                <a className="nav-link" href="/login">LOGIN</a>
+                            </li>
+                        )}
 
-            <div>
-            <img src="/assets/images/logo/logo.png"  />
-            </div>
-            <div className='button'>
-<RiCloseLargeLine  size={20} onClick={handleClose}/>
-</div>
-        </Offcanvas.Header>
-        <Offcanvas.Body style={{ maxHeight: '80vh', overflowY: 'auto' }}>
-        <ul className="list-unstyled">
-            <li className="mb-2">
-              <a className="nav-link" href="/">{pathname === "/login" ? "" : "HOME"}</a>
-            </li>
-            <li className="mb-2">
-              {user?.user_name ? (
-                <a className="nav-link" href="/submit-article">SUBMIT ARTICLE</a>
-              ) : (
-                <a className="nav-link" href="/login">SUBMIT ARTICLE</a>
-              )}
-            </li>
-            {!user?.user_name && pathname !== "/login" && (
-              <li className="mb-2">
-                <a className="nav-link" href="/login">LOGIN</a>
-              </li>
-            )}
+                        {/* More Dropdown */}
+                        <li className="mb-2 fw-bold mt-3">More Categories:</li>
+                        {categories.map((item, index) => (
+                            <li key={index}>
+                                <a className="nav-link ps-3" href={`/category/${item.value}`}>{item.label}</a>
+                            </li>
+                        ))}
 
-            {/* More Dropdown */}
-            <li className="mb-2 fw-bold mt-3">More Categories:</li>
-            {categories.map((item, index) => (
-              <li key={index}>
-                <a className="nav-link ps-3" href={`/category/${item.value}`}>{item.label}</a>
-              </li>
-            ))}
-
-            {/* Profile Dropdown */}
-            {user?.user_name && (
-              <>
-                <li className="mb-2 fw-bold mt-3">Profile:</li>
-                {[
-                  { value: `members/${user.user_name}`, label: "View Profile" },
-                  { value: `members/${user.user_name}`, label: "Settings" },
-                  { value: "login", label: "Logout" },
-                ].map((item, index) => (
-                  <li key={index}>
-                    {item.label === "Logout" ? (
-                      <a className="nav-link ps-3" href={`/${item.value}`} onClick={handleLogout}>
-                        {item.label}
-                      </a>
-                    ) : (
-                      <a className="nav-link ps-3" href={`/${item.value}`}>{item.label}</a>
-                    )}
-                  </li>
-                ))}
-              </>
-            )}
-          </ul>
-        </Offcanvas.Body>
-      </Offcanvas>
+                        {/* Profile Dropdown */}
+                        {user?.user_name && (
+                            <>
+                                <li className="mb-2 fw-bold mt-3">Profile:</li>
+                                {[
+                                    { value: `members/${user.user_name}`, label: "View Profile" },
+                                    { value: `members/${user.user_name}`, label: "Settings" },
+                                    { value: "login", label: "Logout" },
+                                ].map((item, index) => (
+                                    <li key={index}>
+                                        {item.label === "Logout" ? (
+                                            <a className="nav-link ps-3" href={`/${item.value}`} onClick={handleLogout}>
+                                                {item.label}
+                                            </a>
+                                        ) : (
+                                            <a className="nav-link ps-3" href={`/${item.value}`}>{item.label}</a>
+                                        )}
+                                    </li>
+                                ))}
+                            </>
+                        )}
+                    </ul>
+                </Offcanvas.Body>
+            </Offcanvas>
         </>
     )
 }
