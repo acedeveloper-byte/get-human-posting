@@ -5,29 +5,40 @@ import React, { useEffect, useState } from 'react'
 const DATA = [
     {
         id: 1,
-        image: "placeholder.png"
+        image: "/assets/blog.png",
+        type: "placeholder"
     },
     {
         id: 2,
-        image: "placeholder.png"
+        image: "/assets/blog.png",
+        type: "placeholder"
     },
     {
         id: 3,
-        image: "placeholder.png"
+        image: "/assets/blog.png",
+        type: "placeholder"
     },
     {
         id: 4,
-        image: "placeholder.png"
+        image: "/assets/blog.png",
+        type: "placeholder"
     },
     {
         id: 5,
-        image: "placeholder.png"
+        image: "/assets/blog.png",
+        type: "placeholder"
+    },
+    {
+        id: 6,
+        image: "/assets/blog.png",
+        type: "placeholder"
     },
 ]
 const TechSection = () => {
 
     const [data, setData] = useState(DATA)
     const [user, setuser] = useState({})
+    var conditionaldata =  data.length !==0 ? data : DATA
 
     useEffect(() => {
         if (localStorage.getItem("auth_data")) {
@@ -63,7 +74,7 @@ const TechSection = () => {
                                             <div class="penci-biggrid-inner default">
                                                 <div class="penci-big-grid-ajax-data">
                                                     <div class="penci-clearfix penci-biggrid-data penci-dblock penci-fixh">
-                                                        {data.slice(0, 5).map((itx, idx) => {
+                                                        {conditionaldata.slice(0, 5).map((itx, idx) => {
                                                             return (
                                                                 // <div class="penci-bgitem pcbg-big-item bgitem-1">
                                                                 <div class={`${idx + 1 < 1 ? `penci-bgitem bgitem-${idx + 1}` : `penci-bgitem pcbg-big-item bgitem-${idx + 1}`}`}>
@@ -73,8 +84,9 @@ const TechSection = () => {
                                                                                 <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
                                                                                     href={`/${itx.url}`}
                                                                                     title={`${itx.title}`}></a>
+
                                                                                     <img
-                                                                                        src={`${HOST}resources/post/${itx.image}`}
+                                                                                         src={ itx.type === "placeholder" ? itx.image :`${HOST}resources/post/${itx.image}`}
                                                                                         class="penci-lazy penci-image-holder" />
                                                                                 </div>
                                                                             </div>

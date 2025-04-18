@@ -7,28 +7,39 @@ import Placeholder from 'react-bootstrap/Placeholder';
 const DATA = [
     {
         id: 1,
-        image: "placeholder.png"
+        image: "/assets/blog.png",
+        type: "placeholder"
     },
     {
         id: 2,
-        image: "placeholder.png"
+        image: "/assets/blog.png",
+        type: "placeholder"
     },
     {
         id: 3,
-        image: "placeholder.png"
+        image: "/assets/blog.png",
+        type: "placeholder"
     },
     {
         id: 4,
-        image: "placeholder.png"
+        image: "/assets/blog.png",
+        type: "placeholder"
     },
     {
         id: 5,
-        image: "placeholder.png"
+        image: "/assets/blog.png",
+        type: "placeholder"
+    },
+    {
+        id: 6,
+        image: "/assets/blog.png",
+        type: "placeholder"
     },
 ]
 const FeaturedSection = () => {
 
-    const [data, setData] = useState(DATA)
+    const [data, setData] = useState([])
+    var conditionaldata =  data.length !==0 ? data : DATA
     useEffect(() => {
 
         AllPost(setData, "Featured")
@@ -56,8 +67,8 @@ const FeaturedSection = () => {
                                                     <div class="penci-clearfix penci-biggrid-data penci-dblock penci-fixh">
                                                         {
 
-                                                            data.slice(0, 5).map((item, idx) => {
-
+                                                        conditionaldata.slice(0, 5).map((item, idx) => {
+                                                                console.log("item::", item)
                                                                 return (
 
                                                                     <div class={`${idx + 1 === 5 ? `penci-bgitem bgitem-0` : `penci-bgitem bgitem-${idx + 1}`}`}>
@@ -66,8 +77,13 @@ const FeaturedSection = () => {
                                                                                 <div class="pcbg-thumb">
 
                                                                                     <div class="pcbg-thumbin">
-                                                                                        <a class="pcbg-bgoverlay"></a>                                                                                    <img
-                                                                                            src={`${HOST}resources/post/${item.image}`}
+                                                                                        <a class="pcbg-bgoverlay">
+                                                                                        </a>
+
+                                                                                
+                                                                                
+                                                                                        <img
+                                                                                            src={ item.type === "placeholder" ? item.image :`${HOST}resources/post/${item.image}`}
                                                                                             class="penci-lazy penci-image-holder" />
                                                                                     </div>
                                                                                 </div>
