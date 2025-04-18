@@ -90,7 +90,7 @@ const CategorySection = () => {
                                                                                 href={`/category/${item.label}`} title={item.label}></a>
                                                                                 <img
                                                                                     src={item.imgSrc}
-                                                                                    class="penci-lazy penci-image-holder" />
+                                                                                    class="penci-lazy penci-image-holder" alt={item.imgSrc} />
                                                                             </div>
                                                                         </div>
                                                                         <div class="pcbg-content">

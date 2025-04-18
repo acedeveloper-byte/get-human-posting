@@ -87,7 +87,7 @@ const TechSection = () => {
 
                                                                                     <img
                                                                                          src={ itx.type === "placeholder" ? itx.image :`${HOST}resources/post/${itx.image}`}
-                                                                                        class="penci-lazy penci-image-holder" />
+                                                                                        class="penci-lazy penci-image-holder" alt={"Tech"} />
                                                                                 </div>
                                                                             </div>
                                                                             <div class="pcbg-content">
