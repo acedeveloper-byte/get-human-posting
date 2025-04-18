@@ -68,7 +68,7 @@ const FeaturedSection = () => {
                                                         {
 
                                                         conditionaldata.slice(0, 5).map((item, idx) => {
-                                                                console.log("item::", item)
+
                                                                 return (
 
                                                                     <div class={`${idx + 1 === 5 ? `penci-bgitem bgitem-0` : `penci-bgitem bgitem-${idx + 1}`}`}>
@@ -81,7 +81,7 @@ const FeaturedSection = () => {
                                                                                         </a>
 
                                                                                 
-                                                                                
+
                                                                                         <img
                                                                                             src={ item.type === "placeholder" ? item.image :`${HOST}resources/post/${item.image}`}
                                                                                             class="penci-lazy penci-image-holder" />

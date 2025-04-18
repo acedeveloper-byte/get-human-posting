@@ -6,6 +6,7 @@ import FeaturedSection from "@/components/HomeSection/FeaturedSection";
 import TechSection from "@/components/HomeSection/TechSection";
 import Footer from "@/components/Footer";
 import CategorySection from "@/components/HomeSection/CategorySection";
+import TravelSection from "@/components/HomeSection/TravelSection";
 
 export default function Home() {
 
@@ -18,6 +19,7 @@ export default function Home() {
         <FeaturedSection />
         <LifeStyleSection />
         <CategorySection />
+        <TravelSection />
         {/* <LatestStyle /> */}
         <TechSection />
         <Footer />
