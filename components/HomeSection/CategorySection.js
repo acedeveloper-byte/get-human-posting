@@ -8,34 +8,34 @@ const DATA = [
     {
         id: 1,
         image: "/assets/blog.png",
-        type :"placeholder"
+        type: "placeholder"
     },
     {
         id: 2,
         image: "/assets/blog.png",
-                type :"placeholder"
+        type: "placeholder"
     },
     {
         id: 3,
         image: "/assets/blog.png",
-                type :"placeholder"
+        type: "placeholder"
     },
     {
         id: 4,
         image: "/assets/blog.png",
-                type :"placeholder"
+        type: "placeholder"
     },
     {
         id: 5,
         image: "/assets/blog.png",
-                type :"placeholder"
+        type: "placeholder"
 
     },
 ]
 const CategorySection = () => {
 
     const [data, setData] = useState([])
-    var conditional  =  data.length !== 0 ? data  : DATA  
+    var conditional = data.length !== 0 ? data : DATA
     useEffect(() => {
         FetchAllCategory(setData)
     }, [])
@@ -87,7 +87,7 @@ const CategorySection = () => {
 
                                                 <div id="scrollable-grid" class="penci-clearfix penci-biggrid-data penci-dflex horizontal-scroll">
                                                     {conditional.map((item, index) => {
-                                                                
+
                                                         return (
                                                             <div class="penci-bgitem elementor-repeater-item-17beedc">
                                                                 <div class="penci-bgitin">
@@ -96,7 +96,7 @@ const CategorySection = () => {
                                                                             <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
                                                                                 href={`/category/${item.label}`} title={item.label}></a>
                                                                                 <img
-                                                                                    src={item.type === "placeholder" ? item.image: item.imgSrc}
+                                                                                    src={item.type === "placeholder" ? item.image : item.imgSrc}
                                                                                     class="penci-lazy penci-image-holder" alt={item.imgSrc} />
                                                                             </div>
                                                                         </div>

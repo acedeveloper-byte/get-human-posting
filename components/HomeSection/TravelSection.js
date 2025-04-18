@@ -74,7 +74,7 @@ const TravelSection = () => {
                                                                     <img class="penci-image-holder penci-lazy"
                                                                      src={ itex.type === "placeholder" ? itex.image :`${HOST}resources/post/${itex.image}`}
                                                                         href={`/${itex.title}`}
-                                                                        title={`${itex.title}`} />
+                                                                        title={`${itex.title}`} alt="travel" />
                                                                 </div>
                                                                 <div class="magcat-detail">
                                                                     <div class="mag-header">
@@ -141,7 +141,7 @@ const TravelSection = () => {
                                                                                                                                                      src={ itm.type === "placeholder" ? itm.image :`${HOST}resources/post/${itm.image}`}
 
                                                                                 href={`/${itm.title}`}
-                                                                                title={itm.title} />
+                                                                                title={itm.title} alt="travel" />
                                                                         </div>
                                                                         <div class="grid-header-box">
                                                                             <h2 class="grid-title entry-title"><a
@@ -191,7 +191,7 @@ const TravelSection = () => {
 
                                                                         href={`/${itx.title}`}
                                                                         // href="how-to-get-your-partner-on-board-with-a-healthy-lifestyle-change-with-you/index.html"
-                                                                        title={itx.title} />
+                                                                        title={itx.title} alt="travel" />
                                                                     </div>
                                                   
                                                                     <div class="content-list-right content-list-center">
