@@ -1,3 +1,4 @@
+ 'use client'
 import { AllPost } from '@/utils/apicall/fetchAllPost'
 import { truncateHTML } from '@/utils/functions/truncate'
 import { HOST } from '@/utils/static'
@@ -58,30 +59,7 @@ const TravelSection = () => {
                                             <div
                                                 class="penci-border-arrow penci-homepage-title penci-magazine-title style-13 pcalign-left pciconp-right pcicon-right">
                                                 <h3 class="inner-arrow"> <span> <a href="category/life-style/index.html">Lastest in Travel</a> </span> </h3>
-                                                <nav data-ppp="6" data-query_type="ajaxtab" data-blockid="pencifeatured_cat_8861"
-                                                    data-more="" class="pcnav-lgroup">
-                                                    <ul class="pcflx">
-                                                        <li class="all visible"><a data-paged="1" data-maxp="2"
-                                                            class="pc-ajaxfil-link current-item" data-id="default" href="#"
-                                                            aria-label="Paged">All</a></li>
-                                                        <li><a href="#" aria-label="Category" data-id="0f48557c63833f8dfc5265b2060a96df"
-                                                            class="pc-ajaxfil-link" data-paged="1" data-cat="3">Fashion</a></li>
-                                                        <li><a href="#" aria-label="Category" data-id="9d1a88ffbf40ac406eca7f030a7e32d0"
-                                                            class="pc-ajaxfil-link" data-paged="1" data-cat="5">Food</a></li>
-                                                        <li><a href="#" aria-label="Category" data-id="6d5d062fbe64cd9d77efef78dfebc780"
-                                                            class="pc-ajaxfil-link" data-paged="1" data-cat="6">Life Style</a></li>
-                                                        <li><a href="#" aria-label="Category" data-id="862e3d7ad6f211031130a708557cad3f"
-                                                            class="pc-ajaxfil-link" data-paged="1" data-cat="8">Healthy Living</a></li>
-                                                    </ul>
-                                                    <ul class="pcflx-nav">
-                                                        <li class="pcaj-nav-item pcaj-prev"><a
-                                                            class="disable pc-ajaxfil-link pcaj-nav-link prev" data-id="" href="#"
-                                                            aria-label="Previous"><i class="penciicon-left-chevron"></i></a></li>
-                                                        <li class="pcaj-nav-item pcaj-next"><a class="pc-ajaxfil-link pcaj-nav-link next"
-                                                            data-id="" href="#" aria-label="Next"><i class="penciicon-right-chevron"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                </nav>
+                                      
 
                                             </div>
                                             <div class="home-featured-cat-wrapper">
@@ -190,7 +168,7 @@ const TravelSection = () => {
 
                                 </div>
                             </div>
-                            {/* <div
+                            <div
                                 class="elementor-element elementor-element-3cabe56 elementor-widget elementor-widget-penci-latest-posts"
                                 data-id="3cabe56" data-element_type="widget" data-widget_type="penci-latest-posts.default">
                                 <div class="elementor-widget-container">
@@ -244,7 +222,7 @@ const TravelSection = () => {
                                     </div>
 
                                 </div>
-                            </div> */}
+                            </div>
                         </div>
                     </div>
                     <div
@@ -258,40 +236,7 @@ const TravelSection = () => {
                                     <div id="sidebar"
                                         class="penci-sidebar-content penci-sidebar-content-vc style-15 pcalign-left pcsb-boxed-widget pciconp-right pcicon-right">
                                         <div class="theiaStickySidebar">
-                                            {/* <aside id="penci_social_widget-2" class="widget penci_social_widget">
-                                                <h3 class="widget-title penci-border-arrow"><span class="inner-arrow">Keep in touch</span>
-                                                </h3>
-                                                <div
-                                                    class="widget-social pc_aligncenter show-text remove-border-radius penci-social-colored ">
-                                                    <a href="https://www.facebook.com/envato/" aria-label="Facebook" rel="noreferrer"
-                                                        target="_blank"><i class="penci-faicon fa fa-facebook" style={{ fontSize: "14px" }}></i>
-                                                        <span style={{ fontSize: "13px" }}>Facebook</span></a> <a href="https://twitter.com/envato/"
-                                                            aria-label="Twitter" rel="noreferrer" target="_blank"><i
-                                                                class="penci-faicon penciicon-x-twitter" style={{ fontSize: "14px" }}></i> <span
-                                                                    style={{ fontSize: "13px" }}>Twitter</span></a> <a href="https://www.instagram.com/envato/"
-                                                                        aria-label="Instagram" rel="noreferrer" target="_blank"><i
-                                                                            class="penci-faicon fa fa-instagram" style={{ fontSize: "14px" }}></i> <span
-                                                                                style={{ fontSize: "13px" }}>Instagram</span></a> <a href="https://pinterest.com/envato/"
-                                                                                    aria-label="Pinterest" rel="noreferrer" target="_blank"><i
-                                                                                        class="penci-faicon fa fa-pinterest" style={{ fontSize: "14px" }}></i> <span
-                                                                                            style={{ fontSize: "13px" }}>Pinterest</span></a> <a
-                                                                                                href="https://www.youtube.com/c/envato/" aria-label="Youtube" rel="noreferrer"
-                                                                                                target="_blank"><i class="penci-faicon fa fa-youtube-play" style={{ fontSize: "14px" }}></i>
-                                                        <span style={{ fontSize: "13px" }}>Youtube</span></a> <a
-                                                            href="cdn-cgi/l/email-protection.html#8bf2e4fef9e6eae2e7cbe3e4f8ffe6eae2e7a5e8e4e6"
-                                                            aria-label="Email" rel="noreferrer" target="_blank"><i
-                                                                class="penci-faicon fa fa-envelope" style={{ fontSize: "14px" }}></i> <span
-                                                                    style={{ fontSize: "13px" }}>Email</span></a> </div>
-                                            </aside> */}
-                                            {/* <aside id="custom_html-4" class="widget_text widget widget_custom_html">
-                                                <div class="textwidget custom-html-widget"><a href="https://1.envato.market/YYJ4P"
-                                                    target="_blank" rel="noopener"><img loading="lazy" decoding="async"
-                                                        src="wp-content/uploads/2021/07/imgsidebar.jpg"
-                                                        alt="Top Selling Multipurpose WP Theme" width="400" height="333" /></a></div>
-                                            </aside> */}
                                             <RecentPosts />
-
-
                                         </div>
                                     </div>
                                 </div>
