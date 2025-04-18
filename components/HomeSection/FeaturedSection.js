@@ -77,14 +77,9 @@ const FeaturedSection = () => {
                                                                                 <div class="pcbg-thumb">
 
                                                                                     <div class="pcbg-thumbin">
-                                                                                        <a class="pcbg-bgoverlay">
-                                                                                        </a>
-
-                                                                                
-
                                                                                         <img
                                                                                             src={ item.type === "placeholder" ? item.image :`${HOST}resources/post/${item.image}`}
-                                                                                            class="penci-lazy penci-image-holder" />
+                                                                                            class="penci-lazy penci-image-holder" alt="featured" />
                                                                                     </div>
                                                                                 </div>
 
