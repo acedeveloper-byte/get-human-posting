@@ -1,6 +1,6 @@
  'use client'
 import { AllPost } from '@/utils/apicall/fetchAllPost'
-import { truncateHTML } from '@/utils/functions/truncate'
+// import { truncateHTML } from '@/utils/functions/truncate'
 import { HOST } from '@/utils/static'
 import React, { useEffect, useState } from 'react'
 import RecentPosts from '../RecentPosts'
@@ -26,6 +26,7 @@ const DATA = [
         image: "placeholder.png"
     },
 ]
+
 const TravelSection = () => {
         const [data, setData] = useState([])
         const [dataHealthy, setDataHealthy] = useState([])
@@ -87,7 +88,7 @@ const TravelSection = () => {
                                                                             datetime="2021-07-30T08:20:08+00:00">July 30, 2021</time></span> </div>
                                                                     </div>
                                                                     <div class="mag-excerpt entry-content">
-                                                                        <p dangerouslySetInnerHTML={{ __html: truncateHTML(itex.content, 100) }} />
+                                                                        {/* <p dangerouslySetInnerHTML={{ __html: truncateHTML(itex.content, 100) }} /> */}
                                                                     </div>
                                                                     <div class="penci-hide-tagupdated"> <span class="author-italic author vcard"> <a
                                                                         class="author-url url fn n" href={`/${itex.url}`}></a>
@@ -208,7 +209,7 @@ const TravelSection = () => {
                                                                                 datetime="2021-07-30T08:26:21+00:00">July 30, 2021</time></span> </div>
                                                                         </div>
                                                                         <div className="item-content entry-content">
-                                                                            <p dangerouslySetInnerHTML={{ __html: truncateHTML(itx.content, 100) }} />
+                                                                            {/* <p dangerouslySetInnerHTML={{ __html: truncateHTML(itx.content, 100) }} /> */}
                                                                         </div>
                                                                     </div>
                                                                 </article>
