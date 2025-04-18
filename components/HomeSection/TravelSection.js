@@ -190,7 +190,7 @@ const TravelSection = () => {
 
                                 </div>
                             </div>
-                            <div
+                            {/* <div
                                 class="elementor-element elementor-element-3cabe56 elementor-widget elementor-widget-penci-latest-posts"
                                 data-id="3cabe56" data-element_type="widget" data-widget_type="penci-latest-posts.default">
                                 <div class="elementor-widget-container">
@@ -244,7 +244,7 @@ const TravelSection = () => {
                                     </div>
 
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div
@@ -289,7 +289,7 @@ const TravelSection = () => {
                                                         src="wp-content/uploads/2021/07/imgsidebar.jpg"
                                                         alt="Top Selling Multipurpose WP Theme" width="400" height="333" /></a></div>
                                             </aside> */}
-                                            {/* <RecentPosts /> */}
+                                            <RecentPosts />
 
 
                                         </div>
