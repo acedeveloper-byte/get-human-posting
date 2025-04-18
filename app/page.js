@@ -1,7 +1,6 @@
 'use client'
 import Header from "@/components/Header";
 import LifeStyleSection from "@/components/HomeSection/LifeStyleSection";
-import LatestStyle from "@/components/HomeSection/LatestStyle";
 import FeaturedSection from "@/components/HomeSection/FeaturedSection";
 import TechSection from "@/components/HomeSection/TechSection";
 import Footer from "@/components/Footer";
