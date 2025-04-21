@@ -26,13 +26,13 @@ const page = () => {
     content: Yup.string().required("Content is required"),
     category: Yup.string().required("Category is required"),
     file: Yup.mixed()
-    .required("File is required")
-    .test("fileExists", "Please upload a file", value => value instanceof File)
-    .test("fileType", "Only JPG and PNG files are allowed", value => {
-      if (!value) return false;
-      const allowedTypes = ['image/jpeg', 'image/png'];
-      return allowedTypes.includes(value.type);
-    })
+      .required("File is required")
+      .test("fileExists", "Please upload a file", value => value instanceof File)
+      .test("fileType", "Only JPG and PNG files are allowed", value => {
+        if (!value) return false;
+        const allowedTypes = ['image/jpeg', 'image/png'];
+        return allowedTypes.includes(value.type);
+      })
   });
 
   const formik = useFormik({
@@ -77,7 +77,7 @@ const page = () => {
                 <Form.Group as={Col} md="8" controlId="category">
                   <Form.Label>Category</Form.Label>
                   <Form.Select {...formik.getFieldProps("category")}>
-                  <option selected value={""}>Select Category</option>
+                    <option selected value={""}>Select Category</option>
 
                     {[
                       { "value": "Lifestyle", "label": "Lifestyle" },
@@ -137,24 +137,23 @@ const page = () => {
               <Form.Group className="mb-3" as={Col} md="8">
                 <Form.Label>Content</Form.Label>
                 <Editor
-                  apiKey='js3uunm9tdph718l08kpjj9r8xwtv0wpuezj2nzvnjnuvpsa'
+                  apiKey="js3uunm9tdph718l08kpjj9r8xwtv0wpuezj2nzvnjnuvpsa"
                   onInit={(_evt, editor) => (editorRef.current = editor)}
                   value={formik.values.content}
                   onEditorChange={(content) => formik.setFieldValue("content", content)}
                   init={{
-
                     height: 500,
                     menubar: false,
                     plugins: [
                       'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
                       'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
-                      'insertdatetime', 'media', 'table', 'code', 'help', 'wordcount'
+                      'insertdatetime', 'media', 'table', 'help', 'wordcount'
                     ],
                     toolbar: 'undo redo | blocks | ' +
                       'bold italic forecolor | alignleft aligncenter ' +
                       'alignright alignjustify | bullist numlist outdent indent | ' +
-                      'removeformat | help',
-                    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px  } '
+                      'link image | removeformat | help',
+                    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
                   }}
                 />
                 {formik.touched.content && formik.errors.content && (

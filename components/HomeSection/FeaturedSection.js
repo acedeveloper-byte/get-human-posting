@@ -42,7 +42,7 @@ const FeaturedSection = () => {
     var conditionaldata =  data.length !==0 ? data : DATA
     useEffect(() => {
 
-        AllPost(setData, "Featured")
+        AllPost(setData, "Travel")
     }, [])
 
     return (
