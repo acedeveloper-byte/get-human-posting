@@ -30,7 +30,7 @@ const PostDetails = () => {
 
         <Container fluid className='penci-single-block inview'>
             <Row>
-            <Col md={8}>
+                <Col md={8}>
                     <div style={{
                         backgroundImage: `url(${HOST}resources/post/${data.image})`,
                         backgroundSize: "cover", height: "300px",
@@ -47,11 +47,14 @@ const PostDetails = () => {
                             <Col md={3}>
                                 Published on : <b>{moment(data.createdAt).format("MMMM Do YYYY")}</b>
                             </Col>
-                            <Col md={4} style={{ justifyContent: "flex-end", display: "flex" }}>
-                                <span>
-                                    <Button variant={"primary"} style={{ borderRadius: "10px", margin: 0, paading: 0 }}><Link href={`/post/${data.url}`} className="text-decoration-none text-white"> <LuPencilLine size={20} />Edit </Link></Button>
-                                </span>
-                            </Col>
+                            {user_data._id === data.user_id &&
+                                <Col md={4} style={{ justifyContent: "flex-end", display: "flex" }}>
+                                    <span>
+                                        <Button variant={"primary"} style={{ borderRadius: "10px", margin: 0, paading: 0 }}><Link href={`/post/${data.url}`} className="text-decoration-none text-white"> <LuPencilLine size={20} />Edit </Link></Button>
+                                    </span>
+                                </Col>
+                            }
+
                         </div>
                     </div>
                     <div className="container mt-4" dangerouslySetInnerHTML={{
@@ -63,13 +66,7 @@ const PostDetails = () => {
                         className="penci-sidebar-right penci-sidebar-content style-15 pcalign-left pcsb-boxed-widget pciconp-right pcicon-right penci-sticky-sidebar">
                         <div className="theiaStickySidebar">
 
-                            <aside id="custom_html-4" className="widget_text widget widget_custom_html">
-                                <div className="textwidget custom-html-widget"><a href="https://1.envato.market/YYJ4P" target="_blank"
-                                    rel="noopener"><img className=" penci-lazy penci-lazy"
-                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20333'%3E%3C/svg%3E"
-                                        data-src="https://soledaddemo.pencidesign.net/wp-content/uploads/2021/07/imgsidebar.jpg"
-                                        alt="" width="400" height="333" /></a></div>
-                            </aside>
+                      
 
                             <RecentPosts />
 
