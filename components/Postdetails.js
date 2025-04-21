@@ -33,7 +33,8 @@ const PostDetails = () => {
                 <Col md={8}>
                     <div style={{
                         backgroundImage: `url(${HOST}resources/post/${data.image})`,
-                        backgroundSize: "cover", height: "300px",
+                        backgroundSize: "contain", 
+                        height: "60vh",
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center",
                     }}>
@@ -99,4 +100,5 @@ const PostDetails = () => {
 }
 
 export default PostDetails
+
 

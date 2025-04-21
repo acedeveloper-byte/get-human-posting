@@ -1,4 +1,5 @@
 import { RecentPostsApi } from '@/utils/apicall/RecentPostsApi'
+import { HOST } from '@/utils/static'
 import moment from 'moment'
 import React, { useEffect, useState } from 'react'
 
@@ -24,25 +25,26 @@ const RecentPosts = () => {
                             <li className="penci-feed"> <span className="order-border-number"> <span className="number-post">{index + 1}</span> </span>
                                 <div className="side-item">
                                     <div className="side-image"> <a
-
+                                        
                                         className="penci-lazy penci-image-holder small-fix-size" rel="bookmark"
                                         href={`/${item.url}`}
-                                        title={item.title}> </a> </div>
+                                        title={item.title}> 
+                                      <img src={`${HOST}resources/post/${item.image}`} />   </a> </div>
+
                                     <div className="side-item-text">
                                         <h4 className="side-title-post"> <a
                                             href={`/${item.url}`} rel="bookmark"
-                                            title="Killing Comments Won&#8217;t Cure Our Toxic Internet Culture"> {item.title} </a> </h4>
+                                            title={`${item.title}`}> {item.title} </a> </h4>
                                         <div className="grid-post-box-meta penci-side-item-meta pcsnmt-below"> <span
-                                            className="side-item-meta side-wdate"><time className="entry-date published"
-                                                datetime="2021-07-30T08:28:29+00:00">{moment(item.createdAt).format("MMMM Do yy")}</time></span> <span
-                                                    className="side-item-meta side-wviews">21.3K views</span> </div>
+                                            className="side-item-meta side-wdate"><time className="entry-date published">{moment(item.createdAt).format("MMMM Do yy")}</time></span> <span
+                                                className="side-item-meta side-wviews">21.3K views</span> </div>
                                     </div>
                                 </div>
                             </li>
                         )
                     })}
 
-      
+
                 </ul>
 
             </aside>
