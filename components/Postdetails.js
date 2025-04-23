@@ -58,6 +58,11 @@ const PostDetails = () => {
 
                         </div>
                     </div>
+                             <div className="container mt-4" >
+                            <h1>
+                            {data.title}
+                            </h1>
+                            </div>
                     <div className="container mt-4" dangerouslySetInnerHTML={{
                         __html: data.content
                     }} />
