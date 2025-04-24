@@ -1,4 +1,4 @@
-
+'use client'
 import { LuPencilLine } from "react-icons/lu";
 import { AllPostBytitle } from '@/utils/apicall/post_by_title'
 import { HOST } from '@/utils/static'
@@ -9,20 +9,22 @@ import { Button, Col, Container, Row } from 'react-bootstrap'
 import RecentPosts from './RecentPosts'
 import Link from "next/link";
 
-const PostDetails = () => {
 
-    const params = useParams()
-    const [data, setData] = useState([])
+
+
+
+
+
+
+
+const PostDetails = ({ data}) => {
     const [user_data, setUser] = useState(false);
 
     useEffect(() => {
         if (localStorage.getItem("auth_data")) {
             setUser(JSON.parse(localStorage.getItem("auth_data")))
         }
-        const callapi = async () => {
-            await AllPostBytitle(setData, params.title)
-        }
-        callapi()
+       
     }, [])
 
 
@@ -66,6 +68,7 @@ const PostDetails = () => {
                     <div className="container mt-4" dangerouslySetInnerHTML={{
                         __html: data.content
                     }} />
+                    
                 </Col>
                 <Col md={4}>
                     <div id="sidebar"

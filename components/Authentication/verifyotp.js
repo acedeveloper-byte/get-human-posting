@@ -40,7 +40,7 @@ const OTP = () => {
                             value={values.otp}
                         />
 
-                        <button type="submit">                    {loading ? <Spinner animation="border" /> : "Submit"}
+                        <button type="submit">                    {loading ? <Spinner animation="border" /> : "verify"}
                         </button>
                     </form>
                 </div>

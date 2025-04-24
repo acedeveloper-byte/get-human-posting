@@ -166,9 +166,9 @@ const page = () => {
               <Form.Group as={Col} md={8}>
 
                 {user_data.user_name ?
-                  <Button type="submit">{loading ? <Spinner /> : "Submit Form"}</Button>
+                  <Button type="submit">{loading ? <Spinner /> : "Submit article"}</Button>
                   :
-                  <Button type="button" onClick={() => router.push("/login")}>Please login to create a post</Button>
+                  <Button type="button" onClick={() => router.push("/login")}>Please login to submit article</Button>
                 }
               </Form.Group>
             </Form>
