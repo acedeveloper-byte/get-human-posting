@@ -17,7 +17,7 @@ import Link from "next/link";
 
 
 
-const PostDetails = ({ data}) => {
+const PostDetails = ({ data }) => {
     const [user_data, setUser] = useState(false);
 
     useEffect(() => {
@@ -26,7 +26,7 @@ const PostDetails = ({ data}) => {
         }
        
     }, [])
-
+    console.log("user_data:" , user_data)
 
     return (
 
@@ -45,7 +45,7 @@ const PostDetails = ({ data}) => {
                     <div className="container mt-2">
                         <div className='row'>
                             <Col md={2}>
-                                Author : <b>{user_data?.user_name}</b>
+                                Author : <b>{user_data.user_name}</b>
                             </Col>
                             <Col md={3}>
                                 Published on : <b>{moment(data.createdAt).format("MMMM Do YYYY")}</b>

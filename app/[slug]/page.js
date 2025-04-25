@@ -29,7 +29,11 @@ export default async function  Page({ params }) {
 
   const res = await axios.get(`${HOST}post/fetch-all-post-by-url/${params.slug}`);
   const post = res.data.response;
-  console.log(post.response)
+
+  
+  const user = await   axios.get(`${HOST}post/fetch-all-post-by-url/${params.slug}`);
+  const user_data = res.data.response;
+
   return (
     <>
       <Header />

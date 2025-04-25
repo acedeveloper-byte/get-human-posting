@@ -102,14 +102,14 @@ const CategorySection = () => {
                                                                         </div>
                                                                         <div class="pcbg-content">
                                                                             <div class="pcbg-content-flex pcbg-overlap-hover"> <a class="pcbg-cbgoverlap"
-                                                                                href={`/category/${item.label}`} title={item.title}></a> <a
+                                                                                href={`/category/${item.label}`} title={item.label}></a> <a
                                                                                     class="pcbg-bgoverlay active-overlay" href={`/category/${item.label}`}
-                                                                                    title={item.title}></a>
+                                                                                    title={item.label}></a>
                                                                                 <div class="pcbg-content-inner bgcontent-block"> <a
-                                                                                    href={`/category/${item.label}`} title={item.title}
+                                                                                    href={`/category/${item.label}`} title={item.label}
                                                                                     class="pcbg-bgoverlaytext item-hover"></a>
                                                                                     <div class="pcbg-heading item-hover">
-                                                                                        <h3 class="pcbg-title"><a href={`/category/${item.label}`} >{item.title}</a>
+                                                                                        <h3 class="pcbg-title"><a href={`/category/${item.label}`} >{item.label}</a>
                                                                                         </h3>
                                                                                     </div>
                                                                                 </div>
