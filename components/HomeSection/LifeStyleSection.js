@@ -31,7 +31,7 @@ const LifeStyleSection = () => {
         if (localStorage.getItem("auth_data")) {
             setuser(JSON.parse(localStorage.getItem("auth_data")))
         }
-        AllPost(setData, "Lifestyle")
+        AllPost(setData, "Fashion")
     }, [])
     return (
         <>
@@ -49,11 +49,7 @@ const LifeStyleSection = () => {
                                 <div class="elementor-widget-container">
                                     <div id="pencifeatured_cat_4326" class="penci-featured-cat-sc">
                                         <section class="home-featured-cat mag-cat-style-6">
-                                            <div
-                                                class="penci-border-arrow penci-homepage-title penci-magazine-title style-13 pcalign-left pciconp-right pcicon-right">
-                                                <h3 class="inner-arrow"> <span> <a href="#">Latest in
-                                                    Style</a> </span> </h3>
-                                            </div>
+                                            
                                             <div class="home-featured-cat-wrapper">
                                                 <div class="home-featured-cat-content pwf-id-default style-6">
                                                     <div class="cat-left">
