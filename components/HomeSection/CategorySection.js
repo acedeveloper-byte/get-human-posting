@@ -1,8 +1,7 @@
+'use client';
 import { IoChevronForward } from "react-icons/io5";
 import { IoChevronBack } from "react-icons/io5";
-import { FetchAllCategory } from '@/utils/apicall/fetchAllCategory'
-import React, { useEffect, useState } from 'react'
-import { HOST } from "@/utils/static";
+import React, { useRef } from 'react'
 
 const DATA = [
     {
@@ -32,22 +31,17 @@ const DATA = [
 
     },
 ]
-const CategorySection = () => {
-
-    const [data, setData] = useState([])
+const CategorySection = ({ data}) => {
     var conditional = data.length !== 0 ? data : DATA
-    useEffect(() => {
-        FetchAllCategory(setData)
-    }, [])
+
+    const scrollRef = useRef(null);
 
     const scrollLeft = () => {
-        const container = document.getElementById("scrollable-grid");
-        container.scrollBy({ left: -300, behavior: 'smooth' });
+        scrollRef.current?.scrollBy({ left: -300, behavior: 'smooth' });
     };
 
     const scrollRight = () => {
-        const container = document.getElementById("scrollable-grid");
-        container.scrollBy({ left: 300, behavior: 'smooth' });
+        scrollRef.current?.scrollBy({ left: 300, behavior: 'smooth' });
     };
     return (
         <>
@@ -85,7 +79,7 @@ const CategorySection = () => {
 
                                                 </div>
 
-                                                <div id="scrollable-grid" class="penci-clearfix penci-biggrid-data penci-dflex horizontal-scroll">
+                                                <div ref={scrollRef} id="scrollable-grid" class="penci-clearfix penci-biggrid-data penci-dflex horizontal-scroll">
                                                     {conditional.map((item, index) => {
 
                                                         return (

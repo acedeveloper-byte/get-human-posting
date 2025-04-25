@@ -27,18 +27,12 @@ const DATA = [
     },
 ]
 
-const TravelSection = () => {
-        const [data, setData] = useState([])
-        const [dataHealthy, setDataHealthy] = useState([])
-        const [dataFashion, setDataFashion] = useState([])
-        useEffect(() => {
-            AllPost(setData, "Travel")
-            AllPost(setDataHealthy, "Healthy")
-            AllPost(setDataFashion, "Fashion")
-        }, [])
-        var conditionaldata =  data.length !==0 ? data : DATA
-        var conditionaldatahealty =  dataHealthy.length !==0 ? data : DATA
-        var conditionaldatafashion =  dataFashion.length !==0 ? data : DATA
+const MultiCategory = ({ dataBusiness , dataHealthy  , datasales}) => {
+
+        
+        var conditionaldata =  datasales.length !==0 ? datasales : DATA
+        var conditionaldatahealty =  dataHealthy.length !==0 ? dataHealthy : DATA
+        var conditionaldataBusiness =  dataBusiness.length !==0 ? dataBusiness : DATA
     
     
   return (
@@ -182,7 +176,7 @@ const TravelSection = () => {
                                         <div class="penci-wrapper-posts-ajax">
                                             <div class="penci-wrapper-posts-content pwid-default">
                                                 <ul data-layout="list" class="penci-wrapper-data penci-grid penci-shortcode-render">
-                                                    {conditionaldatafashion.map((itx, ix) => {
+                                                    {conditionaldataBusiness.map((itx, ix) => {
                                                         return (
                                                             <li class="list-post penci-item-listp">
                                                                 <article id="post-422" class="item hentry">
@@ -250,4 +244,4 @@ const TravelSection = () => {
   )
 }
 
-export default TravelSection
+export default MultiCategory

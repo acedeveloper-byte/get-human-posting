@@ -13,20 +13,9 @@ import Link from "next/link";
 
 
 
+const PostDetails = ({ data , user_data }) => {
 
 
-
-
-const PostDetails = ({ data }) => {
-    const [user_data, setUser] = useState(false);
-
-    useEffect(() => {
-        if (localStorage.getItem("auth_data")) {
-            setUser(JSON.parse(localStorage.getItem("auth_data")))
-        }
-       
-    }, [])
-    console.log("user_data:" , user_data)
 
     return (
 
@@ -45,13 +34,13 @@ const PostDetails = ({ data }) => {
                     <div className="container mt-2">
                         <div className='row'>
                             <Col md={2}>
-                                Author : <b>{user_data.user_name}</b>
+                                Author : <b>{data.author_name}</b>
                             </Col>
                             <Col md={3}>
                                 Published on : <b>{moment(data.createdAt).format("MMMM Do YYYY")}</b>
                             </Col>
                             {user_data._id === data.user_id &&
-                                <Col md={4} style={{ justifyContent: "flex-end", display: "flex" }}>
+                                <Col md={7} style={{ justifyContent: "flex-end", display: "flex" }}>
                                     <span>
                                         <Button variant={"primary"} style={{ borderRadius: "10px", margin: 0, paading: 0 }}><Link href={`/post/${data.url}`} className="text-decoration-none text-white"> <LuPencilLine size={20} />Edit </Link></Button>
                                     </span>

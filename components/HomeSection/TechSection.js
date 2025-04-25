@@ -1,51 +1,48 @@
-import { AllPost } from '@/utils/apicall/fetchAllPost'
 import { HOST } from '@/utils/static'
 import moment from 'moment'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 const DATA = [
     {
         id: 1,
         image: "/assets/blog.png",
-        type: "placeholder"
+        type: "placeholder",
+        url :"#"
     },
     {
         id: 2,
         image: "/assets/blog.png",
-        type: "placeholder"
+        type: "placeholder",
+        url :"#"
     },
     {
         id: 3,
         image: "/assets/blog.png",
-        type: "placeholder"
+        type: "placeholder",
+        url :"#"
     },
     {
         id: 4,
         image: "/assets/blog.png",
-        type: "placeholder"
+        type: "placeholder",
+        url :"#"
     },
     {
         id: 5,
         image: "/assets/blog.png",
-        type: "placeholder"
+        type: "placeholder",
+        url :"#"
     },
     {
         id: 6,
         image: "/assets/blog.png",
-        type: "placeholder"
+        type: "placeholder",
+        url :"#"
     },
 ]
-const TechSection = () => {
+const TechSection = ({ data}) => {
 
-    const [data, setData] = useState(DATA)
-    const [user, setuser] = useState({})
+
     var conditionaldata =  data.length !==0 ? data : DATA
-
-    useEffect(() => {
-        if (localStorage.getItem("auth_data")) {
-            setuser(JSON.parse(localStorage.getItem("auth_data")))
-        }
-        AllPost(setData, "Tech")
-    }, [])
 
     return (
         <>
@@ -105,7 +102,7 @@ const TechSection = () => {
                                                                                             <div class="pcbg-meta-desc"> <span
                                                                                                 class="bg-date-author author-italic author vcard"> by <a
                                                                                                     class="author-url url fn n" href="#">
-                                                                                                    {user.user_name}
+                                                                                                    {itx.user_name}
                                                                                                 </a> </span> <span class="bg-date"><time
                                                                                                     class="entry-date published"
                                                                                                 >{moment(itx.createdAt).format("MMMM Do yy")}</time></span>

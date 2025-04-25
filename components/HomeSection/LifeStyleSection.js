@@ -1,7 +1,8 @@
 import { AllPost } from '@/utils/apicall/fetchAllPost'
 import { HOST } from '@/utils/static'
+import axios from 'axios'
 import moment from 'moment'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 const DATA = [
     {
         id: 1,
@@ -24,15 +25,8 @@ const DATA = [
         image: "placeholder.png"
     },
 ]
-const LifeStyleSection = () => {
-    const [user, setuser] = useState({})
-    const [data, setData] = useState(DATA)
-    useEffect(() => {
-        if (localStorage.getItem("auth_data")) {
-            setuser(JSON.parse(localStorage.getItem("auth_data")))
-        }
-        AllPost(setData, "Fashion")
-    }, [])
+const LifeStyleSection = async ({ data }) => {
+ 
     return (
         <>
             <section
@@ -66,7 +60,7 @@ const LifeStyleSection = () => {
                                                                                 href={`/${itex.url}`}>{itex.title}</a> </h3>
                                                                             <div class="grid-post-box-meta mag-meta"> <span
                                                                                 class="featc-author author-italic author">by <a class="url fn n"
-                                                                                    href="#">{user.user_name}</a></span> <span
+                                                                                    href="#">{data.author_name}</a></span> <span
                                                                                         class="featc-date"><time class="entry-date published"
                                                                                             datetime="2021-07-30T08:24:33+00:00">July 30, 2021</time></span> </div>
                                                                         </div>
@@ -74,7 +68,7 @@ const LifeStyleSection = () => {
                                                                             <p>{itex.title}</p>
                                                                         </div>
                                                                         <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                            class="author-url url fn n" href="#">{user.user_name}</a>
+                                                                            class="author-url url fn n" href="#">{data.author_name}</a>
                                                                         </span> </div>
                                                                     </div>
                                                                 </div>
@@ -98,7 +92,7 @@ const LifeStyleSection = () => {
                                                                         <div class="grid-post-box-meta mag-meta"> <span class="featc-date"><time
                                                                             class="entry-date published" datetime="2021-07-30T08:08:29+00:00">{moment(idx.createdAt).format("MMMM Do yy")}</time></span> </div>
                                                                         <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                            class="author-url url fn n" href="#">{user.user_name}</a>
+                                                                            class="author-url url fn n" href="#">{data.author_name}</a>
                                                                         </span> </div>
                                                                     </div>
                                                                 </div>

@@ -42,10 +42,8 @@ const Header = () => {
         { value: "Sports", label: "Sports" },
         { value: "Technology", label: "Technology" },
         { value: "Travel", label: "Travel" },
-        { value: "Video", label: "Video" },
        
         { value: "Wellness", label: "Wellness" },
-        { value: "Writing", label: "Writing" }
     ];
 
 
@@ -109,21 +107,18 @@ const Header = () => {
 
                                         <>
                                             {[
-                                                { "value": "Lifestyle", "label": "Lifestyle" },
-                                                { "value": "Latest", "label": "Latest Blog" },
-                                                { "value": "Featured", "label": "Featured Blog" },
+                                                { "value": "Sales", "label": "Sales" },
+                  
+                      
                                                 { "value": "Tech", "label": "Technology" },
                                                 { "value": "Healthy", "label": "Healthy Lifestyle" },
                                                 { "value": "Fashion", "label": "Fashion" },
                                                 { "value": "Business", "label": "Business" },
                                                 { "value": "Design", "label": "Design" },
-                                                { "value": "Domain Names", "label": "Domain Names" },
                                                 { "value": "Education", "label": "Education" },
                                                 { "value": "Entertainment", "label": "Entertainment" },
                                                 { "value": "Home & Lifestyle", "label": "Home & Lifestyle" },
-                                                { "value": "Marketing", "label": "Marketing" },
                                                 { "value": "Digital Marketing", "label": "Digital Marketing" },
-                                                { "value": "SEO", "label": "SEO" },
                                                 { "value": "Social Media", "label": "Social Media" },
                                                 { "value": "Music", "label": "Music" },
                                                 { "value": "Other", "label": "Other" },
@@ -132,11 +127,8 @@ const Header = () => {
                                                 { "value": "Sports", "label": "Sports" },
                                                 { "value": "Technology", "label": "Technology" },
                                                 { "value": "Travel", "label": "Travel" },
-                                                { "value": "Video", "label": "Video" },
-                                                { "value": "Web Hosting", "label": "Web Hosting" },
-                                                { "value": "Web Security", "label": "Web Security" },
+                                 
                                                 { "value": "Wellness", "label": "Wellness" },
-                                                { "value": "Writing", "label": "Writing" }
                                             ].map((item, index) => {
                                                 return (
                                                     <li key={index} ><a href={`/category/${item.value}`}>{item.label}</a></li>

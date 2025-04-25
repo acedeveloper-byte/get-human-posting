@@ -1,6 +1,5 @@
-import { AllPost } from '@/utils/apicall/fetchAllPost'
-import { HOST } from '@/utils/static'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { HOST } from "@/utils/static";
 
 import Placeholder from 'react-bootstrap/Placeholder';
 
@@ -36,14 +35,10 @@ const DATA = [
         type: "placeholder"
     },
 ]
-const FeaturedSection = () => {
-
-    const [data, setData] = useState([])
+const FeaturedSection = ({data}) => {
     var conditionaldata =  data.length !==0 ? data : DATA
-    useEffect(() => {
 
-        AllPost(setData, "Travel")
-    }, [])
+
 
     return (
         <>
