@@ -23,6 +23,7 @@ const Register = () => {
   const { values, handleChange, handleSubmit } = formik;
 
   return (
+    <section style ={{ height :  "50vh" , margin:"10%"}}>
     <div className="split-form">
       <div className="image-side">
         <h2>Join Us!</h2>
@@ -61,6 +62,8 @@ const Register = () => {
         </form>
       </div>
     </div>
+    </section>
+
   );
 };
 

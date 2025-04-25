@@ -13,10 +13,21 @@ import Link from "next/link";
 
 
 
-const PostDetails = ({ data , user_data }) => {
+const PostDetails = ({ data, user_data }) => {
+    var loggedIn = false
+    if (localStorage.getItem('auth_data')) {
+        console.log('yes');
+        loggedIn = true
+        // Optional: Update localStorage data
+        const authData = JSON.parse(localStorage.getItem('auth_data'));
+        if (data.user_id === authData._id) {
+            loggedIn = true
 
-
-
+        }
+        localStorage.setItem('auth_data', JSON.stringify(authData));
+    } else {
+        loggedIn = false
+    }
     return (
 
         <Container fluid className='penci-single-block inview'>
@@ -24,7 +35,7 @@ const PostDetails = ({ data , user_data }) => {
                 <Col md={8}>
                     <div style={{
                         backgroundImage: `url(${HOST}resources/post/${data.image})`,
-                        backgroundSize: "contain", 
+                        backgroundSize: "contain",
                         height: "60vh",
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center",
@@ -39,7 +50,7 @@ const PostDetails = ({ data , user_data }) => {
                             <Col md={3}>
                                 Published on : <b>{moment(data.createdAt).format("MMMM Do YYYY")}</b>
                             </Col>
-                            {user_data._id === data.user_id &&
+                            {loggedIn === true && user_data?._id === data.user_id &&
                                 <Col md={7} style={{ justifyContent: "flex-end", display: "flex" }}>
                                     <span>
                                         <Button variant={"primary"} style={{ borderRadius: "10px", margin: 0, paading: 0 }}><Link href={`/post/${data.url}`} className="text-decoration-none text-white"> <LuPencilLine size={20} />Edit </Link></Button>
@@ -49,22 +60,22 @@ const PostDetails = ({ data , user_data }) => {
 
                         </div>
                     </div>
-                             <div className="container mt-4" >
-                            <h1>
+                    <div className="container mt-4" >
+                        <h1>
                             {data.title}
-                            </h1>
-                            </div>
+                        </h1>
+                    </div>
                     <div className="container mt-4" dangerouslySetInnerHTML={{
                         __html: data.content
                     }} />
-                    
+
                 </Col>
                 <Col md={4}>
                     <div id="sidebar"
                         className="penci-sidebar-right penci-sidebar-content style-15 pcalign-left pcsb-boxed-widget pciconp-right pcicon-right penci-sticky-sidebar">
                         <div className="theiaStickySidebar">
 
-                      
+
 
                             <RecentPosts />
 

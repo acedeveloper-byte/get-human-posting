@@ -89,7 +89,6 @@ const Page = () => {
               <div
                 className="theiaStickySidebar">
                 <RecentPosts />
-                <Categories_widget />
               </div>
             </div>
 

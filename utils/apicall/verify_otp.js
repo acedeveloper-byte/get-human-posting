@@ -17,6 +17,7 @@ export const handleOtpCall = async (values, router, setloading) => {
     const resp = await fetchapi
     if (resp.data.baseResponse.message === "REQUEST_FULLFILLED") {
         setloading(false)
+        localStorage.setItem("message" , "Your OTP has been verified successfully." )
         router.push("/login")
     } else {
         setloading(false)

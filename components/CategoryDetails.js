@@ -12,7 +12,6 @@ const CategoryPage = () => {
     const [data, setData] = useState([])
     useEffect(() => {
 
-
         if (params.categoryname) {
             AllPost(setData, params.categoryname);
         }

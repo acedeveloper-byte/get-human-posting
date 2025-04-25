@@ -33,6 +33,9 @@ export default async function  Page({ params }) {
   
   const user = await axios.get(`${HOST}auth/find-user-by-user_id/${post.user_id}`);
   const user_data = user.data.data
+
+  console.log(user_data)
+
   return (
     <>
       <Header />
