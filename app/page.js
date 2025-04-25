@@ -11,7 +11,7 @@ import axios from "axios";
 
 export default async function  Home() {
   
-  const travel = await   axios.get(`${HOST}post/fetch-all-post-by-category/${"Travel"}`);
+  const travel = await axios.get(`${HOST}post/fetch-all-post-by-category/${"Travel"}`);
   const travel_data = travel.data.response;
 
   const fashion = await   axios.get(`${HOST}post/fetch-all-post-by-category/${"Fashion"}`);

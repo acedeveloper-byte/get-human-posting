@@ -21,9 +21,6 @@ const ViewProfile = ({ username = "mayank@work", name = "mayank@work" }) => {
         axios.request(config)
             .then((response) => {
 
-
-                
-
                 console.log(response.data)
             if  (response.data.baseResponse.status === 1) {
                 setuser_info(response.data.data)
