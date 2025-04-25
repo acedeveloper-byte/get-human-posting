@@ -45,7 +45,13 @@ const Login = () => {
     }
 
     setTimeout(() => {
+      if (
+      localStorage.getItem("message")
+
+       ){
       localStorage.removeItem("message")
+
+       }
     }, 1000);
   }, [])
 
