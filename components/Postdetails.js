@@ -50,7 +50,8 @@ const PostDetails = ({ data, user_data }) => {
                                 Published on : <b>{moment(data.createdAt).format("MMMM Do YYYY")}</b>
                             </Col>
                             <Col md={3}>
-                                Category : <b>{data.category}</b>
+
+                                Category : <a  className="text-decoration-none text-black" href={`/category/${data.category}`}><b>{data.category}</b></a>
                             </Col>
                             {user?._id === data.user_id &&
                                 <Col md={5} style={{ justifyContent: "flex-end", display: "flex" }}>
