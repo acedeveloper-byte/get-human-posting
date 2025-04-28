@@ -53,7 +53,7 @@ const PostDetails = ({ data, user_data }) => {
                                 Category : <b>{data.category}</b>
                             </Col>
                             {user?._id === data.user_id &&
-                                <Col md={7} style={{ justifyContent: "flex-end", display: "flex" }}>
+                                <Col md={5} style={{ justifyContent: "flex-end", display: "flex" }}>
                                     <span>
                                         <Button variant={"primary"} style={{ borderRadius: "10px", margin: 0, paading: 0 }}><Link href={`/post/${data.url}`} className="text-decoration-none text-white"> <LuPencilLine size={20} />Edit </Link></Button>
                                     </span>
