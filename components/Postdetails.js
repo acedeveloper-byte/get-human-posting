@@ -16,38 +16,14 @@ import Link from "next/link";
 const PostDetails = ({ data, user_data }) => {
 
 
-    // console.log(user_data)
-    // console.log(data)
+    const [user, setuser] = useState({})
+    useEffect(() => {
+        if (localStorage.getItem('auth_data')) {
+            const authData = JSON.parse(localStorage.getItem('auth_data'));
+            setuser(authData)
 
-    // const [user , setuser] = useState({})
-    
-    // var loggedIn = false
-
-    // if (localStorage.getItem('auth_data')) {
-        
-    //     loggedIn = true
-    //     // Optional: Update localStorage data
-    //     const authData = JSON.parse(localStorage.getItem('auth_data'));
-    //     setuser(authData)
-
-    //     if (data.user_id === authData._id) {
-    //         loggedIn = true
-    //     }
-    //     localStorage.setItem('auth_data', JSON.stringify(authData));
-    // } else {
-    //     loggedIn = false
-    // }
-    // console.log("user" , user)
-    const [user , setuser] = useState({})
-useEffect(() => {
-    if (localStorage.getItem('auth_data')) {
-        
-     // Optional: Update localStorage data
-     const authData = JSON.parse(localStorage.getItem('auth_data'));
-     setuser(authData)
-    
- }
-} , [])
+        }
+    }, [])
 
 
 
@@ -62,7 +38,7 @@ useEffect(() => {
                         height: "60vh",
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center",
-                    }}> 
+                    }}>
 
                     </div>
                     <div className="container mt-2">
@@ -73,7 +49,7 @@ useEffect(() => {
                             <Col md={3}>
                                 Published on : <b>{moment(data.createdAt).format("MMMM Do YYYY")}</b>
                             </Col>
-                            { user?._id === data.user_id &&
+                            {user?._id === data.user_id &&
                                 <Col md={7} style={{ justifyContent: "flex-end", display: "flex" }}>
                                     <span>
                                         <Button variant={"primary"} style={{ borderRadius: "10px", margin: 0, paading: 0 }}><Link href={`/post/${data.url}`} className="text-decoration-none text-white"> <LuPencilLine size={20} />Edit </Link></Button>

@@ -97,7 +97,7 @@ const page = () => {
                       { "value": "Politics", "label": "Politics" },
                       { "value": "Real Estate", "label": "Real Estate" },
                       { "value": "Sports", "label": "Sports" },
-                      { "value": "Technology", "label": "Technology" },
+                      
                       { "value": "Travel", "label": "Travel" },
                       { "value": "Wellness", "label": "Wellness" },
                     ].map((item, index) => {
