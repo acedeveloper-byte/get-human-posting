@@ -93,15 +93,12 @@ const page = () => {
                                     <Form.Label>Current Category {data_blog.category}</Form.Label>
                                     <Form.Select {...formik.getFieldProps("category")}>
                                         {[
-                                            { "value": "Lifestyle", "label": "Lifestyle" },
-                                            { "value": "Latest", "label": "Latest Blog" },
-                                            { "value": "Featured", "label": "Featured Blog" },
-                                            { "value": "Tech", "label": "Technology" },
+                                                                              { "value": "Select Category", "label": "Select Category" },
+                                                                              { "value": "Tech", "label": "Technology" },
                                             { "value": "Healthy", "label": "Healthy Lifestyle" },
                                             { "value": "Fashion", "label": "Fashion" },
                                             { "value": "Business", "label": "Business" },
                                             { "value": "Design", "label": "Design" },
-                                            { "value": "Domain Names", "label": "Domain Names" },
                                             { "value": "Education", "label": "Education" },
                                             { "value": "Entertainment", "label": "Entertainment" },
                                             { "value": "Home & Lifestyle", "label": "Home & Lifestyle" },
@@ -113,18 +110,12 @@ const page = () => {
                                             { "value": "Other", "label": "Other" },
                                             { "value": "Politics", "label": "Politics" },
                                             { "value": "Real Estate", "label": "Real Estate" },
-                                            { "value": "Sports", "label": "Sports" },
-                                            
+                                            { "value": "Sports", "label": "Sports" },                                            
                                             { "value": "Travel", "label": "Travel" },
-                                            { "value": "Video", "label": "Video" },
-                                            { "value": "Web Hosting", "label": "Web Hosting" },
-                                            { "value": "Web Security", "label": "Web Security" },
                                             { "value": "Wellness", "label": "Wellness" },
-                                            { "value": "Writing", "label": "Writing" }
                                         ].map((item, index) => {
                                             return (
                                                 <>
-                                                    <option selected value={""}>Select Category</option>
                                                     <option value={item.value}>{item.label}</option>
                                                 </>
                                             )
@@ -184,7 +175,7 @@ const page = () => {
                             <Form.Group as={Col} md={8}>
 
                                 {user_data.user_name ?
-                                    <Button type="submit">{loading ? <Spinner /> : "Submit Form"}</Button>
+                                    <Button type="submit">{loading ? <Spinner /> : "Submit"}</Button>
                                     :
                                     <Button type="button" onClick={() => router.push("/login")}>Please login to create a post</Button>
                                 }
