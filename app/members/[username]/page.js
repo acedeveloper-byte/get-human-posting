@@ -14,6 +14,7 @@ import EditProfile from '@/components/Profile/Edit/EditProfile'
 import EmailPasswordForm from '@/components/Profile/SettingsChangeDetails'
 import { HOST } from '@/utils/static'
 import axios from 'axios'
+import UserBlog from '@/components/Profile/UserBlog'
 
 
 const Page = () => {
@@ -67,6 +68,7 @@ const Page = () => {
 
                 <div className="profile-view-content">
                   <ViewProfile username={auth.user_name} name={auth.user_name} />
+                  <UserBlog />
                 </div>
               )}
               {getActiveTabs === "Profile" && contentActiveTabs === "Edit" && (

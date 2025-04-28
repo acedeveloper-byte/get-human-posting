@@ -20,7 +20,6 @@ export const GetAllPostByUserId = async (id, setData) => {
     } else {
         resp.data.length === 0 && alert("no post found")
 
-        alert(resp.data.baseResponse.message)
     }
 
 }
