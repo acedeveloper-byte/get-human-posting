@@ -4645,7 +4645,7 @@ ul.penci-topbar-menu ul.sub-menu > li:first-child > a {
 
 #navigation.header-10,
 #navigation.header-11 {
-  height: 82px;
+  height: 100px;
 }
 
 #navigation.header-10 .menu > li > a,
@@ -15977,13 +15977,3 @@ button:hover {
   }
 }
 
-ul {
-  list-style-type: disc !important;       /* solid circle bullets */
-  padding-left: 1.5rem !important;        /* indent so bullets are visible */
-  margin: 1rem 0 !important;              /* spacing above/below list */
-}
-
-li {
-  margin-bottom: 0.5rem !important;       /* spacing between items */
-list-style-position: outside !important;/* bullets outside the text block */
-}

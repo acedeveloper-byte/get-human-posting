@@ -37,6 +37,7 @@ const page = () => {
 
                   <ul data-layout="grid" class="penci-wrapper-data penci-grid">
                     {data.map((item, index) => {
+                      console.log("itemL" , item)
                       return (
 
                         <li class="grid-style grid-overlay-meta">

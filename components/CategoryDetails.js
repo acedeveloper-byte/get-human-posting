@@ -32,7 +32,7 @@ const CategoryPage = () => {
                                             <div className="thumbnail">
                                                 <a href={`/${item.url}`} className='text-decoration-none'>
                                                     <img
-                                                        src={item.itemSrc}
+                                                           src={`${HOST}resources/post/${item.image}`}
                                                         alt="Post Image"
                                                         loading="lazy"
                                                     />
