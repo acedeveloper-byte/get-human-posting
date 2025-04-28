@@ -49,6 +49,9 @@ const PostDetails = ({ data, user_data }) => {
                             <Col md={3}>
                                 Published on : <b>{moment(data.createdAt).format("MMMM Do YYYY")}</b>
                             </Col>
+                            <Col md={3}>
+                                Category : <b>{data.category}</b>
+                            </Col>
                             {user?._id === data.user_id &&
                                 <Col md={7} style={{ justifyContent: "flex-end", display: "flex" }}>
                                     <span>

@@ -17,7 +17,6 @@ const RecentPosts = () => {
                     <span className="inner-arrow">Popular Posts</span></h3>
 
                 <ul id="penci-popularwg-3738"
-                    data-settings='{"hide_thumb":"","show_author":"","show_comment":"","show_postviews":"on","showborder":"","row_gap":"","imgwidth":"100","ptfsfe":"","ptfs":"13","pmfs":"12","image_type":"default","type":"all","title_length":"8","number":"5","offset":"","categories":"","featured":"","allfeatured":"","thumbright":"","twocolumn":"","featured2":"","ordernum":"","postdate":"","icon":"","cats_id":"all","tags_id":"all","ptype":"","taxonomy":"","tax_ids":"","sticky":"on"}'
                     data-paged="1" data-action="penci_popular_news_ajax" data-mes="Sorry, No more posts" data-max="16"
                     className="side-newsfeed display-order-numbers order-numbers-1">
                     {data.slice(0, 5).map((item, index) => {
@@ -37,7 +36,7 @@ const RecentPosts = () => {
                                             title={`${item.title}`}> {item.title} </a> </h4>
                                         <div className="grid-post-box-meta penci-side-item-meta pcsnmt-below"> <span
                                             className="side-item-meta side-wdate"><time className="entry-date published">{moment(item.createdAt).format("MMMM Do yy")}</time></span> <span
-                                                className="side-item-meta side-wviews">21.3K views</span> </div>
+                                                className="side-item-meta side-wviews">{item.category}</span> </div>
                                     </div>
                                 </div>
                             </li>

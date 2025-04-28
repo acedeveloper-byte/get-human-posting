@@ -15976,3 +15976,14 @@ button:hover {
     border-radius: 10px;
   }
 }
+
+ul {
+  list-style-type: disc !important;       /* solid circle bullets */
+  padding-left: 1.5rem !important;        /* indent so bullets are visible */
+  margin: 1rem 0 !important;              /* spacing above/below list */
+}
+
+li {
+  margin-bottom: 0.5rem !important;       /* spacing between items */
+list-style-position: outside !important;/* bullets outside the text block */
+}
