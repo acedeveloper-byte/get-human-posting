@@ -10,20 +10,20 @@ const page = () => {
     <p>Hello! Thank you for your interest in our blog! We're excited to have you here.</p>
     <p>If you have exceptional writing skills and a passion for sharing your expertise with a broad audience, we’d love to hear from you. Let’s collaborate and make an impact together!</p>
 
-    <h2>Overview</h2>
+    <h3>Overview</h3>
     <p>The Blog Guest intends to make you familiar with the guidelines for posting your content on our site. Read the detailed policy for a hassle-free experience.</p>
 
-    <h2>Ensure that Submissions Meet Our Quality Standards</h2>
+    <h3>Ensure that Submissions Meet Our Quality Standards</h3>
     <p>All submissions must adhere to our quality standards to be considered for publication. HubSpot has clear guidelines regarding the types of blog posts we accept and reject. Editors hold the discretion to decline contributions that do not meet our editorial criteria.</p>
 
-    <h2>Blogs Must Be Published Exclusively on The Blog Guest</h2>
+    <h3>Blogs Must Be Published Exclusively on The Blog Guest</h3>
     <p>Once your article is published on The Blog Guest, it will remain exclusive to our platform. We encourage you to share the post with your network and include a link back to it.</p>
     <p>Please note that you are not permitted to republish the article on any other site. Additionally, we do not accept guest articles that have already been published elsewhere.</p>
 
-    <h2>The Importance of Editorial Integrity</h2>
+    <h3>The Importance of Editorial Integrity</h3>
     <p>It is essential for a site to gain the trust of visitors to reach the maximum number of its audience. We believe that we can be the voice of the people by being transparent with them. Therefore, we believe in the power of editorial integrity. At The Blog Guest, we strive to maintain that connection with our audience.</p>
 
-    <h2>Posts We Do Not Accept</h2>
+    <h3>Posts We Do Not Accept</h3>
     <p>We do not accept submissions on topics already covered on our blog. Please conduct a site search before submitting your article.</p>
     <p>We also do not accept content that:</p>
     <ul>
