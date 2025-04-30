@@ -11,26 +11,26 @@ import axios from "axios";
 
 export default async function  Home() {
   
-  const travel = await axios.get(`${HOST}post/fetch-all-post-by-category/${"Travel"}`);
+  const travel = await axios.get(`${HOST}post/fetch-all-post-by-category/${"travel"}`);
   const travel_data = travel.data.response;
 
-  const fashion = await   axios.get(`${HOST}post/fetch-all-post-by-category/${"Fashion"}`);
+  const fashion = await   axios.get(`${HOST}post/fetch-all-post-by-category/${"fashion"}`);
   const fashion_data = fashion.data.response;
 
   const category = await   axios.get(`${HOST}category/fetch-all-category`);
   const category_data = category.data.response;
 
-  const healthy = await   axios.get(`${HOST}post/fetch-all-post-by-category/${"Healthy"}`);
+  const healthy = await   axios.get(`${HOST}post/fetch-all-post-by-category/${"healthy"}`);
   const healthy_data = healthy.data.response;
 
-  const sales = await   axios.get(`${HOST}post/fetch-all-post-by-category/${"Sales"}`);
+  const sales = await   axios.get(`${HOST}post/fetch-all-post-by-category/${"sales"}`);
   const sales_data = sales.data.response;
 
-  const business = await   axios.get(`${HOST}post/fetch-all-post-by-category/${"Business"}`);
+  const business = await   axios.get(`${HOST}post/fetch-all-post-by-category/${"business"}`);
   const business_data = business.data.response;
 
   
-  const technology = await   axios.get(`${HOST}post/fetch-all-post-by-category/${"Tech"}`);
+  const technology = await   axios.get(`${HOST}post/fetch-all-post-by-category/${"tech"}`);
   const technology_data = technology.data.response;
 
 
