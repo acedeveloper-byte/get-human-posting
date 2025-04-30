@@ -30,15 +30,13 @@ export default async function  Page({ params }) {
   const post = res.data.response;
 
   
-  const user = await axios.get(`${HOST}auth/find-user-by-user_id/${post.user_id}`);
-  const user_data = user.data.data
 
 
   return (
     <>
       <Header />
       <div className='penci-single-wrapper'>
-        <Postdetails data={post} user_data ={user_data}/>
+        <Postdetails data={post}/>
       </div>
       <Footer />
     </>

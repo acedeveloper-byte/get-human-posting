@@ -13,7 +13,7 @@ import Link from "next/link";
 
 
 
-const PostDetails = ({ data, user_data }) => {
+const PostDetails = ({ data }) => {
 
     const [user, setuser] = useState({})
     useEffect(() => {
