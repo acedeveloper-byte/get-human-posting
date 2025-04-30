@@ -15,7 +15,6 @@ import Link from "next/link";
 
 const PostDetails = ({ data, user_data }) => {
 
-
     const [user, setuser] = useState({})
     useEffect(() => {
         if (localStorage.getItem('auth_data')) {
@@ -54,7 +53,7 @@ const PostDetails = ({ data, user_data }) => {
                                 Category : <a  className="text-decoration-none text-black" href={`/category/${data.category}`}><b>{data.category}</b></a>
                             </Col>
                             {user?._id === data.user_id &&
-                                <Col md={5} style={{ justifyContent: "flex-end", display: "flex" }}>
+                                <Col md={4} style={{ justifyContent: "flex-end", display: "flex" }}>
                                     <span>
                                         <Button variant={"primary"} style={{ borderRadius: "10px", margin: 0, paading: 0 }}><Link href={`/post/${data.url}`} className="text-decoration-none text-white"> <LuPencilLine size={20} />Edit </Link></Button>
                                     </span>
@@ -68,7 +67,7 @@ const PostDetails = ({ data, user_data }) => {
                             {data.title}
                         </h1>
                     </div>
-                    <div className="container mt-4" dangerouslySetInnerHTML={{
+                    <div className="container container-ul mt-4" dangerouslySetInnerHTML={{
                         __html: data.content
                     }} />
 

@@ -32,7 +32,7 @@ const DATA = [
     },
 ]
 const CategorySection = ({ data}) => {
-    var conditional = data.length !== 0 ? data : DATA
+    var conditional = data.length !== 0  ? data : DATA
 
     const scrollRef = useRef(null);
 

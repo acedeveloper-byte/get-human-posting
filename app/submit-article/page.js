@@ -221,9 +221,13 @@ const page = () => {
                   apiKey="js3uunm9tdph718l08kpjj9r8xwtv0wpuezj2nzvnjnuvpsa"
                   onInit={(_evt, editor) => (editorRef.current = editor)}
                   value={formik.values.content}
+                  
                   onEditorChange={(content) => formik.setFieldValue("content", content)}
                   init={{
                     height: 500,
+                    paste_as_text: false,  // Ensure it's not pasting as plain text
+                    paste_data_images: true, // Optional: supports image pasting
+                    paste_webkit_styles: 'all',
                     menubar: false,
                     plugins: [
                       'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
