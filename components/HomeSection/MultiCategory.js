@@ -4,6 +4,7 @@ import { AllPost } from '@/utils/apicall/fetchAllPost'
 import { HOST } from '@/utils/static'
 import React, { useEffect, useState } from 'react'
 import RecentPosts from '../RecentPosts'
+import moment from 'moment'
 const DATA = [
     {
         id: 1,
@@ -78,8 +79,7 @@ const MultiCategory = ({ dataBusiness , dataHealthy  , datasales}) => {
                                                                             <span
                                                                             class="featc-author author-italic author vcard"> <a
                                                                                 class="author-url url fn n" href={`/${itex.url}`}></a>
-                                                                        </span> <span class="featc-date"><time class="entry-date published"
-                                                                            datetime="2021-07-30T08:20:08+00:00">July 30, 2021</time></span> </div>
+                                                                        </span> <span class="featc-date"><time class="entry-date published">{moment(itex.createdAt).format("MMMM Do yy")}</time></span> </div>
                                                                     </div>
                                                                     <div class="mag-excerpt entry-content">
                                                                         {/* <p dangerouslySetInnerHTML={{ __html: truncateHTML(itex.content, 100) }} /> */}
@@ -145,7 +145,7 @@ const MultiCategory = ({ dataBusiness , dataHealthy  , datasales}) => {
                                                                                 class="featc-author author-italic author vcard"> <a
                                                                                     class="author-url url fn n" href="/"></a>
                                                                             </span> <span class="featc-date"><time class="entry-date published"
-                                                                                datetime="2021-07-30T08:31:58+00:00">July 30, 2021</time></span> </div>
+                                                                                datetime="2021-07-30T08:31:58+00:00"> <span class="featc-date"><time class="entry-date published">{moment(itm.createdAt).format("MMMM Do yy")}</time></span></time></span> </div>
                                                                             <div class="penci-hide-tagupdated"> <span class="author-italic author vcard"> <a
                                                                                 class="author-url url fn n" href="/"></a>
                                                                             </span> </div>
@@ -199,8 +199,7 @@ const MultiCategory = ({ dataBusiness , dataHealthy  , datasales}) => {
                                                                             <div class="grid-post-box-meta"> <span
                                                                                 class="otherl-date-author author-italic author vcard"> <a
                                                                                     class="author-url url fn n" href="/"></a>
-                                                                            </span> <span class="otherl-date"><time class="entry-date published"
-                                                                                datetime="2021-07-30T08:26:21+00:00">July 30, 2021</time></span> </div>
+                                                                            </span>  <span class="featc-date"><time class="entry-date published">{moment(itx.createdAt).format("MMMM Do yy")}</time></span> </div>
                                                                         </div>
                                                                         <div className="item-content entry-content">
                                                                             {/* <p dangerouslySetInnerHTML={{ __html: truncateHTML(itx.content, 100) }} /> */}

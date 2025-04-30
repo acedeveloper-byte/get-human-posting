@@ -41,7 +41,7 @@ export default async function  Home() {
 
         <LifeStyleSection data={fashion_data}  />
         <CategorySection data={category_data? category_data : []} />
-        <MultiCategory dataHealthy={healthy_data} dataBusiness={business_data}datasales={sales_data}/>
+        <MultiCategory dataHealthy={healthy_data} dataBusiness={business_data} datasales={sales_data}/>
         <TechSection data={technology_data}/>
       <Footer />
       </div>
