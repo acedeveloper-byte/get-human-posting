@@ -68,13 +68,13 @@ const MultiCategory = ({ dataBusiness , dataHealthy  , datasales}) => {
                                                                 <div class="magcat-thumb">
                                                                     <img class="penci-image-holder penci-lazy"
                                                                      src={ itex.type === "placeholder" ? itex.image :`${HOST}resources/post/${itex.image}`}
-                                                                        href={`/${itex.title}`}
+                                                                        href={`/${itex.url}`}
                                                                         title={`${itex.title}`} alt="travel" />
                                                                 </div>
                                                                 <div class="magcat-detail">
                                                                     <div class="mag-header">
                                                                         <h3 class="magcat-titlte entry-title"><a
-                                                                            href={`/${itex.title}`}> {itex.title}</a> </h3>
+                                                                            href={`/${itex.url}`}> {itex.title}</a> </h3>
                                                                         <div class="grid-post-box-meta mag-meta"> 
                                                                             <span
                                                                             class="featc-author author-italic author vcard"> <a
@@ -134,12 +134,12 @@ const MultiCategory = ({ dataBusiness , dataHealthy  , datasales}) => {
                                                                             <img class="penci-image-holder penci-lazy"
                                                                                                                                                      src={ itm.type === "placeholder" ? itm.image :`${HOST}resources/post/${itm.image}`}
 
-                                                                                href={`/${itm.title}`}
+                                                                                href={`/${itm.url}`}
                                                                                 title={itm.title} alt="travel" />
                                                                         </div>
                                                                         <div class="grid-header-box">
                                                                             <h2 class="grid-title entry-title"><a
-                                                                                href={`/${itm.title}`}>
+                                                                                href={`/${itm.url}`}>
                                                                                 {itm.title} </a> </h2>
                                                                             <div class="grid-post-box-meta"> <span
                                                                                 class="featc-author author-italic author vcard"> <a
@@ -183,7 +183,7 @@ const MultiCategory = ({ dataBusiness , dataHealthy  , datasales}) => {
                                                                     <div class="thumbnail"> <img class="penci-image-holder penci-lazy"
                                                                         src={ itx.type === "placeholder" ? itx.image :`${HOST}resources/post/${itx.image}`}
 
-                                                                        href={`/${itx.title}`}
+                                                                         href={`/${itx.url}`}
                                                                         // href="how-to-get-your-partner-on-board-with-a-healthy-lifestyle-change-with-you/index.html"
                                                                         title={itx.title} alt="travel" />
                                                                     </div>
@@ -191,7 +191,7 @@ const MultiCategory = ({ dataBusiness , dataHealthy  , datasales}) => {
                                                                     <div class="content-list-right content-list-center">
                                                                         <div class="header-list-style">
                                                                             <h2 class="penci-entry-title entry-title grid-title"><a
-                                                                                href={`/${itx.title}`}>{itx.title}</a>
+                                                                                 href={`/${itx.url}`}>{itx.title}</a>
                                                                             </h2>
                                                                             <div class="penci-hide-tagupdated"> <span class="author-italic author vcard"> <a
                                                                                 class="author-url url fn n" href="/"></a>
