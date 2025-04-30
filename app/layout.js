@@ -19,6 +19,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+ <meta name="msvalidate.01" content="F6BEFEE949444439B816AD85BF2B384C" />
+
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
