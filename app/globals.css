@@ -15983,3 +15983,19 @@ button:hover {
 .container-ul li, ol, ul {
   list-style: disc;
 }
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

@@ -192,7 +192,7 @@ const page = () => {
                       .map((item, index) => {
                         return (
                           <>
-                            <option value={item.slug !== "" && item.slug }>{item.label}</option>
+                            <option value={item.slug !== "" && item.slug}>{item.label}</option>
                           </>
                         )
                       }
@@ -221,7 +221,7 @@ const page = () => {
                   apiKey="js3uunm9tdph718l08kpjj9r8xwtv0wpuezj2nzvnjnuvpsa"
                   onInit={(_evt, editor) => (editorRef.current = editor)}
                   value={formik.values.content}
-                  
+
                   onEditorChange={(content) => formik.setFieldValue("content", content)}
                   init={{
                     height: 500,
@@ -229,6 +229,7 @@ const page = () => {
                     paste_data_images: true, // Optional: supports image pasting
                     paste_webkit_styles: 'all',
                     menubar: false,
+
                     plugins: [
                       'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
                       'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
@@ -238,7 +239,18 @@ const page = () => {
                       'bold italic forecolor | alignleft aligncenter ' +
                       'alignright alignjustify | bullist numlist outdent indent | ' +
                       'link image | removeformat | help',
-                    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+                    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
+                    // ✅ Allow table structure
+                    valid_elements: '*[*]',  // Or customize this for more control
+                    extended_valid_elements: 'table[style|class|border|cellspacing|cellpadding],tr,td,th,colgroup,col',
+                    table_default_attributes: {
+                      border: '1',
+                    },
+                    table_default_styles: {
+                      width: '100%',
+                      borderCollapse: 'collapse',
+                    },
+                    table_toolbar: 'tableprops cell row column deletetable',
                   }}
                 />
                 {formik.touched.content && formik.errors.content && (
