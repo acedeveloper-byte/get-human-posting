@@ -8,7 +8,9 @@ const Footer = () => {
                 <div className="container">
                     <div className="footer-socials-section penci-social-colored ">
                         <ul className="footer-socials">
-
+                        <li>
+                            <a href="/guidelines" className ="text-white text-decoation-none"> Guidelines</a>
+                        </li>
                         </ul>
                     </div>
                     <div className="penci-flag-rlt-popup"></div>
