@@ -88,7 +88,7 @@ const CategorySection = ({ data}) => {
                                                                     <div class="penci-bgmain">
                                                                         <div class="pcbg-thumb">
                                                                             <div class="pcbg-thumbin"> <a class="pcbg-bgoverlay"
-                                                                                href={`/category/${item.label}`} title={item.label}></a>
+                                                                                href={`/category/${item.slug}`} title={item.label}></a>
                                                                                 <img
                                                                                     src={item.type === "placeholder" ? item.image : item.imgSrc}
                                                                                     class="penci-lazy penci-image-holder" alt={item.imgSrc} />
@@ -96,14 +96,14 @@ const CategorySection = ({ data}) => {
                                                                         </div>
                                                                         <div class="pcbg-content">
                                                                             <div class="pcbg-content-flex pcbg-overlap-hover"> <a class="pcbg-cbgoverlap"
-                                                                                href={`/category/${item.label}`} title={item.label}></a> <a
-                                                                                    class="pcbg-bgoverlay active-overlay" href={`/category/${item.label}`}
+                                                                                href={`/category/${item.slug}`} title={item.label}></a> <a
+                                                                                    class="pcbg-bgoverlay active-overlay" href={`/category/${item.slug}`}
                                                                                     title={item.label}></a>
                                                                                 <div class="pcbg-content-inner bgcontent-block"> <a
-                                                                                    href={`/category/${item.label}`} title={item.label}
+                                                                                    href={`/category/${item.slug}`} title={item.label}
                                                                                     class="pcbg-bgoverlaytext item-hover"></a>
                                                                                     <div class="pcbg-heading item-hover">
-                                                                                        <h3 class="pcbg-title"><a href={`/category/${item.label}`} >{item.label}</a>
+                                                                                        <h3 class="pcbg-title"><a href={`/category/${item.slug}`} >{item.label}</a>
                                                                                         </h3>
                                                                                     </div>
                                                                                 </div>

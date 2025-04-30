@@ -7172,7 +7172,7 @@ ul.penci-grid {
 
 .penci-grid li .item h2 a,
 .penci-masonry .item-masonry h2 a {
-  font-size: 18px;
+  font-size: 18px !important;
   color: var(--pcheading-cl);
   text-transform: uppercase;
   -o-transition: 0.3s;

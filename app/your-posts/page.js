@@ -37,9 +37,7 @@ const page = () => {
 
                   <ul data-layout="grid" class="penci-wrapper-data penci-grid">
                     {data.map((item, index) => {
-                      console.log("itemL" , item)
                       return (
-
                         <li class="grid-style grid-overlay-meta">
                           <article id="post-434" class="item hentry">
                             <div class="thumbnail">
@@ -49,7 +47,8 @@ const page = () => {
                                 <img
                                   src={`${HOST}resources/post/${item.image}`}
                                   alt="Post Image"
-                                  loading="lazy" />
+                                  loading="lazy" 
+                                  />
                               </a>
                             </div>
 
@@ -68,7 +67,7 @@ const page = () => {
 
                               <div class="penci-hide-tagupdated">
                                 <span class="author-italic author vcard">
-                                  by <a class="author-url url fn n" href="">{user?.user_name ? user.user_name : ""}</a>
+                                  by <a class="author-url url fn n" href="">{item.author_name}</a>
                                 </span>
                                 <p class="entry-date published" >{item.createdAt}</p>
                               </div>

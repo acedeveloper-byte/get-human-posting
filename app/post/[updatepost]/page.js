@@ -65,7 +65,6 @@ const page = () => {
         },
     });
 
-    console.log("preview:", preview?.name)
     return (
         <>
             <Header />
@@ -93,35 +92,130 @@ const page = () => {
                                     <Form.Label>Current Category {data_blog.category}</Form.Label>
                                     <Form.Select {...formik.getFieldProps("category")}>
                                         {[
-                                                                              { "value": "Select Category", "label": "Select Category" },
-                                                                              { "value": "Tech", "label": "Technology" },
-                                            { "value": "Healthy", "label": "Healthy Lifestyle" },
-                                            { "value": "Fashion", "label": "Fashion" },
-                                            { "value": "Business", "label": "Business" },
-                                            { "value": "Design", "label": "Design" },
-                                            { "value": "Education", "label": "Education" },
-                                            { "value": "Entertainment", "label": "Entertainment" },
-                                            { "value": "Home & Lifestyle", "label": "Home & Lifestyle" },
-                                            { "value": "Marketing", "label": "Marketing" },
-                                            { "value": "Digital Marketing", "label": "Digital Marketing" },
-                                            { "value": "SEO", "label": "SEO" },
-                                            { "value": "Social Media", "label": "Social Media" },
-                                            { "value": "Music", "label": "Music" },
-                                            { "value": "Other", "label": "Other" },
-                                            { "value": "Politics", "label": "Politics" },
-                                            { "value": "Real Estate", "label": "Real Estate" },
-                                            { "value": "Sports", "label": "Sports" },                                            
-                                            { "value": "Travel", "label": "Travel" },
-                                            { "value": "Wellness", "label": "Wellness" },
-                                        ].map((item, index) => {
-                                            return (
-                                                <>
-                                                    <option value={item.value}>{item.label}</option>
-                                                </>
-                                            )
-                                        }
 
-                                        )}
+{
+    "value": "000",
+    "label": "Select Category",
+    "slug": ""
+},
+                                            {
+                                                "value": "413",
+                                                "label": "Technology",
+                                                "imgSrc": "https://api.acedigitalsolution.com/resources/category/tech.jpg",
+                                                "slug": "tech"
+                                            },
+                                            {
+                                                "value": "413",
+                                                "label": "Healthy Lifesyle",
+                                                "imgSrc": "https://api.acedigitalsolution.com/resources/category/healthy.jpg",
+                                                "slug": "healthy"
+                                            },
+                                            {
+                                                "value": "413",
+                                                "label": "Fashion",
+                                                "imgSrc": "https://api.acedigitalsolution.com/resources/category/fashion.jpg",
+                                                "slug": "fashion"
+                                            },
+                                            {
+                                                "value": "413",
+                                                "label": "Business",
+                                                "imgSrc": "https://api.acedigitalsolution.com/resources/category/business.jpg",
+                                                "slug": "business"
+                                            },
+                                            {
+                                                "value": "410",
+                                                "label": "Design",
+                                                "imgSrc": "https://api.acedigitalsolution.com/resources/category/design.jpg",
+                                                "slug": "design"
+                                            },
+                                            {
+                                                "value": "426",
+                                                "label": "Education",
+                                                "imgSrc": "https://api.acedigitalsolution.com/resources/category/education.jpg",
+                                                "slug": "education"
+                                            },
+                                            {
+                                                "value": "411",
+                                                "label": "Entertainment",
+                                                "imgSrc": "https://api.acedigitalsolution.com/resources/category/entertainment.jpg",
+                                                "slug": "entertainment"
+                                            },
+                                            {
+                                                "value": "416",
+                                                "label": "Home & Lifestyle",
+                                                "imgSrc": "https://api.acedigitalsolution.com/resources/category/home-lifestyle.jpg",
+                                                "slug": "home-lifestyle"
+                                            },
+                                            {
+                                                "value": "6",
+                                                "label": "Digital Marketing",
+                                                "imgSrc": "https://api.acedigitalsolution.com/resources/category/digital-marketing.jpg",
+                                                "slug": "digital-marketing"
+                                            },
+                                            {
+                                                "value": "4",
+                                                "label": "Social Media",
+                                                "imgSrc": "https://api.acedigitalsolution.com/resources/category/social-media.jpg",
+                                                "slug": "social-media"
+                                            },
+                                            {
+                                                "value": "412",
+                                                "label": "Music",
+                                                "imgSrc": "https://api.acedigitalsolution.com/resources/category/music.jpg",
+                                                "slug": "music"
+                                            },
+                                            {
+                                                "value": "437",
+                                                "label": "Politics",
+                                                "imgSrc": "https://api.acedigitalsolution.com/resources/category/politics.jpg",
+                                                "slug": "politics"
+                                            },
+                                            {
+                                                "value": "436",
+                                                "label": "Real Estate",
+                                                "imgSrc": "https://api.acedigitalsolution.com/resources/category/real-estate.jpg",
+                                                "slug": "real-estate"
+                                            },
+                                            {
+                                                "value": "415",
+                                                "label": "Sports",
+                                                "imgSrc": "https://api.acedigitalsolution.com/resources/category/sports.jpg",
+                                                "slug": "sports"
+                                            },
+                                            {
+                                                "value": "418",
+                                                "label": "Travel",
+                                                "imgSrc": "https://api.acedigitalsolution.com/resources/category/travel.jpg",
+                                                "slug": "travel"
+                                            },
+                                            {
+                                                "value": "417",
+                                                "label": "Wellness",
+                                                "imgSrc": "https://api.acedigitalsolution.com/resources/category/wellness.jpg",
+                                                "slug": "wellness"
+                                            },
+                                            {
+                                                "value": "417",
+                                                "label": "Sales",
+                                                "imgSrc": "https://api.acedigitalsolution.com/resources/category/sales.jpg",
+                                                "slug": "sales"
+                                            },
+                                            {
+                                                "value": "1",
+                                                "label": "Other",
+                                                "imgSrc": "https://api.acedigitalsolution.com/resources/category/other.jpg",
+                                                "slug": "other"
+                                            }
+                                        ]
+                                            .map((item, index) => {
+                                                return (
+                                                    <>
+                                                        <option value={item.slug !== "" && item.slug}>{item.label}</option>
+                                                    </>
+                                                )
+                                            }
+
+                                            )}
                                     </Form.Select>
                                 </Form.Group>
                                 <Form.Group className="mb-3" as={Col} md="8" controlId="file">

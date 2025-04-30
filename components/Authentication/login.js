@@ -64,10 +64,10 @@ const Login = () => {
               style={{
                 borderRadius: '5px',
                 width: '100%',
-                background: '#D1F6D1',
+                background: message.includes("Your OTP has been verified.") ? '#D1F6D1' :"#FFB9B9",
                 padding: '5px',
                 textAlign: 'center',
-                color: '#006600',
+                color: '#FF0000',
                 display: 'block',
                 alignItems: 'center',
                 justifyContent: 'center',

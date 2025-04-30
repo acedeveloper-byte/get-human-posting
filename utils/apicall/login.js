@@ -27,7 +27,8 @@ export const handleApiCall = async (values, router, setloading) => {
 
         localStorage.setItem("auth_data", JSON.stringify(resp.data.response))
         router.push("/")
-    } else {
+        } else {
+            localStorage.setItem("message" , "You have to be more smart. Please verify your account first.");
         setloading(false)
         alert(resp.data.baseResponse.message)
     }

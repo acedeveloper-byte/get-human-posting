@@ -10,10 +10,13 @@ const page = () => {
     return (
         < >
             <Header />
+            <section style ={{ height :  "100vh" }}>
+
             <div className='penci-single-wrapper'>
 
                 <CategoryDetails />
             </div>
+            </section>
             <Footer />
         </>
 
