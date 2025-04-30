@@ -52,7 +52,7 @@ const page = async ({ params }) => {
 
                             <div class="grid-header-box">
                               <span class="cat">
-                                <a class="penci-cat-name penci-cat-3" href="#" rel="category tag">
+                                <a class="penci-cat-name penci-cat-3" href={`/category/${item.category}`} rel="category tag">
                                   <span>  {item.category}</span>
                                 </a>
                               </span>
