@@ -182,11 +182,11 @@ const LatestStyle = () => {
                                                                                 {itm.title} </a> </h2>
                                                                             <div class="grid-post-box-meta"> <span
                                                                                 class="featc-author author-italic author vcard">by <a
-                                                                                    class="author-url url fn n" href="/">Penci Design</a>
+                                                                                    class="author-url url fn n" href="/">{itm.author_name}</a>
                                                                             </span> <span class="featc-date"><time class="entry-date published"
                                                                                 datetime="2021-07-30T08:31:58+00:00">July 30, 2021</time></span> </div>
                                                                             <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                                class="author-url url fn n" href="/">Penci Design</a>
+                                                                                class="author-url url fn n" href="/">{itm.author_name}</a>
                                                                             </span> </div>
                                                                         </div>
                                                                     </article>
@@ -246,13 +246,12 @@ const LatestStyle = () => {
                                                                                 href={`/${itx.title}`}>{itx.title}</a>
                                                                             </h2>
                                                                             <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                                class="author-url url fn n" href="/">Penci Design</a>
+                                                                                class="author-url url fn n" href="/">{itx.author_name}</a>
                                                                             </span> </div>
                                                                             <div class="grid-post-box-meta"> <span
                                                                                 class="otherl-date-author author-italic author vcard">by <a
-                                                                                    class="author-url url fn n" href="/">Penci Design</a>
-                                                                            </span> <span class="otherl-date"><time class="entry-date published"
-                                                                                datetime="2021-07-30T08:26:21+00:00">July 30, 2021</time></span> </div>
+                                                                                    class="author-url url fn n" href="/">{itx.author_name}</a>
+                                                                            </span>  <span class="featc-date"><time class="entry-date published">{moment(itx.createdAt).format("MMMM Do yy")}</time></span> </div>
                                                                         </div>
                                                                         <div className="item-content entry-content">
                                                                             <p dangerouslySetInnerHTML={{ __html: truncateHTML(itx.content, 100) }} />

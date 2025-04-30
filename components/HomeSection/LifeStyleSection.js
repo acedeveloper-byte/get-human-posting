@@ -60,9 +60,7 @@ const LifeStyleSection = async ({ data }) => {
                                                                                 href={`/${itex.url}`}>{itex.title}</a> </h3>
                                                                             <div class="grid-post-box-meta mag-meta"> <span
                                                                                 class="featc-author author-italic author">by <a class="url fn n"
-                                                                                    href="#">{data.author_name}</a></span> <span
-                                                                                        class="featc-date"><time class="entry-date published"
-                                                                                            datetime="2021-07-30T08:24:33+00:00">July 30, 2021</time></span> </div>
+                                                                                    href="#">{itex.author_name}</a></span>  <span class="featc-date"><time class="entry-date published">{moment(itex.createdAt).format("MMMM Do yy")}</time></span> </div>
                                                                         </div>
                                                                         <div class="mag-excerpt entry-content">
                                                                             <p>{itex.title}</p>
