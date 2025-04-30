@@ -53,7 +53,7 @@ const MultiCategory = ({ dataBusiness , dataHealthy  , datasales}) => {
                                         <section class="home-featured-cat mag-cat-style-10">
                                             <div
                                                 class="penci-border-arrow penci-homepage-title penci-magazine-title style-13 pcalign-left pciconp-right pcicon-right">
-                                                <h3 class="inner-arrow"> <span> <a href="category/life-style/index.html">Lastest in Travel</a> </span> </h3>
+                                                <h3 class="inner-arrow"> <span> <a href="category/life-style/index.html">Lastest in Sales</a> </span> </h3>
                                       
 
                                             </div>
@@ -109,7 +109,7 @@ const MultiCategory = ({ dataBusiness , dataHealthy  , datasales}) => {
                                             <div
                                                 class="penci-border-arrow penci-homepage-title penci-magazine-title style-13 pcalign-left pciconp-right pcicon-right">
                                                 <h3 class="inner-arrow"> <span> <a href="category/life-style/index.html">Latest In
-                                                    Fashion</a> </span> </h3>
+                                                    Health Lifesyle</a> </span> </h3>
                                                 <nav data-ppp="6" data-query_type="ajaxtab" data-blockid="pencifeatured_cat_86443"
                                                     data-more="" class="pcnav-lgroup">
 
@@ -171,7 +171,7 @@ const MultiCategory = ({ dataBusiness , dataHealthy  , datasales}) => {
                                         class="penci-latest-posts-sc penci-latest-posts-list penci-latest-posts-el penci-el-mixed-s1 penci-std-continue-center penci-std-excerpt-center penci-grid-excerpt-left">
                                         <div
                                             class="penci-border-arrow penci-homepage-title penci-home-latest-posts style-13 pcalign-left pciconp-right pcicon-right">
-                                            <h3 class="inner-arrow"> <span> <span>Healthy Living</span> </span> </h3>
+                                            <h3 class="inner-arrow"> <span> <span>Business News</span> </span> </h3>
                                         </div>
                                         <div class="penci-wrapper-posts-ajax">
                                             <div class="penci-wrapper-posts-content pwid-default">
