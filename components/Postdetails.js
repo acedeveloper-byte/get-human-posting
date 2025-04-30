@@ -43,7 +43,7 @@ const PostDetails = ({ data }) => {
                     <div className="container mt-2">
                         <div className='row'>
                             <Col md={2}>
-                                Author : <b>{data.author_name}</b>
+                                Author : <b> <Link className="text-decoration-none text-black" href={`/members/author/${data.author_name}`}>{data.author_name}</Link></b>
                             </Col>
                             <Col md={3}>
                                 Published on : <b>{moment(data.createdAt).format("MMMM Do YYYY")}</b>
