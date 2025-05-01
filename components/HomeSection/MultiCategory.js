@@ -54,7 +54,7 @@ const MultiCategory = ({ dataBusiness , dataHealthy  , datasales}) => {
                                         <section class="home-featured-cat mag-cat-style-10">
                                             <div
                                                 class="penci-border-arrow penci-homepage-title penci-magazine-title style-13 pcalign-left pciconp-right pcicon-right">
-                                                <h3 class="inner-arrow"> <span> <a href="category/life-style/index.html">Lastest in Sales</a> </span> </h3>
+                                                <h3 class="inner-arrow"> <span> <a href="#">Lastest in Sales</a> </span> </h3>
                                       
 
                                             </div>
@@ -108,7 +108,7 @@ const MultiCategory = ({ dataBusiness , dataHealthy  , datasales}) => {
                                         <section class="home-featured-cat mag-cat-style-13">
                                             <div
                                                 class="penci-border-arrow penci-homepage-title penci-magazine-title style-13 pcalign-left pciconp-right pcicon-right">
-                                                <h3 class="inner-arrow"> <span> <a href="category/life-style/index.html">Latest In
+                                                <h3 class="inner-arrow"> <span> <a href="#">Latest In
                                                     Health Lifesyle</a> </span> </h3>
                                                 <nav data-ppp="6" data-query_type="ajaxtab" data-blockid="pencifeatured_cat_86443"
                                                     data-more="" class="pcnav-lgroup">
