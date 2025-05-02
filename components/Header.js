@@ -25,25 +25,24 @@ const Header = () => {
 
     const categories = [
 
-        { value: "Tech", label: "Technology" },
-        { value: "Healthy", label: "Healthy Lifestyle" },
-        { value: "Fashion", label: "Fashion" },
-        { value: "Business", label: "Business" },
-        { value: "Design", label: "Design" },
-        { value: "Education", label: "Education" },
-        { value: "Entertainment", label: "Entertainment" },
-        { value: "Home & Lifestyle", label: "Home & Lifestyle" },
-        { value: "Digital Marketing", label: "Digital Marketing" },
-        { value: "Social Media", label: "Social Media" },
-        { value: "Music", label: "Music" },
-        { value: "Other", label: "Other" },
-        { value: "Politics", label: "Politics" },
-        { value: "Real Estate", label: "Real Estate" },
-        { value: "Sports", label: "Sports" },
-        { value: "Technology", label: "Technology" },
-        { value: "Travel", label: "Travel" },
-
-        { value: "Wellness", label: "Wellness" },
+        { value: "tech", label: "Technology" },
+        { value: "healthy", label: "Healthy Lifestyle" },
+        { value: "fashion", label: "Fashion" },
+        { value: "business", label: "Business" },
+        { value: "design", label: "Design" },
+        { value: "education", label: "Education" },
+        { value: "entertainment", label: "Entertainment" },
+        { value: "home-&-lifestyle", label: "Home & Lifestyle" },
+        { value: "digital-Marketing", label: "Digital Marketing" },
+        { value: "social-media", label: "Social Media" },
+        { value: "music", label: "Music" },
+        { value: "other", label: "Other" },
+        { value: "politics", label: "Politics" },
+        { value: "real-estate", label: "Real Estate" },
+        { value: "sports", label: "Sports" },
+        { value: "technology", label: "Technology" },
+        { value: "travel", label: "Travel" },
+        { value: "wellness", label: "Wellness" },
     ];
 
 

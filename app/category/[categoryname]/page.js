@@ -8,12 +8,10 @@ import CategoryDetails from '@/components/CategoryDetails';
 
 const page = () => {
     return (
-        < >
+        <>
             <Header />
-            <section style ={{ height :  "100vh" }}>
-
+            <section >
             <div className='penci-single-wrapper'>
-
                 <CategoryDetails />
             </div>
             </section>
