@@ -8,6 +8,7 @@ import '../globals.css';
 import Postdetails from '@/components/Postdetails';
 import axios from 'axios';
 import { HOST } from '@/utils/static';
+import { notFound } from 'next/navigation';
 
 
 export  async function generateMetadata({ params }) {
@@ -30,8 +31,11 @@ export default async function  Page({ params }) {
   const post = res.data.response;
 
   
+  console.log("post:" , post)
 
-
+  if (!post || post.length === 0) {
+    notFound(); // Redirect to 404 page using Next.js built-in 404 handling
+  }
   return (
     <>
       <Header />

@@ -1,10 +1,9 @@
  'use client'
-import { AllPost } from '@/utils/apicall/fetchAllPost'
-// import { truncateHTML } from '@/utils/functions/truncate'
 import { HOST } from '@/utils/static'
 import React, { useEffect, useState } from 'react'
 import RecentPosts from '../RecentPosts'
 import moment from 'moment'
+
 const DATA = [
     {
         id: 1,
@@ -30,7 +29,6 @@ const DATA = [
 
 const MultiCategory = ({ dataBusiness , dataHealthy  , datasales}) => {
 
-        
         var conditionaldata =  datasales.length !==0 ? datasales : DATA
         var conditionaldatahealty =  dataHealthy.length !==0 ? dataHealthy : DATA
         var conditionaldataBusiness =  dataBusiness.length !==0 ? dataBusiness : DATA
