@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { HOST } from "@/utils/static";
+import { useEffect } from 'react';
 
 
 const DATA = [
@@ -35,8 +36,20 @@ const DATA = [
     },
 ]
 const FeaturedSection = ({ data }) => {
-    var conditionaldata = data.length !== 0 ? data : DATA
+    const [data, setData] = useState(DATA)
 
+
+    const handleApi = async () => {
+
+        const travel = await axios.get(`${HOST}post/fetch-all-post-by-category/travel`);
+        const travel_data = travel.data.response;
+        setData(travel_data)
+        useEffect(() => {
+            handleApi()
+        }, [])
+    }
+
+    var conditionaldata = data.length !== 0 ? data : DATA
 
     return (
         <>
