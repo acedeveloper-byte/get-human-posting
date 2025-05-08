@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react'
 import { HOST } from "@/utils/static";
 import { useEffect } from 'react';
