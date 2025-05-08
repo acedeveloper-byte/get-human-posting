@@ -1,8 +1,10 @@
- 'use client'
+
+'use client'
 import { HOST } from '@/utils/static'
 import React, { useEffect, useState } from 'react'
 import RecentPosts from '../RecentPosts'
 import moment from 'moment'
+import axios from 'axios'
 
 const DATA = [
     {
@@ -27,11 +29,40 @@ const DATA = [
     },
 ]
 
-const MultiCategory = ({ dataBusiness , dataHealthy  , datasales}) => {
+const MultiCategory = () => {
 
-        var conditionaldata =  datasales.length !==0 ? datasales : DATA
-        var conditionaldatahealty =  dataHealthy.length !==0 ? dataHealthy : DATA
-        var conditionaldataBusiness =  dataBusiness.length !==0 ? dataBusiness : DATA
+
+
+
+    const [healthyData, setHealthyData] = useState([]);
+    const [salesData, setSalesData] = useState([]);
+    const [businessData, setBusinessData] = useState([]);
+  
+    useEffect(() => {
+      const fetchAllData = async () => {
+        try {
+          const [ healthy, sales, business] = await Promise.all([
+            axios.get(`${HOST}post/fetch-all-post-by-category/healthy`),
+            axios.get(`${HOST}post/fetch-all-post-by-category/sales`),
+            axios.get(`${HOST}post/fetch-all-post-by-category/business`)
+          ]);
+  
+          setHealthyData(healthy.data.response);
+          setSalesData(sales.data.response);
+          setBusinessData(business.data.response);
+  
+          console.log('All categories fetched');
+        } catch (error) {
+          console.error("Error fetching category data:", error);
+        }
+      };
+  
+      fetchAllData();
+    }, []);
+
+    var conditionaldata =  salesData.length !==0 ? salesData : DATA
+        var conditionaldatahealty =  healthyData.length !==0 ? healthyData : DATA
+        var conditionaldataBusiness =  businessData.length !==0 ? businessData : DATA
     
     
   return (

@@ -9,27 +9,13 @@ import { HOST } from "@/utils/static";
 import axios from "axios";
 
 
-export default async function  Home() {
+export default  function  Home() {
 
 
-  const fashion = await   axios.get(`${HOST}post/fetch-all-post-by-category/fashion`);
-  const fashion_data = fashion.data.response;
-
-  const category = await   axios.get(`${HOST}category/fetch-all-category`);
-  const category_data = category.data.response;
-
-  const healthy = await   axios.get(`${HOST}post/fetch-all-post-by-category/healthy`);
-  const healthy_data = healthy.data.response;
-
-  const sales = await   axios.get(`${HOST}post/fetch-all-post-by-category/sales`);
-  const sales_data = sales.data.response;
-
-  const business = await   axios.get(`${HOST}post/fetch-all-post-by-category/business`);
-  const business_data = business.data.response;
 
   
-  const technology = await   axios.get(`${HOST}post/fetch-all-post-by-category/tech`);
-  const technology_data = technology.data.response;
+  // const technology =    axios.get(`${HOST}post/fetch-all-post-by-category/tech`);
+  // const technology_data = technology.data.response;
 
   return (
     <div className="home page-template page-template-page-fullwidth page-template-page-fullwidth-php page page-id-13 penci-disable-desc-collapse soledad-ver-8-6-3 pclight-mode pcmn-drdw-style-slide_down pchds-default elementor-default elementor-kit-7 elementor-page elementor-page-13 e--ua-blink e--ua-chrome e--ua-webkit penci-ready-js">
@@ -37,10 +23,10 @@ export default async function  Home() {
       <Header />
       <FeaturedSection /> 
 
-        <LifeStyleSection data={fashion_data}  />
-        <CategorySection data={category_data? category_data : []} />
-        <MultiCategory dataHealthy={healthy_data} dataBusiness={business_data} datasales={sales_data}/>
-        <TechSection data={technology_data}/>
+        <LifeStyleSection  />
+        <CategorySection  />
+        <MultiCategory />
+        <TechSection />
       <Footer />
       </div>
     </div>

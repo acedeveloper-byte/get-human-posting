@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { HOST } from "@/utils/static";
 import { useEffect } from 'react';
+import axios from 'axios';
 
 
 const DATA = [
@@ -36,22 +37,28 @@ const DATA = [
         type: "placeholder"
     },
 ]
-const FeaturedSection = ({ data }) => {
+const FeaturedSection = () => {
     const [data, setData] = useState(DATA)
 
 
-    const handleApi = async () => {
+    useEffect(() => {
+        const fetchTravelData = async () => {
+          try {
+            const travel = await axios.get(`${HOST}post/fetch-all-post-by-category/travel`);
+            const travel_data = travel.data.response;
+            console.log("travel_data:", travel_data);
+            setData(travel_data);
+          } catch (error) {
+            console.error("Error fetching travel data:", error);
+          }
+        };
+    
+        fetchTravelData();
+      }, []);
 
-        const travel = await axios.get(`${HOST}post/fetch-all-post-by-category/travel`);
-        const travel_data = travel.data.response;
-        setData(travel_data)
-        useEffect(() => {
-            handleApi()
-        }, [])
-    }
 
     var conditionaldata = data.length !== 0 ? data : DATA
-
+        console.log(data)
     return (
         <>
             <section

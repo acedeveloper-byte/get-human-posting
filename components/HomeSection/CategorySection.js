@@ -1,7 +1,9 @@
 'use client';
 import { IoChevronForward } from "react-icons/io5";
 import { IoChevronBack } from "react-icons/io5";
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import axios from "axios";
+import { HOST } from "@/utils/static";
 
 const DATA = [
     {
@@ -31,8 +33,24 @@ const DATA = [
 
     },
 ]
-const CategorySection = ({ data}) => {
-    var conditional = data.length !== 0  ? data : DATA
+const CategorySection = () => {
+    const [data, setData] = useState(DATA)
+    
+    useEffect(() => {
+         const fetchTravelData = async () => {
+           try {
+             const travel = await axios.get(`${HOST}category/fetch-all-category`);
+             const travel_data = travel.data.response;
+             console.log("travel_data:", travel_data);
+             setData(travel_data);
+           } catch (error) {
+             console.error("Error fetching travel data:", error);
+           }
+         };
+     
+         fetchTravelData();
+       }, []);
+ 
 
     const scrollRef = useRef(null);
 
@@ -80,7 +98,7 @@ const CategorySection = ({ data}) => {
                                                 </div>
 
                                                 <div ref={scrollRef} id="scrollable-grid" class="penci-clearfix penci-biggrid-data penci-dflex horizontal-scroll">
-                                                    {conditional.map((item, index) => {
+                                                    {data.map((item, index) => {
 
                                                         return (
                                                             <div class="penci-bgitem elementor-repeater-item-17beedc">
