@@ -33,24 +33,14 @@ const DATA = [
 
     },
 ]
-const CategorySection = () => {
-    const [data, setData] = useState(DATA)
-    
-    useEffect(() => {
-         const fetchTravelData = async () => {
-           try {
-             const travel = await axios.get(`${HOST}category/fetch-all-category`);
-             const travel_data = travel.data.response;
-             console.log("travel_data:", travel_data);
-             setData(travel_data);
-           } catch (error) {
-             console.error("Error fetching travel data:", error);
-           }
-         };
-     
-         fetchTravelData();
-       }, []);
- 
+
+
+const CategorySection = ({ catdata }) => {
+
+    const [data, setData] = useState(catdata)
+
+  
+
 
     const scrollRef = useRef(null);
 

@@ -1,3 +1,4 @@
+'use client'
 import { RecentPostsApi } from '@/utils/apicall/RecentPostsApi'
 import { HOST } from '@/utils/static'
 import moment from 'moment'

@@ -1,8 +1,7 @@
-'use client'
 import { HOST } from '@/utils/static'
 import axios from 'axios'
 import moment from 'moment'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 const DATA = [
     {
         id: 1,
@@ -41,25 +40,19 @@ const DATA = [
         url :"#"
     },
 ]
-const TechSection = () => {
+const getDataCat = async () => {
+  const res = await fetch(`${HOST}post/fetch-all-post-by-category/tech`, {
+    cache: "no-store", // ya revalidate: 60 if you want ISR
+  });
+  if (!res.ok) throw new Error("Failed to fetch posts");
+  return res.json();
+};
 
- const [data, setData] = useState([])
+const TechSection = async () => {
+    const techies =  await getDataCat()
+ const data =techies.response
 
-    useEffect(() => {
-        const fetchTravelData = async () => {
-            try {
-                const travel = await axios.get(`${HOST}post/fetch-all-post-by-category/tech`)
-                const travel_data = travel.data.response
-                console.log("travel_data:", travel_data)
-                setData(travel_data)
-            } catch (error) {
-                console.error("Error fetching travel data:", error)
-            }
-        }
-
-        fetchTravelData()
-    }, [])
-
+    
     var conditionaldata =  data.length !==0 ? data : DATA
 
     return (

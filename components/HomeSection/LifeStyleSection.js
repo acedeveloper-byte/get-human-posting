@@ -1,11 +1,7 @@
-
-
-
-'use client'
 import { HOST } from '@/utils/static'
 import axios from 'axios'
 import moment from 'moment'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 const DATA = [
     { id: 1, image: "placeholder.png" },
@@ -15,23 +11,30 @@ const DATA = [
     { id: 5, image: "placeholder.png" },
 ]
 
-const LifeStyleSection = () => {
-    const [data, setData] = useState(DATA)
+const getData = async () => {
+  const res = await fetch(`${HOST}post/fetch-all-post-by-category/fashion`, {
+    cache: "no-store", // ya revalidate: 60 if you want ISR
+  });
+  if (!res.ok) throw new Error("Failed to fetch posts");
+  return res.json();
+};
 
-    useEffect(() => {
-        const fetchTravelData = async () => {
-            try {
-                const travel = await axios.get(`${HOST}post/fetch-all-post-by-category/fashion`)
-                const travel_data = travel.data.response
-                console.log("travel_data:", travel_data)
-                setData(travel_data)
-            } catch (error) {
-                console.error("Error fetching travel data:", error)
-            }
-        }
+const LifeStyleSection = async () => {
+    const  fashiondata  = await getData()
+    // useEffect(() => {
+    //     const fetchTravelData = async () => {
+    //         try {
+    //             const travel = await axios.get(`${HOST}post/fetch-all-post-by-category/fashion`)
+    //             const travel_data = travel.data.response
+    //             console.log("travel_data:", travel_data)
+    //             setData(travel_data)
+    //         } catch (error) {
+    //             console.error("Error fetching travel data:", error)
+    //         }
+    //     }
 
-        fetchTravelData()
-    }, [])
+    //     fetchTravelData()
+    // }, [])
 
     return (
         <section
@@ -52,7 +55,7 @@ const LifeStyleSection = () => {
                                     <div class="home-featured-cat-wrapper">
                                         <div class="home-featured-cat-content pwf-id-default style-6">
                                             <div class="cat-left">
-                                                {data.slice(0, 1).map((itex, idx) => {
+                                                {fashiondata.response.slice(0, 1).map((itex, idx) => {
                                                     return (
                                                         <div class="mag-post-box hentry first-post">
                                                             <div class="magcat-thumb"> <img class="penci-image-holder penci-lazyimg"
@@ -71,7 +74,7 @@ const LifeStyleSection = () => {
                                                                     <p>{itex.title}</p>
                                                                 </div>
                                                                 <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                    class="author-url url fn n" href="#">{data.author_name}</a>
+                                                                    class="author-url url fn n" href="#">{itex.author_name}</a>
                                                                 </span> </div>
                                                             </div>
                                                         </div>
@@ -80,7 +83,7 @@ const LifeStyleSection = () => {
 
                                             </div>
                                             <div class="cat-right">
-                                                {data.slice(1, 5).map((idx, indx) => {
+                                                {fashiondata.response.slice(1, 5).map((idx, indx) => {
                                                     return (
                                                         <div class="mag-post-box hentry">
                                                             <div class="magcat-thumb">
@@ -95,7 +98,7 @@ const LifeStyleSection = () => {
                                                                 <div class="grid-post-box-meta mag-meta"> <span class="featc-date"><time
                                                                     class="entry-date published" datetime="2021-07-30T08:08:29+00:00">{moment(idx.createdAt).format("MMMM Do yy")}</time></span> </div>
                                                                 <div class="penci-hide-tagupdated"> <span class="author-italic author vcard">by <a
-                                                                    class="author-url url fn n" href="#">{data.author_name}</a>
+                                                                    class="author-url url fn n" href="#">{idx.author_name}</a>
                                                                 </span> </div>
                                                             </div>
                                                         </div>

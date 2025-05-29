@@ -1,7 +1,6 @@
 
-'use client'
 import { HOST } from '@/utils/static'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import RecentPosts from '../RecentPosts'
 import moment from 'moment'
 import axios from 'axios'
@@ -28,38 +27,55 @@ const DATA = [
         image: "placeholder.png"
     },
 ]
+const getDataCat = async () => {
+  try {
+    const [categoriesRes, healthyRes, salesRes, businessRes] = await Promise.all([
+      fetch(`${HOST}category/fetch-all-category`, { cache: "no-store" }),
+      fetch(`${HOST}post/fetch-all-post-by-category/healthy`, { cache: "no-store" }),
+      fetch(`${HOST}post/fetch-all-post-by-category/sales`, { cache: "no-store" }),
+      fetch(`${HOST}post/fetch-all-post-by-category/business`, { cache: "no-store" })
+    ]);
 
-const MultiCategory = () => {
+    if (
+      !categoriesRes.ok ||
+      !healthyRes.ok ||
+      !salesRes.ok ||
+      !businessRes.ok
+    ) {
+      throw new Error("Failed to fetch one or more endpoints");
+    }
+
+    const [categories, healthy, sales, business] = await Promise.all([
+      categoriesRes.json(),
+      healthyRes.json(),
+      salesRes.json(),
+      businessRes.json()
+    ]);
+
+    return {
+      categories: categories.response,
+      healthy: healthy.response,
+      sales: sales.response,
+      business: business.response
+    };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    throw error;
+  }
+};
+
+const MultiCategory = async () => {
+ const {  healthy, sales, business } = await getDataCat();
 
 
 
+    const healthyData = healthy
+    const salesData= sales;
+    const businessData= business
 
-    const [healthyData, setHealthyData] = useState([]);
-    const [salesData, setSalesData] = useState([]);
-    const [businessData, setBusinessData] = useState([]);
+
   
-    useEffect(() => {
-      const fetchAllData = async () => {
-        try {
-          const [ healthy, sales, business] = await Promise.all([
-            axios.get(`${HOST}post/fetch-all-post-by-category/healthy`),
-            axios.get(`${HOST}post/fetch-all-post-by-category/sales`),
-            axios.get(`${HOST}post/fetch-all-post-by-category/business`)
-          ]);
-  
-          setHealthyData(healthy.data.response);
-          setSalesData(sales.data.response);
-          setBusinessData(business.data.response);
-  
-          console.log('All categories fetched');
-        } catch (error) {
-          console.error("Error fetching category data:", error);
-        }
-      };
-  
-      fetchAllData();
-    }, []);
-
+   
     var conditionaldata =  salesData.length !==0 ? salesData : DATA
         var conditionaldatahealty =  healthyData.length !==0 ? healthyData : DATA
         var conditionaldataBusiness =  businessData.length !==0 ? businessData : DATA
