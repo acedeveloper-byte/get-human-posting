@@ -37,8 +37,17 @@ const DATA = [
         type: "placeholder"
     },
 ]
-const FeaturedSection = () => {
-    const [data, setData] = useState(DATA)
+
+
+
+
+
+
+
+const FeaturedSection = ({
+    travdata
+}) => {
+    const [data, setData] = useState(travdata)
 
 
     useEffect(() => {
@@ -59,7 +68,9 @@ const FeaturedSection = () => {
 
     var conditionaldata = data.length !== 0 ? data : DATA
         console.log(data)
-    return (
+
+    
+        return (
         <>
             <section
                 class="penci-section penci-disSticky penci-structure-10 elementor-section elementor-top-section elementor-element elementor-element-67c6f7c elementor-section-boxed elementor-section-height-default elementor-section-height-default"

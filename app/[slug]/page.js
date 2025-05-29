@@ -23,19 +23,27 @@ export  async function generateMetadata({ params }) {
   };
 }
 
+const getData = async () => {
+  const res =  await axios.get(`${HOST}post/fetch-all-post-by-url/${params.slug}`, {
+    cache: "no-store", // ya revalidate: 60 if you want ISR
+  });
+    const post = res.data.response;
+  if (!res.ok) throw new Error("Failed to fetch posts");
+  return res.json();
+};
+
+
 
 // ✅ Must be a default export
 export default async function  Page({ params }) {
-
-  const res = await axios.get(`${HOST}post/fetch-all-post-by-url/${params.slug}`);
-  const post = res.data.response;
-
   
-  console.log("post:" , post)
+const  post = await getData(params)
+
 
   if (!post || post.length === 0) {
     notFound(); // Redirect to 404 page using Next.js built-in 404 handling
   }
+  
   return (
     <>
       <Header />

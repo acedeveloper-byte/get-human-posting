@@ -15992,10 +15992,25 @@ table {
 }
 th, td {
   border: 1px solid #ccc;
-  padding: 8px;
+    padding: 8px;
   text-align: left;
   vertical-align: top;
 }
 tr:nth-child(even) {
   background-color: #f9f9f9;
+}
+li > h4 {
+  margin: 0;                  /* Removes default top and bottom margins */
+  padding: 0;                 /* Ensures no extra spacing */
+  font-size: 12pt;            /* Match your desired font size */
+  font-weight: normal;        /* Optional: remove bold if not needed */
+  color: #666666;             /* Match text color */
+  font-family: Arial, sans-serif; /* Match font */
+}
+
+ol li {
+  font-size: 12pt;
+  font-family: Arial, sans-serif;
+  color: #666666;
+  line-height: 1.5;  /* Adjust spacing for better vertical alignment */
 }
