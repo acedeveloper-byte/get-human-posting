@@ -1,5 +1,5 @@
 User-Agent: *
-Allow /
+Allow : *
 
 User-Agent: bingbot
-Allow / 
+Allow : * 
