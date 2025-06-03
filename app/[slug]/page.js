@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../globals.css';
 import Postdetails from '@/components/Postdetails';
 import axios from 'axios';
-import { HOST } from '@/utils/static';
+import { HOST, SITE_URL } from '@/utils/static';
 import { notFound } from 'next/navigation';
 
 
@@ -15,7 +15,7 @@ export async function generateMetadata({ params }) {
 
   const res = await axios.get(`${HOST}post/fetch-all-post-by-url/${params.slug}`);
   const post = res.data.response;
-const canonicalUrl = `/${params.slug}`;
+const canonicalUrl = `${SITE_URL}/${params.slug}`;
   return {
     title: post.title,
     description: "Read more about " + post.title,
