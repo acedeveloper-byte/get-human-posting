@@ -15,10 +15,13 @@ export async function generateMetadata({ params }) {
 
   const res = await axios.get(`${HOST}post/fetch-all-post-by-url/${params.slug}`);
   const post = res.data.response;
-
+const canonicalUrl = `/${params.slug}`;
   return {
     title: post.title,
     description: "Read more about " + post.title,
+     alternates: {
+      canonical: canonicalUrl,
+    },
   };
 }
 
