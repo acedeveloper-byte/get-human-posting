@@ -50,7 +50,7 @@ const PostDetails = ({ data }) => {
                             </Col>
                             <Col md={3}>
 
-                                Category : <a  className="text-decoration-none text-black" href={`/category/${data.category}`}><b>{data.category}</b></a>
+                                Category : <a className="text-decoration-none text-black" href={`/category/${data.category}`}><b>{data.category}</b></a>
                             </Col>
                             {user?._id === data.user_id &&
                                 <Col md={4} style={{ justifyContent: "flex-end", display: "flex" }}>

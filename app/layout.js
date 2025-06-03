@@ -20,10 +20,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <meta name="msvalidate.01" content="F6BEFEE949444439B816AD85BF2B384C" />
-
+      <meta name="robots" content="index, follow" />
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
     </html>
   );
 }
+ 
